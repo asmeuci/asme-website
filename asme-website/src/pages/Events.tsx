@@ -1,35 +1,29 @@
 import Section from "../components/Section"
 import Layout from "../components/Layout"
-import asmeimg from '../assets/pngver.png';
+//import asmeimg from '../assets/pngver.png';
 import { Reveal } from '../components/Reveal';
-
-interface instaPosts { //the interface for the Instagram Updates
-    title: string;
-    date: string; 
-    link: string; //goes to the post when clicked
-    caption: string; //
-    image: string; //display image or if its not a video
-};
+//import { InstagramEmbed } from 'react-social-media-embed';
+import asmeGif from '../assets/asmegif.gif'
 
 const postData = [
-  { id: 1, title: "RNN" },
-  { id: 2, title: "Post 2" },
-  { id: 3, title: "Post 3" },
-  { id: 4, title: "Post 4" },
-  { id: 5, title: "Post 5" },
-  { id: 6, title: "Post 6" },
-  { id: 7, title: "Post 1" },
-  { id: 8, title: "Post 2" },
-  { id: 9, title: "Post 3" },
-  { id: 10, title: "Post 4" },
-  { id: 11, title: "Post 5" },
-  { id: 12, title: "Post 6" },
-  { id: 13, title: "Post 1" },
-  { id: 14, title: "Post 2" },
-  { id: 15, title: "Post 3" },
-  { id: 16, title: "Post 4" },
-  { id: 17, title: "Post 5" },
-  { id: 18, title: "Post 6" },
+  { id: 1, title: "RNN", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
+  { id: 2, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
+  { id: 3, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
+  { id: 4, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 5, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 6, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 7, title: "Post 1", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 8, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 9, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 10, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 11, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 12, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 13, title: "Post 1", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 14, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 15, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 16, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 17, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+  { id: 18, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
 ];
 
 function Events(){
@@ -45,29 +39,51 @@ function Events(){
            <Section className="bg-[#f1f0ea]">
                 <div className="container mx-auto p-15">
                     <h1 className="flex justify-center font-helvetica text-[40px] "> Recent Posts </h1>
-                    <div className="grid grid-cols-2 gap-6 bg-[#f1f0ea]">
-                        {postData.slice(0,6).map((post, index) => (
+                    <div className="grid grid-cols-2 gap-6 bg-[#f1f0ea]"> {/*most recent */}
+                        {postData.slice(0,6).map((post, index) => (  //post = dataset postData, while index is the loop variable
                             <Reveal key={index} width="100%">
-                            <div className="aspect-square border flex items-center justify-center p-4 bg-blue-100">
-                                <p className="text-black font-bold">{post.title}</p>
+                            <div className="mx-auto max-w-fit border flex items-center justify-center p-2 bg-blue-100">
+                                <a
+                                    href={post.link}
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="">
+                                    <img 
+                                        src={post.image}
+                                        alt={post.title}/>
+                                </a>
                             </div>
                             </Reveal>
                         ))}
                     </div>
-                    <div className="grid grid-cols-3 gap-6 bg-[#f1f0ea] p-6"> //padding to separate the top from middle and bottom
+                    <div className="grid grid-cols-3 gap-8 bg-[#f1f0ea] p-6"> {/* //padding to separate the top from middle and bottom */}
                         {postData.slice(6,12).map((post, index) => (
                             <Reveal key={index} width="100%">
-                            <div className="aspect-square border flex items-center justify-center p-4 bg-blue-100">
-                                <p className="text-black font-bold">{post.title}</p>
+                            <div className="h-auto  border flex items-center justify-center p-2 bg-blue-100">
+                                <a
+                                    href={post.link}
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                    <img 
+                                        src={post.image}    
+                                        alt={post.title}/>
+                                </a>
                             </div>
                             </Reveal>
                         ))}
                     </div>
-                    <div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]">
+                    <div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]"> {/* 6x1  */}
                         {postData.slice(12,18).map((post, index) => (
                             <Reveal key={index} width="100%">
-                            <div className="aspect-square border flex items-center justify-center p-4 bg-blue-100">
-                                <p className="text-black font-bold">{post.title}</p>
+                            <div className="aspect-[4/5] border flex items-center justify-center p-2 bg-blue-100">
+                                <a
+                                    href={post.link}
+                                    target="_blank" 
+                                    rel="noopener noreferrer">
+                                    <img 
+                                        src={post.image}
+                                        alt={post.title}/>
+                                </a>
                             </div>
                             </Reveal>
                         ))}
