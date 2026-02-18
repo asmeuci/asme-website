@@ -37,12 +37,12 @@ function Events(){
                 </div>
            </Section>
            <Section className="bg-[#f1f0ea]">
-                <div className="container mx-auto p-15">
-                    <h1 className="flex justify-center font-helvetica text-[40px] "> Recent Posts </h1>
+                <div className="container mx-auto ">
+                    <h1 className="flex justify-center font-helvetica text-[40px] p-20 "> Recent Posts </h1>
                     <div className="grid grid-cols-2 gap-6 bg-[#f1f0ea]"> {/*most recent */}
                         {postData.slice(0,6).map((post, index) => (  //post = dataset postData, while index is the loop variable
                             <Reveal key={index} width="100%">
-                            <div className="mx-auto max-w-fit border flex items-center justify-center p-2 bg-blue-100">
+                            <div className="mx-auto max-w-fit border flex items-center justify-center bg-blue-100">
                                 <a
                                     href={post.link}
                                     target="_blank" 
@@ -59,7 +59,7 @@ function Events(){
                     <div className="grid grid-cols-3 gap-8 bg-[#f1f0ea] p-6"> {/* //padding to separate the top from middle and bottom */}
                         {postData.slice(6,12).map((post, index) => (
                             <Reveal key={index} width="100%">
-                            <div className="h-auto  border flex items-center justify-center p-2 bg-blue-100">
+                            <div className="mx-auto max-w-fit border flex items-center justify-center bg-blue-100">
                                 <a
                                     href={post.link}
                                     target="_blank" 
@@ -75,7 +75,7 @@ function Events(){
                     <div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]"> {/* 6x1  */}
                         {postData.slice(12,18).map((post, index) => (
                             <Reveal key={index} width="100%">
-                            <div className="aspect-[4/5] border flex items-center justify-center p-2 bg-blue-100">
+                            <div className="aspect-[4/5] border flex items-center justify-center bg-blue-100">
                                 <a
                                     href={post.link}
                                     target="_blank" 
