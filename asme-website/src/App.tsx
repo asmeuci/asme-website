@@ -3,6 +3,7 @@ import FrontPage from './FrontPage';
 import Links from './pages/Links';
 import asmegif from '../src/assets/asmegif.gif'
 import Board from './pages/Board';
+import Events from './pages/Events';
 
 
 const DefaultPage = () => (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/" element={<FrontPage />} />
         <Route path="/links" element={<Links />} />
         <Route path="/board" element= {<Board/>} />
+        <Route path="/events" element = {<Events/>} />
         <Route path="*" element={<DefaultPage />} />
       </Routes>
     </BrowserRouter>
