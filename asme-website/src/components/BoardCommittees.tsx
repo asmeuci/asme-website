@@ -10,7 +10,7 @@ function BoardCommittees() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <h1 className="font-normal text-3xl md:text-4xl tracking-tighter mb-8">
+      <h1 className="font-normal text-3xl md:text-4xl tracking-tighter mb-4">
         Get to know our team
       </h1>
 
@@ -26,7 +26,7 @@ function BoardCommittees() {
         </div>
       )}
 
-      <div className="flex flex-col mt-10 w-full max-w-8xl px-4 items-center"> 
+      <div className="flex flex-col mt-5 w-full max-w-8xl px-4 items-center"> 
         <div className="w-full flex justify-center mb-12">
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl px-2">
             {boardCommitte.map((committee, index) => (
