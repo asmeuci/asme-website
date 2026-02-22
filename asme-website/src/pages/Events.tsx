@@ -28,34 +28,11 @@ const postData = [
 function Events(){
     return(
         <Layout>
-            <Section>
-                <div className="p-32 bg-[#f1f0ea]">
-                    <h1 className="text-[64px] font-bold flex justify-center text-center font-helvetica">CHECK OUT OUR UPCOMING EVENTS!</h1>
-        
-                    {/*Posts Section*/}
-                </div>
-           </Section>
+            {/* 3x2 */ }
            <Section className="bg-[#f1f0ea]">
                 <div className="container mx-auto ">
                     <h1 className="flex justify-center font-helvetica text-[40px] p-20 "> Recent Posts </h1>
-                    <div className="grid grid-cols-2 gap-6 bg-[#f1f0ea]"> {/*most recent */}
-                        {postData.slice(0,6).map((post, index) => (  //post = dataset postData, while index is the loop variable
-                            <Reveal key={index} width="100%">
-                            <div className="mx-auto max-w-fit border flex items-center justify-center bg-blue-100">
-                                <a
-                                    href={post.link}
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="">
-                                    <img 
-                                        src={post.image}
-                                        alt={post.title}/>
-                                </a>
-                            </div>
-                            </Reveal>
-                        ))}
-                    </div>
-                    <div className="grid grid-cols-3 gap-8 bg-[#f1f0ea] p-6"> {/* //padding to separate the top from middle and bottom */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#f1f0ea]"> {/* //padding to separate the top from middle and bottom */}
                         {postData.slice(6,12).map((post, index) => (
                             <Reveal key={index} width="100%">
                             <div className="mx-auto max-w-fit border flex items-center justify-center bg-blue-100">
@@ -71,22 +48,6 @@ function Events(){
                             </Reveal>
                         ))}
                     </div>
-                    <div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]"> {/* 6x1  */}
-                        {postData.slice(12,18).map((post, index) => (
-                            <Reveal key={index} width="100%">
-                            <div className="aspect-[4/5] border flex items-center justify-center bg-blue-100">
-                                <a
-                                    href={post.link}
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src={post.image}
-                                        alt={post.title}/>
-                                </a>
-                            </div>
-                            </Reveal>
-                        ))}
-                    </div>
                 </div>
                 
             </Section>
@@ -95,3 +56,29 @@ function Events(){
 }
 
 export default Events;
+
+
+
+
+/* 
+6x1 grid
+<div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]"> 
+    {postData.slice(12,18).map((post, index) => (
+        <Reveal key={index} width="100%">
+        <div className="aspect-[4/5] border flex items-center justify-center bg-blue-100">
+            <a
+                href={post.link}
+                target="_blank" 
+                rel="noopener noreferrer">
+                <img 
+                    src={post.image}
+                    alt={post.title}/>
+            </a>
+        </div>
+        </Reveal>
+    ))}
+</div>
+
+*/
+
+

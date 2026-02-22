@@ -28,7 +28,7 @@ function BoardCommittees() {
 
       <div className="flex flex-col mt-5 w-full max-w-8xl px-4 items-center"> 
         <div className="w-full flex justify-center mb-12">
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl px-2">
+          <div className="flex flex-wrap justify-center gap-3 max-w-5xl px-2">
             {boardCommitte.map((committee, index) => (
               <button
                 key={index}
