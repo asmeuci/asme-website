@@ -30,7 +30,7 @@ function Events(){
         <Layout>
             {/* 3x2 */ }
            <Section className="bg-[#f1f0ea]">
-                <div className="container mx-auto ">
+                <div className="container mx-auto">
                     <h1 className="flex justify-center font-helvetica text-[40px] p-20 "> Recent Posts </h1>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#f1f0ea]"> {/* //padding to separate the top from middle and bottom */}
                         {postData.slice(6,12).map((post, index) => (

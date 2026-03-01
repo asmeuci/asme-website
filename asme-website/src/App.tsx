@@ -4,6 +4,7 @@ import Links from './pages/Links';
 import asmegif from '../src/assets/asmegif.gif'
 import Board from './pages/Board';
 import Events from './pages/Events';
+import Peterworks from './pages/Peterworks'
 
 
 const DefaultPage = () => (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/links" element={<Links />} />
         <Route path="/board" element= {<Board/>} />
         <Route path="/events" element = {<Events/>} />
+        <Route path="/Peterworks" element = {<Peterworks/>} />
         <Route path="*" element={<DefaultPage />} />
       </Routes>
     </BrowserRouter>
