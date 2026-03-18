@@ -1,6 +1,5 @@
 import Section from "../components/Section"
 import Layout from "../components/Layout"
-import { Reveal } from '../components/Reveal';
 
 function Peterworks(){
     return(
@@ -10,7 +9,6 @@ function Peterworks(){
                     <h1 className="flex justify-center font-helvetica text-[80px] p-20 "> Peterworks </h1>
                 </div>
             </Section>
-<<<<<<< HEAD
             {/* Information Section */}
             <Section className="bg-[#f1f0ea]">
                 <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
@@ -45,14 +43,6 @@ function Peterworks(){
                             <iframe className="w-full h-full" src="https://www.youtube.com/embed/OiqO-Q6URTA?si=MGsnomD-Pi9cKGBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-=======
-            <Section className="bg-[#f1f0ea]">
-                <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
-                <div>
-                    <h1 className="font-helvetica text-[25px]"> What is Peterworks?</h1>
-                    <h1 className="font-helvetica text-[40px]"> BUILD YOUR OWN DRONE! </h1>
-                    <h1 className="font-helvetica text-[30px]"> THE BEST CLASS THAT ISN'T A CLASS </h1>
->>>>>>> 887dcfa3b78bbba30941a3970b8c3b9a29457ce6
                 </div>
             </Section>
         </Layout>
