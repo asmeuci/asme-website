@@ -10,10 +10,10 @@ function Links(){
     return(
         <Layout>
             {/* Added pt-32 so the content starts below the absolute Navbar */}
-            <div className="min-h-screen bg-[#f1f0ea] pt-32 pb-10 space-y-2 md:space-y-4">
+            <div className="min-h-screen bg-[#f1f0ea] pt-14 pb-10 space-y-2 md:space-y-4 md:pt-40">
                 
                 {/* RSPV Section*/}
-                <Section className="bg-[#f1f0ea]">
+                <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
                         <div className="flex flex-col space-y-2">
                             <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">RSVP Forms</h1>
@@ -37,6 +37,15 @@ function Links(){
                                 description={`Hi there Anteaters! Forsberg Racing along with their competition car, Papadakis Racing along with their competition car, Odi Bakchis (driver), and Kevin Wells (competition director), will discuss their path into racing / Formula Drift and showcase their cars! Also there will be time at the end for food and open networking with the FD reps!`}
                             />
                         </Reveal>
+
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="ASME Bonfire RSVP Form" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdlhmjxlu0E_bZL0atmfvWcsdaMdb4P25DE5ywbI15taehQ-Q/viewform?usp=sharing&ouid=107393905385394424504" 
+                                description="Join us for a fun bonfire and hang out with friends!"
+                            />
+                        </Reveal>
+
                     </div>
                 </Section>
 
