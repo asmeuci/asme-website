@@ -1,4 +1,9 @@
 import asmeimg from '../src/assets/asmecover.png';
+import rnn from '../src/assets/frontpage/rnn/rnn.jpg'
+import sdnn from '../src/assets/frontpage/sdnn/sdnn.jpg'
+import network from '../src/assets/frontpage/network/network.jpg'
+import hpvc from '../src/assets/frontpage/hpvc/hpvc.jpg'
+
 import './index.css';
 import EventCard from './components/EventCard';
 import BentoGallery from './components/BentoGallery';
@@ -21,21 +26,21 @@ const eventsData: EventItem[] = [
     title: "Research Network Night",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
-    image: asmeimg,
+    image: rnn,
     tag: "Event"
   },
   {
     title: "Senior Design Networking Night",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
-    image: asmeimg,
+    image: sdnn,
     tag: "Event"
   },
   {
     title: "Network with ASME",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
-    image: asmeimg,
+    image: network,
     tag: "Event"
   },
 ];
@@ -45,14 +50,14 @@ const projectsData: EventItem[] = [
     title: "HPVC",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics...",
-    image: asmeimg,
+    image: hpvc,
     tag: "Event"
   },
   {
     title: "Peterworks",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics...",
-    image: asmeimg,
+    image: hpvc,
     tag: "Event"
   },
 ];
