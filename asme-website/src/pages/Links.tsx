@@ -86,7 +86,7 @@ function Links(){
                         <Reveal width="100%">
                             <LinkCard
                                 title="Discord Server"
-                                href="#"
+                                href="https://discord.gg/vDNnTcwTt6"
                                 description="Chat with members."
                                 iconSrc={discordIcon}
                                 iconAlt="Discord icon"
@@ -95,7 +95,7 @@ function Links(){
                         <Reveal width="100%">
                             <LinkCard
                                 title="Instagram"
-                                href="#"
+                                href="https://www.instagram.com/asmeatuci/"
                                 description="@asmeatuci"
                                 iconSrc={instagramIcon}
                                 iconAlt="Instagram icon"
@@ -104,7 +104,7 @@ function Links(){
                         <Reveal width="100%">
                             <LinkCard
                                 title="LinkedIn"
-                                href="#"
+                                href="https://www.linkedin.com/company/asme-uci/"
                                 description="Connect with alumni."
                                 iconSrc={linkedinIcon}
                                 iconAlt="LinkedIn icon"
