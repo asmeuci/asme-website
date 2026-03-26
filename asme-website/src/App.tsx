@@ -19,24 +19,38 @@ const DefaultPage = () => (
   </div>
 );
 
-const LaunchLoader = () => (
-  <div className="fixed inset-0 z-[999] flex items-center justify-center bg-white">
+const LaunchLoader = ({ isFading }: { isFading: boolean }) => (
+  <div
+    className={`fixed inset-0 z-[999] flex items-center justify-center bg-white transition-opacity duration-700 ease-out ${
+      isFading ? 'opacity-0' : 'opacity-100'
+    }`}
+  >
     <img src={asmegif} className="h-52 w-52 md:h-64 md:w-64" alt="Loading" />
   </div>
 );
 
 export default function App() {
   const [isLaunchLoading, setIsLaunchLoading] = useState(() => document.readyState !== 'complete');
+  const [isLoaderFading, setIsLoaderFading] = useState(false);
 
   useEffect(() => {
     let revealTimer = 0;
+    let hideLoaderTimer = 0;
+
+    const beginReveal = () => {
+      setIsLoaderFading(true);
+      hideLoaderTimer = window.setTimeout(() => {
+        setIsLaunchLoading(false);
+      }, 700);
+    };
+
     const fallbackTimer = window.setTimeout(() => {
-      setIsLaunchLoading(false);
+      beginReveal();
     }, 7000);
 
     const finishLoading = () => {
       revealTimer = window.setTimeout(() => {
-        setIsLaunchLoading(false);
+        beginReveal();
       }, 150);
     };
 
@@ -49,15 +63,29 @@ export default function App() {
     return () => {
       window.clearTimeout(fallbackTimer);
       window.clearTimeout(revealTimer);
+      window.clearTimeout(hideLoaderTimer);
       window.removeEventListener('load', finishLoading);
     };
   }, []);
 
-  if (isLaunchLoading) {
-    return <LaunchLoader />;
-  }
-
   return (
+    <>
+      <div className={`transition-opacity duration-700 ease-out ${isLaunchLoading && !isLoaderFading ? 'opacity-0' : 'opacity-100'}`}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<FrontPage />} />
+            <Route path="/links" element={<Links />} />
+            <Route path="/board" element={<DefaultPage />} />
+            <Route path="/events" element={<DefaultPage />} />
+            <Route path="/yearbook" element={<DefaultPage />} />
+            <Route path="/coming-soon" element={<DefaultPage />} />
+            <Route path="*" element={<DefaultPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+
+      {isLaunchLoading && <LaunchLoader isFading={isLoaderFading} />}
+    </>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<FrontPage />} />
