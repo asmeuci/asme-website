@@ -11,7 +11,6 @@ import ProjectCard from './components/ProjectCard';
 import { Reveal } from './components/Reveal';
 import Layout from './components/Layout';
 import Section from './components/Section';
-import upscale from '../src/assets/4x.png'
 
 interface EventItem {
   title: string;
@@ -86,10 +85,7 @@ function FrontPage() {
         </div>
       </div>
       
-        <div 
-              className="w-full bg-black bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${upscale})` }}
-            >
+        <div className="w-full bg-[#f1f0ea]">
         <Section className="">
           <Reveal>
             <div className="flex flex-col space-y-12">
