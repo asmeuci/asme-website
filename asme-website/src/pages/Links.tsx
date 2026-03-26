@@ -10,7 +10,7 @@ function Links(){
     return(
         <Layout>
             {/* Added pt-32 so the content starts below the absolute Navbar */}
-            <div className="pt-32 bg-[#f1f0ea] min-h-screen">
+            <div className="min-h-screen bg-[#f1f0ea] pt-32 pb-10 space-y-2 md:space-y-4">
                 
                 {/* RSPV Section*/}
                 <Section className="bg-[#f1f0ea]">
@@ -27,6 +27,14 @@ function Links(){
                                 title="ASME FLAM Tour Interest Form" 
                                 href="https://forms.gle/bi3zssBsKxJqDqiV6" 
                                 description="Flying Leatherneck Aviation Museum (FLAM) has the largest and most complete collection of historical aircraft flown by U.S. Marine pilots in the world. A team of UCI students currently work together to restore the 1917 Curtiss JN-4D, or Jenny plane that trained U.S. Air Service throughout World War I. We will be touring a hangar for the new museum that will be built next year in Irvine. "
+                            />
+                        </Reveal>
+
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="Formula Drift S26 Student RSVP" 
+                                href="https://forms.gle/RTMP6P2cmrsJhVADA" 
+                                description={`Hi there Anteaters! Forsberg Racing along with their competition car, Papadakis Racing along with their competition car, Odi Bakchis (driver), and Kevin Wells (competition director), will discuss their path into racing / Formula Drift and showcase their cars! Also there will be time at the end for food and open networking with the FD reps!`}
                             />
                         </Reveal>
                     </div>

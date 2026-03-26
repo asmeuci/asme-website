@@ -46,7 +46,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
         </div>
 
         {description && (
-          <p className="font-helevtica text-zinc-600 text-sm leading-relaxed">
+          <p className="font-helevtica text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
             {description}
           </p>
         )}
