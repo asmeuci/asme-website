@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import FrontPage from './FrontPage'; 
 import Links from './pages/Links';
@@ -18,8 +19,44 @@ const DefaultPage = () => (
   </div>
 );
 
+const LaunchLoader = () => (
+  <div className="fixed inset-0 z-[999] flex items-center justify-center bg-white">
+    <img src={asmegif} className="h-52 w-52 md:h-64 md:w-64" alt="Loading" />
+  </div>
+);
 
 export default function App() {
+  const [isLaunchLoading, setIsLaunchLoading] = useState(() => document.readyState !== 'complete');
+
+  useEffect(() => {
+    let revealTimer = 0;
+    const fallbackTimer = window.setTimeout(() => {
+      setIsLaunchLoading(false);
+    }, 7000);
+
+    const finishLoading = () => {
+      revealTimer = window.setTimeout(() => {
+        setIsLaunchLoading(false);
+      }, 150);
+    };
+
+    if (document.readyState === 'complete') {
+      finishLoading();
+    } else {
+      window.addEventListener('load', finishLoading, { once: true });
+    }
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      window.clearTimeout(revealTimer);
+      window.removeEventListener('load', finishLoading);
+    };
+  }, []);
+
+  if (isLaunchLoading) {
+    return <LaunchLoader />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>
