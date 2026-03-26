@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface EventItem {
   title: string;
   date: string;
@@ -12,7 +14,7 @@ interface ProjectCardProps {
 
 function ProjectCard({event} : ProjectCardProps) {
   return (
-    <div className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden ">
+    <Link to="/coming-soon" className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
       
       <div className="p-6">
         <img 
@@ -31,15 +33,15 @@ function ProjectCard({event} : ProjectCardProps) {
         </p>
 
         <div className="mt-auto pt-4 border-t border-gray-100">
-            <button className="text-black text-sm font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+            <span className="text-black text-sm font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
             View Project
             <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-            </button>
+            </span>
         </div>
 
       </div>
 
-    </div>
+    </Link>
   );
 
 }

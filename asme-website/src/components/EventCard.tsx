@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface EventItem {
   title: string;
   date: string;
@@ -13,7 +15,10 @@ interface EventCardProps {
 
 function EventCard({event, isReversed} : EventCardProps){
   return (
-    <div className={`font-helvetica group flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100  hover:shadow-xl transition-all duration-300`}>
+    <Link
+      to="/coming-soon"
+      className={`font-helvetica group block flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300`}
+    >
       
       <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">        
         <div className="flex items-center gap-3 mb-4">
@@ -33,10 +38,10 @@ function EventCard({event, isReversed} : EventCardProps){
           {event.description}
         </p>
 
-        <button className="self-start text-black font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+        <span className="self-start text-black font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
           Learn More
           <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-        </button>
+        </span>
       </div>
 
       <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center bg-white">
@@ -49,7 +54,7 @@ function EventCard({event, isReversed} : EventCardProps){
         </div>
       </div>
 
-    </div>
+    </Link>
   );
 }
 
