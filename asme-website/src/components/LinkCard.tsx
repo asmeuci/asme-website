@@ -4,10 +4,12 @@ interface LinkCardProps {
   title: string;
   description?: string;
   href: string;
-  tag?: string; 
+  tag?: string;
+  iconSrc?: string;
+  iconAlt?: string;
 }
 
-const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, iconSrc, iconAlt }) => {
   return (
     <a 
       href={href}
@@ -17,9 +19,18 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag }) =>
     >
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-start">
-          <h3 className="font-helevtica text-xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
-            {title}
-          </h3>
+          <div className="flex items-center gap-3">
+            {iconSrc && (
+              <img
+                src={iconSrc}
+                alt={iconAlt ?? `${title} icon`}
+                className="h-7 w-7 rounded-sm object-contain"
+              />
+            )}
+            <h3 className="font-helevtica text-xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
+              {title}
+            </h3>
+          </div>
           
           {/* Animated Arrow Icon */}
           <svg 
