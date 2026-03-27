@@ -28,7 +28,7 @@ function Navbar() {
               {/* About Link w/ dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent hover:bg-gray-100 data-[state=open]:bg-gray-100 rounded-full font-normal text-sm text-gray-800 transition-colors">
-                  About
+                  More
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
