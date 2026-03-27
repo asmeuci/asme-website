@@ -1,8 +1,8 @@
-import asmeimg from '../src/assets/asmecover.png';
-import rnn from '../src/assets/frontpage/rnn/rnn.jpg'
-import sdnn from '../src/assets/frontpage/sdnn/sdnn.jpg'
-import network from '../src/assets/frontpage/network/network.jpg'
-import hpvc from '../src/assets/frontpage/hpvc/hpvc.jpg'
+import asmeimg from '@/assets/site/home-hero-cover.png';
+import rnn from '@/assets/home/event-rnn.jpg';
+import sdnn from '@/assets/home/event-sdnn.jpg';
+import network from '@/assets/home/event-network.jpg';
+import hpvc from '@/assets/home/project-hpvc.jpg';
 
 import './index.css';
 import EventCard from './components/EventCard';

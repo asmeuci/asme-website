@@ -6,8 +6,6 @@ import Board from './pages/Board';
 import Events from './pages/Events';
 import Yearbook from './pages/Yearbook';
 import asmegif from '../src/assets/asmegif.gif'
-import Board from './pages/Board';
-import Events from './pages/Events';
 import Peterworks from './pages/Peterworks'
 
 const PREVIEW_MODE_STORAGE_KEY = 'asme-preview-mode';
@@ -143,15 +141,5 @@ export default function App() {
 
       {isLaunchLoading && <LaunchLoader isFading={isLoaderFading} />}
     </>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<FrontPage />} />
-        <Route path="/links" element={<Links />} />
-        <Route path="/board" element= {<Board/>} />
-        <Route path="/events" element = {<Events/>} />
-        <Route path="/Peterworks" element = {<Peterworks/>} />
-        <Route path="*" element={<DefaultPage />} />
-      </Routes>
-    </BrowserRouter>
   );
 }

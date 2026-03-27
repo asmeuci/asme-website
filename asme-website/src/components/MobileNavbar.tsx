@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MenuIcon from "../assets/burger-bar.png"; 
+import MenuIcon from "@/assets/icons/menu-bars.png";
 import Gears from "/gears.png"
 import { Link } from "react-router-dom";
 

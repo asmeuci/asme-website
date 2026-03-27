@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "@/components/Layout";
-import reactLogo from "@/assets/react.svg";
+import reactLogo from "@/assets/logos/react.svg";
 
 type FolderTone = "accent" | "light" | "dark";
 type PreviewAlign = "left" | "center" | "right";

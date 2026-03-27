@@ -2,9 +2,9 @@ import Layout from "../components/Layout"
 import { Reveal } from "../components/Reveal"
 import Section from "../components/Section"
 import LinkCard from "../components/LinkCard"
-import discordIcon from "@/assets/discord.svg";
-import instagramIcon from "@/assets/instagram.svg";
-import linkedinIcon from "@/assets/linkedinTransparent.svg";
+import discordIcon from "@/assets/social/discord.svg";
+import instagramIcon from "@/assets/social/instagram.svg";
+import linkedinIcon from "@/assets/social/linkedin.svg";
 
 function Links(){
     return(

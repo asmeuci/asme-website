@@ -1,4 +1,4 @@
-import boardHero from "@/assets/board.jpg";
+import boardHero from "@/assets/site/board-hero.jpg";
 import boardCommittees from "@/model/BoardMembers";
 import boardGroupPhotos from "@/model/BoardGroupPhotos";
 import boardCommittees2026_2027 from "@/model/BoardMembers2026_2027";
@@ -64,4 +64,5 @@ export const boardYears: BoardYear[] = [
   },
 ];
 
-export const defaultBoardYearId = boardYears[0]?.id ?? "";
+export const defaultBoardYearId =
+  boardYears.find((boardYear) => boardYear.id === "2026-2027")?.id ?? boardYears[0]?.id ?? "";

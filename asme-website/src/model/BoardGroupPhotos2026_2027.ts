@@ -1,9 +1,9 @@
 import exec from "../assets/board-group-photos/exec.png";
 import externals from "../assets/board-group-photos/externals.jpg";
 import internals from "../assets/board-group-photos/internals.jpg";
-import comms from "../assets/board-group-photos/comms.jpg";
+import comms from "../assets/board-group-photos/communications.jpg";
 import finance from "../assets/board-group-photos/finance.jpg";
-import outreach from "../assets/board-group-photos/studentoutreach.png";
+import outreach from "../assets/board-group-photos/student-outreach.png";
 
 interface BoardGroupPhoto {
   title: string;
