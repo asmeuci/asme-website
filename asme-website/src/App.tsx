@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import FrontPage from './FrontPage'; 
 import Links from './pages/Links';
+import Board from './pages/Board';
+import Events from './pages/Events';
+import Yearbook from './pages/Yearbook';
 import asmegif from '../src/assets/asmegif.gif'
 import Board from './pages/Board';
 import Events from './pages/Events';
 import Peterworks from './pages/Peterworks'
 
+const PREVIEW_MODE_STORAGE_KEY = 'asme-preview-mode';
+const isDev = import.meta.env.DEV;
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -30,28 +35,52 @@ const LaunchLoader = ({ isFading }: { isFading: boolean }) => (
 );
 
 export default function App() {
-  const [isLaunchLoading, setIsLaunchLoading] = useState(() => document.readyState !== 'complete');
+  const [isLaunchLoading, setIsLaunchLoading] = useState(true);
   const [isLoaderFading, setIsLoaderFading] = useState(false);
+  const [isPreviewMode, setIsPreviewMode] = useState(() => {
+    if (typeof window === 'undefined') return isDev;
+    const stored = window.localStorage.getItem(PREVIEW_MODE_STORAGE_KEY);
+    if (stored === null) return isDev;
+    return stored === 'true';
+  });
 
   useEffect(() => {
     let revealTimer = 0;
     let hideLoaderTimer = 0;
+    let minDelayTimer = 0;
+    let fallbackTimer = 0;
+    let revealStarted = false;
+    let minDelayDone = false;
+    let pageReady = false;
+    let gifReady = false;
 
     const beginReveal = () => {
+      if (revealStarted) return;
+      revealStarted = true;
       setIsLoaderFading(true);
       hideLoaderTimer = window.setTimeout(() => {
         setIsLaunchLoading(false);
       }, 700);
     };
 
-    const fallbackTimer = window.setTimeout(() => {
+    const tryReveal = () => {
+      if (minDelayDone && pageReady && gifReady) {
+        beginReveal();
+      }
+    };
+
+    minDelayTimer = window.setTimeout(() => {
+      minDelayDone = true;
+      tryReveal();
+    }, 700);
+
+    fallbackTimer = window.setTimeout(() => {
       beginReveal();
-    }, 7000);
+    }, 9000);
 
     const finishLoading = () => {
-      revealTimer = window.setTimeout(() => {
-        beginReveal();
-      }, 150);
+      pageReady = true;
+      revealTimer = window.setTimeout(tryReveal, 50);
     };
 
     if (document.readyState === 'complete') {
@@ -60,24 +89,52 @@ export default function App() {
       window.addEventListener('load', finishLoading, { once: true });
     }
 
+    const gifImage = new Image();
+    gifImage.src = asmegif;
+    if (gifImage.complete) {
+      gifReady = true;
+      tryReveal();
+    } else {
+      gifImage.onload = () => {
+        gifReady = true;
+        tryReveal();
+      };
+      gifImage.onerror = () => {
+        gifReady = true;
+        tryReveal();
+      };
+    }
+
     return () => {
       window.clearTimeout(fallbackTimer);
+      window.clearTimeout(minDelayTimer);
       window.clearTimeout(revealTimer);
       window.clearTimeout(hideLoaderTimer);
       window.removeEventListener('load', finishLoading);
     };
   }, []);
 
+  useEffect(() => {
+    window.localStorage.setItem(PREVIEW_MODE_STORAGE_KEY, String(isPreviewMode));
+  }, [isPreviewMode]);
+
   return (
     <>
       <div className={`transition-opacity duration-700 ease-out ${isLaunchLoading && !isLoaderFading ? 'opacity-0' : 'opacity-100'}`}>
         <BrowserRouter>
+          <button
+            type="button"
+            onClick={() => setIsPreviewMode((current) => !current)}
+            className="fixed bottom-4 right-4 z-[1000] rounded-full border border-black/15 bg-white/95 px-4 py-2 font-helvetica text-xs font-semibold uppercase tracking-[0.08em] text-gray-800 shadow-lg backdrop-blur"
+          >
+            {isPreviewMode ? 'Preview Mode: On' : 'Under Construction: On'}
+          </button>
           <Routes>
             <Route path="/" element={<FrontPage />} />
             <Route path="/links" element={<Links />} />
-            <Route path="/board" element={<DefaultPage />} />
-            <Route path="/events" element={<DefaultPage />} />
-            <Route path="/yearbook" element={<DefaultPage />} />
+            <Route path="/board" element={isPreviewMode ? <Board /> : <DefaultPage />} />
+            <Route path="/events" element={isPreviewMode ? <Events /> : <DefaultPage />} />
+            <Route path="/yearbook" element={isPreviewMode ? <Yearbook /> : <DefaultPage />} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>

@@ -41,8 +41,8 @@ function Links(){
                         <Reveal width="100%">
                             <LinkCard 
                                 title="ASME Bonfire RSVP Form" 
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSdlhmjxlu0E_bZL0atmfvWcsdaMdb4P25DE5ywbI15taehQ-Q/viewform?usp=sharing&ouid=107393905385394424504" 
-                                description="Join us for a fun bonfire and hang out with friends!"
+                                href="https://forms.gle/Jttruh5zavgHhbWy7" 
+                                description="Join us for a fun evening at the beach! We will have volleyball, pizza, and s'mores :D"
                             />
                         </Reveal>
 
