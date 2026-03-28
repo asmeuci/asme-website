@@ -6,6 +6,7 @@ import Board from './pages/Board';
 import Events from './pages/Events';
 import Yearbook from './pages/Yearbook';
 import asmegif from '@/assets/site/loading.gif';
+import Peterworks from './pages/Peterworks';
 
 const PREVIEW_MODE_STORAGE_KEY = 'asme-preview-mode';
 const isDev = import.meta.env.DEV;
@@ -132,6 +133,7 @@ export default function App() {
             <Route path="/board" element={isPreviewMode ? <Board /> : <DefaultPage />} />
             <Route path="/events" element={isPreviewMode ? <Events /> : <DefaultPage />} />
             <Route path="/yearbook" element={isPreviewMode ? <Yearbook /> : <DefaultPage />} />
+            <Route path="/peterworks" element={isPreviewMode ? <Peterworks /> : <DefaultPage />} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>

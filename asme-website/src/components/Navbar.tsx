@@ -1,14 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Reveal } from "./Reveal";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "./ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger,navigationMenuTriggerStyle,} from "./ui/navigation-menu";
 
 function Navbar() {
   return (
@@ -34,8 +26,8 @@ function Navbar() {
                   <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link to="/about" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
-                          Our Mission
+                        <Link to="/peterworks" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Peterworks
                         </Link>
                       </NavigationMenuLink>
                     </li>
