@@ -9,14 +9,29 @@ function Footer() {
             </p>
           </div>
           <div className="flex flex-row gap-x-8 order-1 md:order-2">
-            <a href="#" className="tracking-wide transition-colors duration-200">
+            <a
+              href="https://www.instagram.com/asmeatuci/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-wide transition-colors duration-200"
+            >
               Instagram
             </a>
-            <a href="#" className="tracking-wide transition-colors duration-200">
+            <a
+              href="https://www.linkedin.com/company/asme-uci/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-wide transition-colors duration-200"
+            >
               LinkedIn
             </a>
-            <a href="#" className="tracking-wide transition-colors duration-200">
-              idk help
+            <a
+              href="https://discord.gg/vDNnTcwTt6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-wide transition-colors duration-200"
+            >
+              Discord
             </a>
           </div>
 
