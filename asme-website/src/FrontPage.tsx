@@ -48,14 +48,14 @@ const projectsData: EventItem[] = [
   {
     title: "HPVC",
     date: "Jan 21 • 5 - 8 PM",
-    description: "Come to learn about the multitude of researh topics...",
+    description: "E-HPVC (Electric Human Powered Vehicle Challenge) is an annual collegiate engineering competition that’s designed to showcase student innovation, teamwork, and technical excellence. The event unites university teams from across the US to design, build, and race electric human-powered vehicles. The competition culminates in a series of dynamic challenges including design, drag, and endurance events. Student-lead teams directly compete against one another in various categories racking up points. The points earned from presentations and track events contribute to each team’s overall score, determining the winners of the competition.",
     image: hpvc,
     tag: "Event"
   },
   {
     title: "Peterworks",
     date: "Jan 21 • 5 - 8 PM",
-    description: "Come to learn about the multitude of researh topics...",
+    description: "PeterWorks is an application based SolidWorks and CAD development program designed to introduce students to 3D modeling and engineering design. Spanning Winter and Spring quarters, participants first learn core CAD skills such as part modeling, assemblies, simulations, and technical drawings, then apply those skills through hands-on fabrication by building a drone in teams. Open to all majors, the program emphasizes practical learning, collaboration, and industry-relevant skills, and was recognized with the “Best Program” award by UCI’s Engineering Student Council for two consecutive years.",
     image: peterworks,
     tag: "Event"
   },
