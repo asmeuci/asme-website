@@ -34,7 +34,7 @@ function Links(){
                             <LinkCard 
                                 title="Formula Drift S26 Student RSVP" 
                                 href="https://forms.gle/RTMP6P2cmrsJhVADA" 
-                                description={`Hi there Anteaters! Forsberg Racing along with their competition car, Papadakis Racing along with their competition car, Odi Bakchis (driver), and Kevin Wells (competition director), will discuss their path into racing / Formula Drift and showcase their cars! Also there will be time at the end for food and open networking with the FD reps!`}
+                                description={`Hi there Anteaters! Rome Charpinter along with his competition car, Papadakis Racing along with their competition car, Odi Bakchis (driver), and Kevin Wells (competition director), will discuss their path into racing / Formula Drift and showcase their cars! Also there will be time at the end for FREE food and open networking with the FD reps!`}
                             />
                         </Reveal>
 

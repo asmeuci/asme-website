@@ -3,7 +3,7 @@ import rnn from '@/assets/home/event-rnn.jpg';
 import sdnn from '@/assets/home/event-sdnn.jpg';
 import network from '@/assets/home/event-network.jpg';
 import hpvc from '@/assets/home/project-hpvc.jpg';
-
+import peterworks from '@/assets/home/project-peterworks.jpg';
 import './index.css';
 import EventCard from './components/EventCard';
 import BentoGallery from './components/BentoGallery';
@@ -23,22 +23,22 @@ interface EventItem {
 const eventsData: EventItem[] = [
   {
     title: "Research Network Night",
-    date: "Jan 21 • 5 - 8 PM",
-    description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
+    date: "",
+    description: "Learn about research labs at UCI and what research is conducted. Connect with professors and graduate students to get the inside scoop of their work (and possibly help get into research)!",
     image: rnn,
     tag: "Event"
   },
   {
     title: "Senior Design Networking Night",
-    date: "Jan 21 • 5 - 8 PM",
-    description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
+    date: "",
+    description: "~14 design projects at UCI are invited to present about their project and network with students. Getting more face time with management and members of project can help when applying!",
     image: sdnn,
     tag: "Event"
   },
   {
     title: "Network with ASME",
-    date: "Jan 21 • 5 - 8 PM",
-    description: "Come to learn about the multitude of researh topics from the Engineering faculty...",
+    date: "",
+    description: "Banquet-style dinner networking event where company representatives invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
     image: network,
     tag: "Event"
   },
@@ -56,7 +56,7 @@ const projectsData: EventItem[] = [
     title: "Peterworks",
     date: "Jan 21 • 5 - 8 PM",
     description: "Come to learn about the multitude of researh topics...",
-    image: hpvc,
+    image: peterworks,
     tag: "Event"
   },
 ];

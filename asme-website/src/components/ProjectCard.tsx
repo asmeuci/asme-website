@@ -17,11 +17,13 @@ function ProjectCard({event} : ProjectCardProps) {
     <Link to="/coming-soon" className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
       
       <div className="p-6">
-        <img 
-          src={event.image} 
-          alt={event.title} 
-          className="w-full h-auto rounded-xl object-cover opacity-95 " 
-        />
+        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
+          <img
+            src={event.image}
+            alt={event.title}
+            className="absolute inset-0 w-full h-full object-cover opacity-95"
+          />
+        </div>
       </div>
 
       <div className="flex-1 px-8 pb-8 pt-2 flex flex-col">        
