@@ -4,6 +4,7 @@ import FrontPage from './FrontPage';
 import Links from './pages/Links';
 import asmegif from '@/assets/site/loading.gif';
 import Board from './pages/Board';
+import Peterworks from './pages/Peterworks';
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -110,7 +111,7 @@ export default function App() {
             <Route path="/board" element={<Board/> } />
             <Route path="/events" element={<DefaultPage />} />
             <Route path="/yearbook" element={<DefaultPage />} />
-            <Route path="/peterworks" element={<DefaultPage />} />
+            <Route path="/peterworks" element={<Peterworks />} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>

@@ -6,6 +6,7 @@ interface EventItem {
   description: string;
   image: string; 
   tag: string;
+  href?: string;
 }
 
 interface ProjectCardProps {
@@ -13,9 +14,10 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({event} : ProjectCardProps) {
-  return (
-    <Link to="/coming-soon" className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
-      
+  const isExternalHref = Boolean(event.href && /^https?:\/\//i.test(event.href));
+
+  const cardContent = (
+    <>
       <div className="p-6">
         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
           <img
@@ -42,7 +44,33 @@ function ProjectCard({event} : ProjectCardProps) {
         </div>
 
       </div>
+    </>
+  );
 
+  if (event.href && isExternalHref) {
+    return (
+      <a
+        href={event.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden"
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  if (event.href) {
+    return (
+      <Link to={event.href} className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <Link to="/coming-soon" className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
+      {cardContent}
     </Link>
   );
 

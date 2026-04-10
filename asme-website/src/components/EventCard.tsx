@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 interface EventItem {
   title: string;
   date: string;
@@ -15,8 +13,7 @@ interface EventCardProps {
 
 function EventCard({event, isReversed} : EventCardProps){
   return (
-    <Link
-      to="/coming-soon"
+    <article
       className={`font-helvetica group block flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300`}
     >
       
@@ -50,7 +47,7 @@ function EventCard({event, isReversed} : EventCardProps){
         </div>
       </div>
 
-    </Link>
+    </article>
   );
 }
 
