@@ -21,7 +21,7 @@ const highlights = [
 function Peterworks() {
   return (
     <Layout>
-      <div className="min-h-screen bg-[#f1f0ea] pt-20 md:pt-28">
+      <div className="min-h-screen bg-[#f1f0ea] pt-16 md:pt-24">
         <Section className="bg-transparent py-0">
           <div className="container mx-auto">
             <h1 className="p-10 text-center font-helvetica text-4xl md:text-6xl lg:text-7xl">
@@ -30,7 +30,7 @@ function Peterworks() {
           </div>
         </Section>
 
-        <Section className="bg-transparent pt-4 pb-14 md:pb-20">
+        <Section className="bg-transparent pt-4 pb-24 md:pb-32">
           <div className="mt-auto border-t-[0.5px] border-zinc-700 pt-4" />
 
           <p className="pt-2 font-helvetica text-xs uppercase tracking-[0.16em] md:text-sm">

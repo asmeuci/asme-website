@@ -1,84 +1,61 @@
-import Section from "../components/Section"
-import Layout from "../components/Layout"
-//import asmeimg from '../assets/pngver.png';
-import { Reveal } from '../components/Reveal';
-//import { InstagramEmbed } from 'react-social-media-embed';
+import Layout from "../components/Layout";
+import Section from "../components/Section";
+import { Reveal } from "../components/Reveal";
 
-const postData = [
-  { id: 1, title: "RNN", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
-  { id: 2, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
-  { id: 3, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
-  { id: 4, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 5, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 6, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 7, title: "Post 1", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 8, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 9, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 10, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 11, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 12, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 13, title: "Post 1", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 14, title: "Post 2", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 15, title: "Post 3", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 16, title: "Post 4", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 17, title: "Post 5", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
-  { id: 18, title: "Post 6", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg" },
+const postLinks = [
+  "https://www.instagram.com/p/DW0Q3sLlNFv/",
+  "https://www.instagram.com/p/DW77QwhioYp/",
+  "https://www.instagram.com/p/DW5FkAYFGRS/",
+  "https://www.instagram.com/p/DW2jqT5qS1g/",
+  "https://www.instagram.com/p/DWy7pwgii3Y/",
+  "https://www.instagram.com/p/DWxs7edCk2u/",
 ];
 
-function Events(){
-    return(
-        <Layout>
-            {/* 3x2 */ }
-           <Section className="bg-[#f1f0ea]">
-                <div className="container mx-auto">
-                    <h1 className="flex justify-center font-helvetica text-[40px] p-20 "> Recent Posts </h1>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#f1f0ea]"> {/* //padding to separate the top from middle and bottom */}
-                        {postData.slice(6,12).map((post, index) => (
-                            <Reveal key={index} width="100%">
-                            <div className="mx-auto max-w-fit border flex items-center justify-center bg-blue-100">
-                                <a
-                                    href={post.link}
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src={post.image}    
-                                        alt={post.title}/>
-                                </a>
-                            </div>
-                            </Reveal>
-                        ))}
-                    </div>
+const EMBED_VISIBLE_HEIGHT = 540;
+const EMBED_TOP_CROP = 58;
+const EMBED_BOTTOM_CROP = 76;
+const EMBED_TOTAL_HEIGHT =
+  EMBED_VISIBLE_HEIGHT + EMBED_TOP_CROP + EMBED_BOTTOM_CROP;
+
+function toEmbedUrl(postUrl: string) {
+  return `${postUrl.replace(/\/$/, "")}/embed`;
+}
+
+function Events() {
+  return (
+    <Layout>
+      <Section className="bg-[#f1f0ea]">
+        <div className="container mx-auto">
+          <h1 className="flex justify-center p-20 font-helvetica text-[40px]">
+            Recent Posts
+          </h1>
+          <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
+            {postLinks.map((postLink) => (
+              <Reveal key={postLink} width="100%">
+                <div
+                  className="relative mx-auto w-full overflow-hidden rounded-xl border border-zinc-200 bg-white"
+                  style={{ height: EMBED_VISIBLE_HEIGHT }}
+                >
+                  <iframe
+                    src={toEmbedUrl(postLink)}
+                    className="absolute left-0 w-full"
+                    style={{
+                      top: -EMBED_TOP_CROP,
+                      height: EMBED_TOTAL_HEIGHT,
+                    }}
+                    loading="lazy"
+                    scrolling="no"
+                    allow="encrypted-media"
+                    title={`Instagram post ${postLink}`}
+                  />
                 </div>
-                
-            </Section>
-        </Layout>
-    )
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </Section>
+    </Layout>
+  );
 }
 
 export default Events;
-
-
-
-
-/* 
-6x1 grid
-<div className="grid grid-cols-6 gap-6 bg-[#f1f0ea]"> 
-    {postData.slice(12,18).map((post, index) => (
-        <Reveal key={index} width="100%">
-        <div className="aspect-[4/5] border flex items-center justify-center bg-blue-100">
-            <a
-                href={post.link}
-                target="_blank" 
-                rel="noopener noreferrer">
-                <img 
-                    src={post.image}
-                    alt={post.title}/>
-            </a>
-        </div>
-        </Reveal>
-    ))}
-</div>
-
-*/
-
-
