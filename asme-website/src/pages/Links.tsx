@@ -23,6 +23,29 @@ function Links(){
                     
                     <div className="flex flex-col space-y-5">
 
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="Nuclear Reactor Tour" 
+                                href="https://forms.gle/57fRq6iZ4ZsHFsZr8" 
+                                description="Join ASME at UCI for an exclusive, behind-the-scenes look at the UCI Nuclear Reactor Facility! This is a rare opportunity to see a functioning Mark I TRIGA reactor and learn about the mechanical engineering and safety systems required to maintain a nuclear research environment."
+                            />
+                        </Reveal>
+                        
+
+                         <Reveal width="100%">
+                            <LinkCard 
+                                title="ASME x Rocket Project Liquids Lab Tours" 
+                                href="https://forms.gle/X8yRGuVJ2Y5SfWUMA" 
+                                description="Thank you for your interest in applying for Rocket Project Liquids for the upcoming academic school year! Please fill out this form to RSVP for a lab tour.
+
+Once we have received responses from those interested, we will reach back out to you via email to let you know what timeslot you have been assigned to based on your preferences.
+
+To learn more about our team, visit https://www.rocket.eng.uci.edu/.
+
+If you have additional questions, please contact us at ucirocketprojectteam@gmail.com. 
+"
+                            />
+                        </Reveal>
 
                         <Reveal width="100%">
                             <LinkCard 
@@ -31,22 +54,6 @@ function Links(){
                                 description="Hello Anteaters! ASME At UCI is excited to invite you all to our annual Senior Design Networking Night! We ask that you fill this form out by Saturday, 4/21/26 by 11:59 PM. Please review the following details carefully before completing the form:"
                             />
                         </Reveal>
-
-
-                        <Reveal width="100%">
-                            <LinkCard 
-                                title="ASME x HyperXite Lab Tours" 
-                                href="https://forms.gle/AuVSkGxR1ddCyZnG9" 
-                                description="Thank you for your interest in applying for HyperXite for the upcoming academic school year! Please fill out this form to RSVP for a lab tour.
-
-Once we have received responses from those interested, we will reach back out to you via email to let you know what timeslot you have been assigned to based on your preferences.
-
-To learn more about our team, visit http://www.hyperxite.com/.
-If you have additional questions, please contact us at ucihyperxite@gmail.com.
-"
-                            />
-                        </Reveal>
-
 
                     </div>
                 </Section>
