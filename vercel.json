@@ -1,0 +1,11 @@
+{
+  "installCommand": "npm --prefix asme-website ci",
+  "buildCommand": "npm --prefix asme-website run build",
+  "outputDirectory": "asme-website/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "npm --prefix asme-website run dev",
+    "build": "npm --prefix asme-website run build",
+    "lint": "npm --prefix asme-website run lint",
+    "preview": "npm --prefix asme-website run preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "react-social-media-embed": "^2.5.18"
+  }
+}
