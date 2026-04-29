@@ -15,40 +15,20 @@ const portraitModules = import.meta.glob(
   { eager: true, import: "default" }
 ) as Record<string, string>;
 
-const normalizeMemberKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
-
 const portraitsByName = Object.entries(portraitModules).reduce<Record<string, string>>((acc, [path, imageUrl]) => {
   const filename = path.split("/").pop() ?? "";
   const basename = filename.replace(/\.[^.]+$/, "");
-  acc[normalizeMemberKey(basename)] = imageUrl;
+  acc[basename] = imageUrl;
   return acc;
 }, {});
 
-const portraitAliases: Record<string, string> = {
-  abhinaavbalaji: "ahbinaavbalaji",
-  mattshanahan: "matthewshanahan",
-  josephgutierrez: "josephguiterrez",
-  colintangkhoang: "colinkhoang",
-};
-
 const resolvePortrait = (memberName: string, fallbackImage: string) => {
-  const normalizedName = normalizeMemberKey(memberName);
-  const aliasKey = portraitAliases[normalizedName];
-
-  if (portraitsByName[normalizedName]) {
-    return portraitsByName[normalizedName];
-  }
-
-  if (aliasKey && portraitsByName[aliasKey]) {
-    return portraitsByName[aliasKey];
-  }
-
-  return fallbackImage;
+  const filenameKey = memberName.replace(/\s+/g, "_");
+  return portraitsByName[filenameKey] ?? fallbackImage;
 };
 
 const placeholderHeadshot =
   "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g";
-const placeholderLinkedin = "https://www.linkedin.com/school/university-of-california-irvine/";
 
 const boardCommittees2026_2027: BoardCommittee[] = [
   {
@@ -63,8 +43,9 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     title: "Externals",
     members: [
       { name: "Nicholas DiDonato", role: "External Affairs Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/nicholasddidonato/" },
-      { name: "Brian Van", role: "Industry Relations Chair", image: placeholderHeadshot, linkedin: placeholderLinkedin },
       { name: "Meera Sambhwani", role: "Networking Events Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/meera-sambhwani-a95bb0256/" },
+      { name: "Anika Sharma", role: "Youth Engagement Chair", image: placeholderHeadshot, linkedin: " https://www.linkedin.com/in/anika-sharma25" },
+      { name: "Alex Tajbakhsh", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/alextajbakhsh/" },
       { name: "Abhinaav Balaji", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/abhinaav-balaji/" },
       { name: "Brian Truong", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/brian-truong-7036a3324/" },
    
@@ -77,6 +58,8 @@ const boardCommittees2026_2027: BoardCommittee[] = [
       { name: "Ananya Ganti", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/ananya-ganti1" },
       { name: "Abigail Baldwin", role: "General Events Chair", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/baldwin-abigail" },
       { name: "Caidon Purificacion", role: "Campus Events Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/caidon-purificacion-2b2385279" },
+      { name: "Audrey Gin", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/audreygin" },
+      { name: "Zexian Wang", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/zexian-wang-039380389/" },
       { name: "Madison Bui", role: "Committee Member", image: placeholderHeadshot, linkedin: "linkedin.com/in/madison-bui-5a2906349"},
     ],
   },
@@ -85,11 +68,12 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     members: [
       { name: "Vayuna Pradhan", role: "Communications Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/vayunapradhan" },
       { name: "Matt Shanahan", role: "Platform Manager Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/matthew-p-shanahan-95448137b/" },
-      { name: "Alice Wu", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/alice-wu-8a748a3a7/" },
       { name: "Bronton Dieu", role: "Webmaster", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/bronton-dieu/" },
       { name: "Tei Park", role: "Historian", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/tei-park-bb9174389" },
       { name: "Angelina Xie", role: "Social Media Engagement Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/angelina-xie/" },
       { name: "Travis Le", role: "Film Media Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/travis-le-uci/" },
+      { name: "Alice Wu", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/alice-wu-8a748a3a7/" },
+      { name: "Kaitlin Otsuka", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/kaitlin-otsuka-7a805827a/" },
       { name: "Joseph Gutierrez", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/josephagutierrez" },
     ],
   },
@@ -105,6 +89,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
   {
     title: "Student Outreach",
     members: [
+      { name: "Katie Schmitz", role: "Student Outreach Director ", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/katie-schmitz-893308331/" },
       { name: "Colin Tang Khoang", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/colin-khoang-10b933366/" },
       { name: "Sarah McClelland", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
     ],
