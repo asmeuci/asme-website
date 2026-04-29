@@ -55,12 +55,12 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     title: "Internal",
     members: [
       { name: "Aashika Ansu", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/aashika-ansu/" },
-      { name: "Ananya Ganti", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/ananya-ganti1" },
-      { name: "Abigail Baldwin", role: "General Events Chair", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/baldwin-abigail" },
+      { name: "Ananya Ganti", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/ananya-ganti1" },
+      { name: "Abigail Baldwin", role: "General Events Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/baldwin-abigail" },
       { name: "Caidon Purificacion", role: "Campus Events Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/caidon-purificacion-2b2385279" },
       { name: "Audrey Gin", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/audreygin" },
       { name: "Zexian Wang", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/zexian-wang-039380389/" },
-      { name: "Madison Bui", role: "Committee Member", image: placeholderHeadshot, linkedin: "linkedin.com/in/madison-bui-5a2906349"},
+      { name: "Madison Bui", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://linkedin.com/in/madison-bui-5a2906349"},
     ],
   },
   {

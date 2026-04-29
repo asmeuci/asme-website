@@ -1,4 +1,5 @@
 import boardHero from "@/assets/site/board-hero.jpg";
+import boardHero2026_2027 from "@/assets/board-group-photos/26-27_Group_Photos/Board.jpeg";
 import boardCommittees from "@/model/BoardMembers";
 import boardGroupPhotos from "@/model/BoardGroupPhotos";
 import boardCommittees2026_2027 from "@/model/BoardMembers2026_2027";
@@ -59,7 +60,7 @@ export const boardYears: BoardYear[] = [
   {
     id: "2026-2027",
     label: "2026-2027",
-    heroImage: boardHero,
+    heroImage: boardHero2026_2027,
     committees: buildCommitteesWithPhotos(boardCommittees2026_2027, boardGroupPhotos2026_2027),
   },
 ];
