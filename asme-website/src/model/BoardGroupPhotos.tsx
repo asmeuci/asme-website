@@ -23,7 +23,7 @@ const boardGroupPhotos: BoardCommittee[] = [
         photoURL : externals
     },
     {
-        title : "Internal",
+        title : "Internals",
         photoURL : internals
     },
     {

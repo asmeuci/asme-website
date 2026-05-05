@@ -52,7 +52,7 @@ const boardCommitte: BoardCommittee[] = [
     ],
   },
   {
-    title: "Internal",
+    title: "Internals",
     members: [
       { name: "Abby Baldwin", role: "Internal Affairs Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E", linkedin : "https://www.linkedin.com/in/baldwin-abigail/"},
       { name: "Meera Sambhwani", role: "Internal Affairs Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g", linkedin : "https://www.linkedin.com/in/meera-sambhwani-a95bb0256/"},

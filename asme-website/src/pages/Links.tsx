@@ -12,7 +12,7 @@ function Links(){
             {/* Added pt-32 so the content starts below the absolute Navbar */}
             <div className="min-h-screen bg-[#f1f0ea] pt-14 pb-10 space-y-2 md:space-y-4 md:pt-40">
                 
-                {/* RSPV Section*/}
+                {/* RSVP Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
                         <div className="flex flex-col space-y-2">
@@ -25,33 +25,10 @@ function Links(){
 
                         <Reveal width="100%">
                             <LinkCard 
-                                title="Nuclear Reactor Tour" 
-                                href="https://forms.gle/57fRq6iZ4ZsHFsZr8" 
-                                description="Join ASME at UCI for an exclusive, behind-the-scenes look at the UCI Nuclear Reactor Facility! This is a rare opportunity to see a functioning Mark I TRIGA reactor and learn about the mechanical engineering and safety systems required to maintain a nuclear research environment."
-                            />
-                        </Reveal>
-                        
-
-                         <Reveal width="100%">
-                            <LinkCard 
-                                title="ASME x Rocket Project Liquids Lab Tours" 
-                                href="https://forms.gle/X8yRGuVJ2Y5SfWUMA" 
-                                description="Thank you for your interest in applying for Rocket Project Liquids for the upcoming academic school year! Please fill out this form to RSVP for a lab tour.
-
-Once we have received responses from those interested, we will reach back out to you via email to let you know what timeslot you have been assigned to based on your preferences.
-
-To learn more about our team, visit https://www.rocket.eng.uci.edu/.
-
-If you have additional questions, please contact us at ucirocketprojectteam@gmail.com. 
-"
-                            />
-                        </Reveal>
-
-                        <Reveal width="100%">
-                            <LinkCard 
-                                title="ASME At UCI Senior Design Networking Night RSVP" 
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSeDUsNFNE5d1Ag2XP47nPZSnn4R-v7RZ_-25rZQGoOLGxIaDA/viewform?usp=publish-editor" 
-                                description="Hello Anteaters! ASME At UCI is excited to invite you all to our annual Senior Design Networking Night! We ask that you fill this form out by Saturday, 4/21/26 by 11:59 PM. Please review the following details carefully before completing the form:"
+                                title="AIAA x ASME Dave and Buster's Power Card and Ride Form"    
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfEprGziv36CpQnhKrsrGPQnBL1qokWTG1EzHhyjoAnPb8Lqg/viewform?pli=1&pli=1" 
+                                description="Join AIAA x ASME for a fun night at Dave and Buster's at Irvine Spectrum! Buy a $10 or $20 Power Card and support future events, workshops, and socials! Power Cards purchases
+                                are due May 5th, so don't miss out!"
                             />
                         </Reveal>
 

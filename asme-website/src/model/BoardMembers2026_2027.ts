@@ -52,7 +52,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     ],
   },
   {
-    title: "Internal",
+    title: "Internals",
     members: [
       { name: "Aashika Ansu", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/aashika-ansu/" },
       { name: "Ananya Ganti", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/ananya-ganti1" },
@@ -67,9 +67,9 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     title: "Communications",
     members: [
       { name: "Vayuna Pradhan", role: "Communications Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/vayunapradhan" },
-      { name: "Matt Shanahan", role: "Platform Manager Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/matthew-p-shanahan-95448137b/" },
+      { name: "Matt Shanahan", role: "Platform Manager Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/matthew-shanahan-95448137b/" },
       { name: "Bronton Dieu", role: "Webmaster", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/bronton-dieu/" },
-      { name: "Tei Park", role: "Historian", image: placeholderHeadshot, linkedin: "www.linkedin.com/in/tei-park-bb9174389" },
+      { name: "Tei Park", role: "Historian", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/tei-park-bb9174389" },
       { name: "Angelina Xie", role: "Social Media Engagement Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/angelina-xie/" },
       { name: "Travis Le", role: "Film Media Chair", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/travis-le-uci/" },
       { name: "Alice Wu", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/alice-wu-8a748a3a7/" },
@@ -97,7 +97,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
   {
     title: "Peterworks",
     members: [
-      { name: "Sarah McClelland", role: "Peterworks TA", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
+      { name: "Sarah McClelland", role: "Peterworks Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
     ],
   },
 ];
