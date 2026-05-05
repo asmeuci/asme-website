@@ -23,15 +23,6 @@ function Links(){
                     
                     <div className="flex flex-col space-y-5">
 
-                        <Reveal width="100%">
-                            <LinkCard 
-                                title="AIAA x ASME Dave and Buster's Power Card and Ride Form"    
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfEprGziv36CpQnhKrsrGPQnBL1qokWTG1EzHhyjoAnPb8Lqg/viewform?pli=1&pli=1" 
-                                description="Join AIAA x ASME for a fun night at Dave and Buster's at Irvine Spectrum! Buy a $10 or $20 Power Card and support future events, workshops, and socials! Power Cards purchases
-                                are due May 5th, so don't miss out!"
-                            />
-                        </Reveal>
-
                     </div>
                 </Section>
 
