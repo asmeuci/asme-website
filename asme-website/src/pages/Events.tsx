@@ -3,12 +3,12 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
-  "https://www.instagram.com/p/DW0Q3sLlNFv/",
-  "https://www.instagram.com/p/DW77QwhioYp/",
-  "https://www.instagram.com/p/DW5FkAYFGRS/",
-  "https://www.instagram.com/p/DW2jqT5qS1g/",
-  "https://www.instagram.com/p/DWy7pwgii3Y/",
-  "https://www.instagram.com/p/DWxs7edCk2u/",
+  "https://www.instagram.com/p/DX5peXxlMJx/",
+  "https://www.instagram.com/p/DX5qETMlNpa/",
+  "https://www.instagram.com/p/DX3LXVxFABT/",
+  "https://www.instagram.com/p/DXnb1W_gSL7/",
+  "https://www.instagram.com/p/DXnaLL7gWV_/",
+  "https://www.instagram.com/p/DXkp47zgSq0/",
 ];
 
 const EMBED_TOP_CROP = 58;

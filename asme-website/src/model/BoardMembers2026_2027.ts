@@ -52,7 +52,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     ],
   },
   {
-    title: "Internal",
+    title: "Internals",
     members: [
       { name: "Aashika Ansu", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/aashika-ansu/" },
       { name: "Ananya Ganti", role: "Internal Affairs Co-Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/ananya-ganti1" },

@@ -13,7 +13,7 @@ interface BoardGroupPhoto {
 const boardGroupPhotos2026_2027: BoardGroupPhoto[] = [
   { title: "Executive", photoURL: exec },
   { title: "Externals", photoURL: externals },
-  { title: "Internal", photoURL: internals },
+  { title: "Internals", photoURL: internals },
   { title: "Communications", photoURL: comms },
   { title: "Finance", photoURL: finance },
   { title: "Student Outreach", photoURL: outreach },
