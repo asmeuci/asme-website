@@ -38,6 +38,13 @@ function Navbar() {
                         </Link>
                       </NavigationMenuLink>
                     </li>
+                                        <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/sponsors" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Sponsors
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>

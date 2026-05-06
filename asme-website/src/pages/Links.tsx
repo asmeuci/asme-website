@@ -12,7 +12,7 @@ function Links(){
             {/* Added pt-32 so the content starts below the absolute Navbar */}
             <div className="min-h-screen bg-[#f1f0ea] pt-14 pb-10 space-y-2 md:space-y-4 md:pt-40">
                 
-                {/* RSPV Section*/}
+                {/* RSVP Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
                         <div className="flex flex-col space-y-2">
