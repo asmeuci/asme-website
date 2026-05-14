@@ -2,17 +2,6 @@ import { useMemo, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import eventRnn from "@/assets/home/event-rnn.jpg";
-import eventSdnn from "@/assets/home/event-sdnn.jpg";
-import eventNetwork from "@/assets/home/event-network.jpg";
-import projectHpvc from "@/assets/home/project-hpvc.jpg";
-import projectPeterworks from "@/assets/home/project-peterworks.jpg";
-import bentoMain from "@/assets/home/bento-main.jpg";
-import bentoMid from "@/assets/home/bento-mid.jpg";
-import bentoMidRight from "@/assets/home/bento-mid-right.jpg";
-import bentoTopRight from "@/assets/home/bento-top-right.jpg";
-import bentoBottomWide from "@/assets/home/bento-bottom-wide.jpg";
-import bentoAccent from "@/assets/home/bento-accent.jpg";
 
 type FolderTone = "accent" | "light" | "dark";
 type PreviewAlign = "left" | "center" | "right";
@@ -134,14 +123,76 @@ const rows: FolderConfig[][] = [
 
 const mobileFolders = rows.flat();
 
-const folderPreviewPhotos: Record<string, string[]> = {
-  "01": [eventRnn, projectHpvc, bentoMain],
-  "02": [eventSdnn, bentoTopRight, bentoMid],
-  "03": [eventNetwork, bentoAccent, bentoMidRight],
-  "04": [projectPeterworks, eventRnn, bentoBottomWide],
-  "05": [projectHpvc, eventSdnn, bentoTopRight],
-  "06": [bentoMain, eventNetwork, bentoMid],
-};
+const YEARBOOK_IMAGE_MODULES = import.meta.glob(
+  "/src/assets/yearbook/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}",
+  { eager: true, import: "default" }
+) as Record<string, string>;
+
+function buildSectionPreviewPhotos() {
+  const groupedBySection = new Map<string, Map<string, string[]>>();
+
+  Object.entries(YEARBOOK_IMAGE_MODULES).forEach(([path, src]) => {
+    const relativePath = path.split("/yearbook/")[1];
+    if (!relativePath) {
+      return;
+    }
+
+    const parts = relativePath.split("/");
+    if (parts.length < 3) {
+      return;
+    }
+
+    const sectionKey = parts[0].trim().toLowerCase();
+    const eventKey = parts[1].trim().toLowerCase();
+    if (!groupedBySection.has(sectionKey)) {
+      groupedBySection.set(sectionKey, new Map());
+    }
+
+    const events = groupedBySection.get(sectionKey);
+    if (!events) {
+      return;
+    }
+
+    const existing = events.get(eventKey) ?? [];
+    existing.push(src);
+    events.set(eventKey, existing);
+  });
+
+  const previews: Record<string, string[]> = {};
+  rows.flat().forEach((folder) => {
+    const sectionEvents = groupedBySection.get(folder.slug);
+    if (!sectionEvents) {
+      previews[folder.id] = [];
+      return;
+    }
+
+    const eventEntries = Array.from(sectionEvents.entries())
+      .map(([eventName, photos]) => ({
+        eventName,
+        photos: photos.slice().sort((a, b) => a.localeCompare(b)),
+      }))
+      .sort((a, b) => a.eventName.localeCompare(b.eventName));
+
+    const onePerEvent = eventEntries
+      .map((event) => event.photos[0])
+      .filter((photo): photo is string => Boolean(photo));
+    const allPhotos = eventEntries.flatMap((event) => event.photos);
+    const combined = [...onePerEvent, ...allPhotos];
+
+    const uniqueTopThree: string[] = [];
+    combined.forEach((photo) => {
+      if (uniqueTopThree.length < 3 && !uniqueTopThree.includes(photo)) {
+        uniqueTopThree.push(photo);
+      }
+    });
+
+    previews[folder.id] = uniqueTopThree;
+  });
+
+  return previews;
+}
+
+const folderPreviewPhotos = buildSectionPreviewPhotos();
 
 function FolderStrip({
   folder,
@@ -180,7 +231,7 @@ function FolderStrip({
 
   const cardX = [0, 118, 236];
   const cardRotate = [-7, -1.5, 5.5];
-  const previewPhotos = folderPreviewPhotos[folder.id] ?? folderPreviewPhotos["01"];
+  const previewPhotos = folderPreviewPhotos[folder.id] ?? [];
 
   return (
     <motion.article
