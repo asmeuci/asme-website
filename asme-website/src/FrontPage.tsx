@@ -149,7 +149,7 @@ function FrontPage() {
                 Explore the hands-on engineering challenges our teams are tackling this year.
             </p>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 md:[&>div]:h-full md:[&>div>div]:h-full md:[&>div>div>*]:h-full">
             {projectsData.map((event, index) => (
               <Reveal key={index} width="100%">
                 <ProjectCard 
