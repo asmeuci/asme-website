@@ -3,12 +3,12 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/DYTcfszqbtK/",
+  "https://www.instagram.com/p/DYJXFNEFJH-/",
   "https://www.instagram.com/p/DX-2NnGFDPO/",
-  "https://www.instagram.com/p/DX5peXxlMJx/",
-  "https://www.instagram.com/p/DX5qETMlNpa/",
-  "https://www.instagram.com/p/DX3LXVxFABT/",
-  "https://www.instagram.com/p/DXnb1W_gSL7/",
-  "https://www.instagram.com/p/DXnaLL7gWV_/",
+  "https://www.instagram.com/p/DYLoKJgEpOC/",
+  "https://www.instagram.com/p/DYLhR53ksNa/",
+  "https://www.instagram.com/p/DYGjdxMFB5H/",
 ];
 
 const EMBED_TOP_CROP = 58;
@@ -24,7 +24,7 @@ function Events() {
       <Section className="bg-[#f1f0ea]">
         <div className="container mx-auto">
           <h1 className="flex justify-center p-20 font-helvetica text-[40px]">
-            Recent Posts
+            Recent Instagram Posts
           </h1>
           <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
             {postLinks.map((postLink) => (
