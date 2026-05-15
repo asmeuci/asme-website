@@ -53,7 +53,7 @@ function ProjectCard({event} : ProjectCardProps) {
         href={event.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden"
+        className="font-helvetica group flex h-full flex-col bg-white rounded-2xl overflow-hidden"
       >
         {cardContent}
       </a>
@@ -62,14 +62,14 @@ function ProjectCard({event} : ProjectCardProps) {
 
   if (event.href) {
     return (
-      <Link to={event.href} className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
+      <Link to={event.href} className="font-helvetica group flex h-full flex-col bg-white rounded-2xl overflow-hidden">
         {cardContent}
       </Link>
     );
   }
 
   return (
-    <Link to="/coming-soon" className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden">
+    <Link to="/coming-soon" className="font-helvetica group flex h-full flex-col bg-white rounded-2xl overflow-hidden">
       {cardContent}
     </Link>
   );
