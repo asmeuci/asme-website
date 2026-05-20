@@ -37,8 +37,8 @@ function Sponsors() {
             </p>
             {/* Package Link*/}
             <a 
-            href="https://drive.google.com/file/d/1a4xoQ22yyD3q1cqGiu5wragDKF0gxziq/view"
-            target="_blank" 
+            href="ASME_Sponsorship_Package_26_27.pdf"
+            target="_blank"   
             rel="noopener noreferrer"
             className="flex justify-center font-helvetica text-[30px]">
               <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
