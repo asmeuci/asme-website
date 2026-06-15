@@ -3,15 +3,20 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
-  "https://www.instagram.com/p/DYWIk-aq0Z6/",
-  "https://www.instagram.com/p/DYTcfszqbtK/",
-  "https://www.instagram.com/p/DYd6NJ1KR1V/",
-  "https://www.instagram.com/p/DYJXFNEFJH-/",
-  "https://www.instagram.com/p/DYd5efmFBDx/",
-  "https://www.instagram.com/p/DX-2NnGFDPO/",
+  "https://www.instagram.com/p/DZN6snwSiWd/",
+  "https://www.instagram.com/p/DZBie9VGF0O/",
+  "https://www.instagram.com/p/DZAt4_rmPG_/",
+  "https://www.instagram.com/p/DYvggePGLd_/",
+  "https://www.instagram.com/p/DYvlRrTKH7U/",
+  "https://www.instagram.com/p/DYplfHIqKMG/",
 ];
 
 const linksPost = [
+  {
+    name: "Anteater",
+    image: "LI_posts/anteater.jpg",
+    link: "https://www.linkedin.com/posts/asme-uci_we-are-thrilled-to-announce-that-asme-at-activity-7468789170426212354-x7Wp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
+  },
   {
     name: "SDNN",
     image: "LI_posts/SDNN.jpg",
@@ -21,11 +26,6 @@ const linksPost = [
     name: "AIAA",
     image: "LI_posts/AIAA.jpg",
     link: "https://www.linkedin.com/posts/asme-uci_uci-uciasme-uciaiaa-activity-7457883526752030720-4h2X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
-  },
-  {
-    name: "Pacifica",
-    image: "LI_posts/Pacifica.jpg",
-    link: "https://www.linkedin.com/posts/asme-uci_%F0%9D%90%96%F0%9D%90%A1%F0%9D%90%9E%F0%9D%90%A7-%F0%9D%90%88-%F0%9D%90%B0%F0%9D%90%9A%F0%9D%90%AC-%F0%9D%90%B2%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%9E%F0%9D%90%AB-%F0%9D%90%88-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%9D-activity-7457791361661124610-lp9r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
   },
 ];
 

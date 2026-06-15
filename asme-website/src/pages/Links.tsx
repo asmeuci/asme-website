@@ -24,17 +24,6 @@ function Links(){
                     
                     <div className="flex flex-col space-y-5">
 
-                            <Reveal width="100%">
-                            <LinkCard 
-                                title="ESC x ASME x Zotckets Potluck" 
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSe0BzVS6LwA_nRwj9loWgdgp1Asno8GzCvVfP7Aw_imuWWQCA/viewform" 
-                                description="Take a break from classes and enjoy a fun potluck with ESC, ASME, and Zotckets! Use this form to RSVP to ensure you have a spot by Monday (5/25). Bring your appetite and your favorite dish/item for an evening of food, fun, and great company! 
-
-Date: Week 9 Tuesday (5/26) 
-Location: MDEA 
-Time: 5:00 pm - 7:30 pm "
-                            />
-                        </Reveal>
 
                     </div>
                 </Section>
