@@ -119,7 +119,7 @@ export default function App() {
             <Route path="/yearbook/:section" element={<YearbookSection />} />
             <Route path="/peterworks" element={<Peterworks />} />
             <Route path ="/sponsors" element={<Sponsors/>}/>
-            <Route path="/alumni" element = {<DefaultPage/>}/> 
+            <Route path="/alumni" element = {<Alumni/>}/> 
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>
