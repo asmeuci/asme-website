@@ -12,21 +12,53 @@
 
 @font-face {
   font-family: 'HelveticaNow';
-  src: url('./assets/fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/veti/HelveticaNowDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HelveticaNow';
-  src: url('./assets/fonts/HelveticaNowDisplay-Medium.ttf') format('truetype');
+  src: url('./assets/fonts/veti/HelveticaNowDisplay-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HelveticaNow';
-  src: url('./assets/fonts/HelveticaNowDisplay-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/veti/HelveticaNowDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bangers';
+  src: url('./assets/fonts/Bangers-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aspire';
+  src: url('./assets/fonts/AspireDemibold-YaaO.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HappyMonkey';
+  src: url('./assets/fonts/HappyMonkey.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Scrapbook';
+  src: url('./assets/fonts/PolandCannedIntoKaito-j9OjM.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SugarMaple';
+  src: url('./assets/fonts/SuperMaples-2vR2w.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -38,6 +70,11 @@
 
 @theme {
   --font-helvetica: "HelveticaNow", "sans-serif";
+  --font-bangers: "Bangers", "sans-serif";
+  --font-monkey: "HappyMonkey", "sans-serif";
+  --font-aspire: "Aspire", "sans-serif";
+  --font-scrap: "Scrapbook", "sans-serif";
+  --font-maple: "SugarMaple", "sans-serif";
 }
 
 .animate-fade-in {

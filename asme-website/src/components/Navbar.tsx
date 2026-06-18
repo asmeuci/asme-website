@@ -17,40 +17,8 @@ function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* About Link w/ dropdown */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-gray-100 data-[state=open]:bg-gray-100 rounded-full font-normal text-sm text-gray-800 transition-colors">
-                  More
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/peterworks" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
-                          Peterworks
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/board" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
-                          Board
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                                        <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/sponsors" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
-                          Sponsors
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
               {/* Dynamic Links (Events, Yearbook, Links) */}
-              {["Events", "Yearbook", "Links"].map((label) => (
+              {["Events", "Yearbook", "Links", "Alumni"].map((label) => (
                 <NavigationMenuItem key={label}>
                   <NavigationMenuLink 
                     asChild 
@@ -62,6 +30,38 @@ function Navbar() {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
+
+              {/* About Link w/ dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-100 data-[state=open]:bg-gray-100 rounded-full font-normal text-sm text-gray-800 transition-colors">
+                  More
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="">
+                  <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/peterworks" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700 ">
+                          Peterworks
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/board" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Board
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/sponsors" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Sponsors
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
             </NavigationMenuList>
           </NavigationMenu>

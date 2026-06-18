@@ -9,6 +9,8 @@ import Events from './pages/Events';
 import Yearbook from './pages/Yearbook';
 import YearbookSection from './pages/YearbookSection';
 import Sponsors from './pages/Sponsors';
+import Alumni from './pages/Alumni'
+import Spotlight from "./pages/Spotlight";
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -118,11 +120,13 @@ export default function App() {
             <Route path="/yearbook/:section" element={<YearbookSection />} />
             <Route path="/peterworks" element={<Peterworks />} />
             <Route path ="/sponsors" element={<Sponsors/>}/>
+            <Route path="/alumni" element = {<Alumni/>}/> 
+            <Route path="/alumni/:id" element={<Spotlight/>} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>
         </BrowserRouter>
-      </div>
+      </div> 
 
       {isLaunchLoading && <LaunchLoader isFading={isLoaderFading} />}
     </>
