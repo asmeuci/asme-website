@@ -54,6 +54,7 @@ function Spotlight() {
                             {/* Portrait */}
                             <img 
                                 src={personData.head} 
+                                loading = "lazy"
                                 className="absolute inset-0 w-full h-full object-cover rounded-2xl z-10" 
                             />
                             
@@ -61,7 +62,7 @@ function Spotlight() {
                             <div className="absolute inset-0 flex justify-center items-start z-20 pointer-events-none">
     
                                 <img 
-                                    src="/CO2026/decor/photo.png" 
+                                    src="/CO2026/decor/photo.webp" 
                                     className="w-[120%] mt-[15%] scale-150 object-contain" 
                                 />
                                 <h1 className="absolute top-[100%] left-[8%] font-aspire font-bold text-[60px] md:text-[80px] text-black z-30">
@@ -77,6 +78,7 @@ function Spotlight() {
                         <div className="w-1/3 flex justify-center">
                             <img 
                                 src={personData.spot1} 
+                                loading = "lazy"
                                 className="w-full h-auto object-contain rotate-[-20deg] px-4" 
                             />
                         </div>
@@ -84,6 +86,7 @@ function Spotlight() {
                         <div className="w-1/3 flex justify-center">
                             <img 
                                 src={personData.spot2} 
+                                loading = "lazy"
                                 className="w-full h-auto object-contain rotate-[20deg] px-4" 
                             /> 
                         </div>
@@ -93,6 +96,7 @@ function Spotlight() {
                         <div className="w-1/3 flex justify-center">
                             <img 
                                 src={personData.group1} 
+                                loading = "lazy"
                                 className="w-full h-auto object-contain rounded-2xl rotate-[15deg] px-4" 
                             />
                         </div>
@@ -100,6 +104,7 @@ function Spotlight() {
                         <div className="w-1/3 flex justify-center">
                             <img 
                                 src={personData.group2} 
+                                loading = "lazy"
                                 className="w-full h-auto object-contain rounded-2xl rotate-[-15deg] px-4" 
                             /> 
                         </div>

@@ -2,23 +2,23 @@
 export const CO2026_2 = [
     {
         name: "Gavin Fujimoto", hover : "gavin", offsetX: "-0px", offsetY: "0px", origin:  "31.30%_70.48%", scale: "1.1",
-        image: "/CO2026/cutout/gavin.png",
+        image: "/CO2026/cutout/gavin.webp",
         coords: "1244,1124,1152,1158,1090,1216,1118,1298,1108,1421,981,1459,906,1527,875,1920,858,1975,848,2026,830,2091,865,2201,875,2255,923,2310,940,2379,978,2382,1002,2327,1080,2327,1077,2399,1053,2505,1053,2549,1108,2573,1326,2580,1289,2526,1186,2327,1207,2303,1299,2361,1371,2293,1371,2235,1484,2187,1521,2153,1651,2286,1655,2317,1747,2355,1792,2409,1764,2481,1778,2529,1939,2556,2055,2556,2117,2522,2062,2478,1997,2471,1963,2402,1870,2351,1814,2239,1742,2140,1646,2027,1595,1962,1537,1935,1533,1883,1506,1811,1465,1760,1458,1699,1430,1647,1386,1548,1311,1504,1280,1439,1294,1394,1324,1384,1348,1333,1365,1299,1376,1247,1365,1193,1324,1138",
         //Spotlight Page
-        head:"/CO2026/headshot/gavin.jpg", spot1:"/CO2026/posts/gavin1.png", spot2:"/CO2026/posts/gavin2.png", group1:"/CO2026/group/cutie.jpg", group2:"/CO2026/group/heart.jpg", post:"",
+        head:"/CO2026/headshot/gavin.webp", spot1:"/CO2026/posts/gavin1.webp", spot2:"/CO2026/posts/gavin2.webp", group1:"/CO2026/group/cutie.webp", group2:"/CO2026/group/heart.webp", post:"",
     },
     {
         name: "Kyle Fernan", hover: "kyle", offsetX: "-0px", offsetY: "0px", origin: "51.81%_61.06%", scale: "1.1",
-        image: "/CO2026/cutout/kyle.png",
+        image: "/CO2026/cutout/kyle.webp",
         coords: "2029,900,1988,910,1934,941,1886,999,1896,1043,1869,1016,1845,1077,1862,1115,1886,1111,1917,1098,1947,1200,1862,1252,1797,1313,1763,1392,1752,1508,1749,1607,1766,1850,1759,1881,1718,1922,1722,1959,1677,2034,1811,2246,2019,2199,2016,2243,2057,2270,2122,2264,2139,2270,2146,2229,2146,2185,2187,2147,2163,2058,2170,2017,2228,1945,2248,1979,2279,1901,2194,1778,2242,1737,2262,1730,2296,1573,2320,1398,2303,1350,2224,1268,2159,1241,2187,1197,2218,1118,2173,1043,2173,981,2136,930",
         //spotlight page
-        head:"/CO2026/headshot/kyle.jpg", spot1:"/CO2026/posts/kyle1.png", spot2:"/CO2026/posts/kyle2.png", group1:"/CO2026/group/cutie.jpg", group2:"/CO2026/group/heart.jpg", post:"",
+        head:"/CO2026/headshot/kyle.webp", spot1:"/CO2026/posts/kyle1.webp", spot2:"/CO2026/posts/kyle2.webp", group1:"/CO2026/group/cutie.webp", group2:"/CO2026/group/heart.webp", post:"",
     },
     {
         name: "Erin Lee", hover: "erin", offsetX: "-0px", offsetY: "0px", origin: "72.47%_51.92%", scale: "1.1",
-        image: "/CO2026/cutout/erin.png",
+        image: "/CO2026/cutout/erin.webp",
         coords: "2460,2461,2563,2499,2683,2489,2803,2489,2840,2520,2874,2550,2861,2571,2991,2574,3367,2526,3155,1518,3196,1289,3175,995,3080,831,3104,827,3059,786,3052,756,2994,759,3025,718,2987,653,2960,598,2898,472,2833,448,2768,455,2717,520,2669,574,2642,663,2632,793,2645,841,2560,909,2512,971,2505,1060,2491,1361,2512,1518,2505,1576,2549,1641,2447,2174,2430,2407,2474,2420",
         //spotlight page
-        head:"/CO2026/headshot/erin.jpg", spot1:"/CO2026/posts/erin1.png", spot2:"/CO2026/posts/erin2.png", group1:"/CO2026/group/cutie.jpg", group2:"/CO2026/group/heart.jpg", post:"",
+        head:"/CO2026/headshot/erin.webp", spot1:"/CO2026/posts/erin1.webp", spot2:"/CO2026/posts/erin2.webp", group1:"/CO2026/group/cutie.webp", group2:"/CO2026/group/heart.webp", post:"",
     },
 ]

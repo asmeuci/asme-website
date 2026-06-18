@@ -21,7 +21,7 @@ function Alumni(){
 
                     <div className="relative w-fit mx-auto overflow-visible">
                         <img
-                            src="/CO2026/group.jpg" 
+                            src="/CO2026/group.webp" 
                             alt="Asme's Class of 2026 Group Photo"
                             className={` p-4 w-full h-auto block rounded-[80px] transition-all duration-500 ease-out 
                                         ${hoveredPerson ? 'brightness-[0.35] saturate-50' : 'brightness-100 saturate-100'
@@ -73,7 +73,7 @@ function Alumni(){
 
                     <div className="relative w-fit mx-auto overflow-visible">
                         <img
-                            src="/CO2026/group2.jpg" 
+                            src="/CO2026/group2.webp" 
                             alt="Asme's Class of 2026 Group Photo"
                             className={` p-4 w-full h-auto block rounded-[80px] transition-all duration-500 ease-out 
                                         ${hoveredPerson ? 'brightness-[0.35] saturate-50' : 'brightness-100 saturate-100'
