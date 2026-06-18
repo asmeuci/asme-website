@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { CO2026_1 } from './DATA/CO2026_1';
+//import { CO2026_1 } from './DATA/CO2026_1';
 import { CO2026_3 } from './DATA/CO2026_3';
 import { CO2026_2 } from './DATA/CO2026_2';
 
@@ -12,7 +12,7 @@ function Alumni(){
         <Layout>
            <Section>
                 <div>
-                    <h1 className="flex justify-center p-20 font-scrap text-[60px] text-blue-400">
+                    <h1 className="flex justify-center md:p-20 font-scrap text-[30px] md:text-[60px] text-blue-400 text-center">
                         ASME Class of 2026    
                     </h1>
 

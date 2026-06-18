@@ -35,42 +35,96 @@ function Spotlight() {
 
 
             <div className="bg-[url('/CO2026/park.jpg')] bg-cover bg-center bg-fixed min-h-screen">
-                <div className="p-20 font-helvetica text-white">
-                    {/*name plate*/}
-                    <div className = "relative p-10 rounded-2xl">
-
-                        <Link to="/alumni" className="absolute block bg-blue-100 font-monkey text-[24px] text-black px-6 py-2 rounded-2xl mt-30 ml-[30px] z-[999] cursor-pointer 
-                 hover:bg-blue-200 transition-colors duration-200">
+                <div className=" p-4 md:p-20 font-helvetica text-white">
+                    <Link to="/alumni" className=" absolute block bg-blue-100 font-monkey text-[24px] text-black px-6 py-2 rounded-2xl md:mt-30 ml-[30px] z-[999] cursor-pointer 
+                             hover:bg-blue-200 transition-colors duration-200">
                             Back
-                        </Link>
-                        <div className="absolute inset-0 bg-blue-900 rounded-2xl z-0 mt-20 max-w-3xl mx-auto"></div>
-                        <div className="relative z-50 mt-20 flex justify-center">
+                     </Link>
+                    {/*name plate*/}
+                    <div className = "relative p-10 rounded-2xl mt:0 md:mt-20 ">
+                        <div className="absolute mt-0 md:mt-0 inset-0 bg-blue-900 rounded-2xl z-0 p-20 mt-20 max-w-3xl mx-auto"></div>
+                        <div className="relative z-50 mt-15 md:mt-0 flex justify-center">
                             <h1 className="text-[80px] text-blue-400 font-maple font-bold">{personData.name}</h1> 
                          </div>
                     </div>
-                    {/* headshot*/}
-                    <div className = "relative flex items-center">
-                        <img src= "/CO2026/decor/photo.png"
-                            className = "absolute inset-0 scale-150 mx-auto z-30"/>
-                        <img src= {personData.head} alt={personData.name} 
-                            className=" absolute inset-0 w-1/3 rounded-2xl mt-15 mx-auto z-20 scale-90" />
-                        <h1 className = "relative mx-auto mt-138 font-aspire font-bold text-[60px] text-black z-50 -translate-x-1/2 left-1/2 ml-[-60px]"> 
-                            Class of 2026 </h1>
-                        <img src= {personData.spot1} alt={personData.name} 
-                            className=" absolute w-1/3 mt-100 rounded-2xl -rotate-20 z-40 scale-90" />
-                        <img src= {personData.spot2} alt={personData.name} 
-                            className="absolute w-1/3 mt-100 rounded-2xl right-1 rotate-20 z-40 scale-90" />
+
+                    {/* headshot and frame */}      
+                    <div className="flex flex-col items-center w-full mb-12 p-4 md:p-6"> 
+                        <div className="relative w-full max-w-lg aspect-square mx-auto">
+                            {/* Portrait */}
+                            <img 
+                                src={personData.head} 
+                                className="absolute inset-0 w-full h-full object-cover rounded-2xl z-10" 
+                            />
+                            
+                            {/* Frame */}
+                            <div className="absolute inset-0 flex justify-center items-start z-20 pointer-events-none">
+    
+                                <img 
+                                    src="/CO2026/decor/photo.png" 
+                                    className="w-[120%] mt-[15%] scale-150 object-contain" 
+                                />
+                                <h1 className="absolute top-[100%] left-[8%] font-aspire font-bold text-[60px] md:text-[80px] text-black z-30">
+                                    Class of 2026
+                                </h1>
+
+                            </div>
+                        </div>
                     </div>
-                    <div className = "mt-10 relative">
-                        <img src= {personData.group1} alt={personData.name} className="absolute right-0 mr-[70px] mt-70 w-1/3 rounded-2xl -rotate-15" />
-                        <img src= {personData.group2} alt={personData.name} className="absolute w-1/3 mt-70 rounded-2xl rotate-15 mr-[50px]" />
+                    {/* highlight*/}
+                    {/* Parent Container: flex layout centered on the screen */}
+                    <div className="hidden lg:flex justify-center items-center w-full mt-48 px-4">
+                        <div className="w-1/3 flex justify-center">
+                            <img 
+                                src={personData.spot1} 
+                                className="w-full h-auto object-contain rotate-[-20deg] px-4" 
+                            />
+                        </div>
+                        <div className="w-1/4" />
+                        <div className="w-1/3 flex justify-center">
+                            <img 
+                                src={personData.spot2} 
+                                className="w-full h-auto object-contain rotate-[20deg] px-4" 
+                            /> 
+                        </div>
                     </div>
-                    <div className = "mt-170">
-
+                    {/* All the fun stuff*/}
+                    <div className="hidden lg:flex justify-center items-center w-full mt-48 px-4">
+                        <div className="w-1/3 flex justify-center">
+                            <img 
+                                src={personData.group1} 
+                                className="w-full h-auto object-contain rounded-2xl rotate-[15deg] px-4" 
+                            />
+                        </div>
+                        <div className="w-1/4" />
+                        <div className="w-1/3 flex justify-center">
+                            <img 
+                                src={personData.group2} 
+                                className="w-full h-auto object-contain rounded-2xl rotate-[-15deg] px-4" 
+                            /> 
+                        </div>
                     </div>
-
-
-
+                    <div className="mt-20"/>
+                    <div className="flex lg:hidden">
+                        <img 
+                        src={personData.spot1} 
+                        className="w-full h-auto object-contain rounded-[80px] px-4 py-25" />
+                    </div>
+                    <div className="flex lg:hidden">
+                        <img 
+                        src={personData.spot2} 
+                        className="w-full h-auto object-contain rounded-[80px] px-4 py-8" />
+                    </div>
+                    <div className="flex lg:hidden">
+                        <img 
+                        src={personData.group1} 
+                        className="w-full h-auto object-contain rounded-[80px] px-4 py-8" />
+                    </div>
+                    <div className="flex lg:hidden">
+                        <img 
+                        src={personData.group2} 
+                        className="w-full h-auto object-contain rounded-[80px] px-4 py-8" />
+                    </div>
                 </div>
             </div>
         </Layout>
