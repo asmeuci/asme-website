@@ -25,9 +25,9 @@ function Sponsors() {
           </Section>
         </div>
 
-        {/* How To Support Us */}
+        {/* Large Screens Info */}
 
-        <div className = "">
+        <div className = "hidden lg:flex">
           <div className="container grid grid-cols-2 gap-4 mx-auto px-4 py-3">
             <div className = "bg-[#f1f0ea] rounded-lg">
               <div className = "pt-15">
@@ -65,9 +65,46 @@ function Sponsors() {
                 className=" w-full h-full object-contain transition-transform rounded-lg">
             </img>
           </div>
+        </div>
+        {/*Small Screen Info*/}
+        <div className = "block lg:hidden">
+            <img
+                src= "sponsors/BOARD.jpg"
+                alt= "ASME BOARD Photo at SDNN, our flagship event"
+                className=" w-full h-full object-contain transition-transform rounded-lg">
+            </img>
+            <div className = "bg-[#f1f0ea] rounded-lg">
+              <div className = "pt-15">
+                <p className= " font-helvetica text-[20px] p-4">
+                    We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
+                </p>
+                <p className= " font-helvetica text-[20px] p-4">
+                    Linked below is the sponsorship packet for additional information and the next steps in how to support us. If you have any questions, do not hesitate to contact us at asme@uci.edu.  
+                </p>
+              </div>
+              {/* Package Link*/}
+              <a 
+              href="ASME_Sponsorship_Package_26_27.pdf"
+              target="_blank"   
+              rel="noopener noreferrer"
+              className="flex justify-center font-helvetica text-[30px]">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+                  Sponsorship Package
+                </h1>
+              </a>
+              {/* Email Link*/}
+              <a 
+              href="mailto:asme@uci.edu"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex justify-center font-helvetica text-[30px] py-4">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+                  Contact Us!
+                </h1>
+              </a>
+            </div>
 
         </div>
-
         {/* Sponsorship List */}
 
         <div className = "bg-[#f1f0ea]">
@@ -84,7 +121,7 @@ function Sponsors() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group w-full sm:w-[500px]"
-              >
+              > 
                 {/* The Image */}
                 <img 
                   src={company.image} 
