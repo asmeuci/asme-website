@@ -12,7 +12,7 @@ function Alumni(){
         <Layout>
            <Section>
                 <div>
-                    <h1 className="flex justify-center p-20 font-helvetica text-[40px]">
+                    <h1 className="flex justify-center p-20 font-scrap text-[60px] text-blue-400">
                         ASME Class of 2026    
                     </h1>
 
@@ -60,7 +60,7 @@ function Alumni(){
                                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap transition-all duration-500 ease-out z-60 ${
                                     hoveredPerson === grads.hover ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                                 }`}>
-                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-helvetica">
+                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-bangers">
                                         {grads.name}
                                     </p>
                                 </div>
@@ -112,7 +112,7 @@ function Alumni(){
                                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap transition-all duration-500 ease-out z-60 ${
                                     hoveredPerson === grads.hover ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                                 }`}>
-                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-helvetica">
+                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-bangers">
                                         {grads.name}
                                     </p>
                                 </div>

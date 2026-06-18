@@ -48,7 +48,7 @@ export const CO2026_3 = [
         image: "/CO2026/cutout/tyler.png",
         coords: "3388,1716,3237,1719,3153,1709,3123,1703,3150,1649,3096,1371,3140,1180,3163,1106,3157,1049,3163,956,3173,842,3193,792,3234,765,3240,735,3220,678,3207,611,3227,561,3287,554,3331,557,3361,594,3331,705,3404,768,3441,795,3461,892,3458,1022,3411,1139,3398,1293,3404,1427",
         //Spotlight Page
-        head:"/CO2026/headshot/tyler.jpg", spot1:"/CO2026/posts/tyler1.png", spot2:"/CO2026/posts/tyler2.png", group1:"/CO2026/group/Tyler1.jpg", group2:"/CO2026/group/Tyler2.jpg", post:"",
+        head:"/CO2026/headshot/tyler.jpg", spot1:"/CO2026/posts/tyler1.png", spot2:"/CO2026/posts/tyler2.png", group1:"/CO2026/group/Tyler.jpg", group2:"/CO2026/group/Tyler2.jpg", post:"",
     }, 
     {
         name: "Vanessa Shimizu", hover: "vanessa", offsetX: "-0px", offsetY: "0px", origin: "45.49%_46.68%", scale: "1.05",
