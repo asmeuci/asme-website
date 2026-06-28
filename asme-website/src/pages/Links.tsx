@@ -15,9 +15,9 @@ function Links(){
                 {/* RSVP Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
-                        <div className="flex flex-col space-y-2">
-                            <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">RSVP Forms</h1>
-                        </div>
+                         <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
+                            RSVP fORMS 
+                        </h1>
                     </Reveal>
                     
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
@@ -31,9 +31,9 @@ function Links(){
                 {/* Resources Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
-                        <div className="flex flex-col space-y-2">
-                            <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Resources</h1>
-                        </div>
+                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
+                            Resources 
+                        </h1>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
@@ -53,9 +53,9 @@ function Links(){
                 {/* General Forms Section*/}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
-                        <div className="flex flex-col space-y-2">
-                            <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Forms</h1>
-                        </div>
+                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
+                            Forms 
+                        </h1>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
@@ -94,9 +94,9 @@ function Links(){
                 {/* Community Section */}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
-                        <div className="flex flex-col space-y-2">
-                            <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Join the Community</h1>
-                        </div>
+                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
+                            join Our CommuniTy! 
+                        </h1>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     

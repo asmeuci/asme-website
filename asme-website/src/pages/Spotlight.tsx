@@ -79,15 +79,15 @@ function Spotlight() {
                             <img 
                                 src={personData.spot1} 
                                 loading = "lazy"
-                                className="w-full h-auto object-contain rotate-[-20deg] px-4" 
+                                className="w-full h-auto object-contain" 
                             />
                         </div>
-                        <div className="w-1/4" />
+                      
                         <div className="w-1/3 flex justify-center">
                             <img 
                                 src={personData.spot2} 
                                 loading = "lazy"
-                                className="w-full h-auto object-contain rotate-[20deg] px-4" 
+                                className="w-full h-auto object-contain" 
                             /> 
                         </div>
                     </div>
