@@ -36,7 +36,7 @@ function Spotlight() {
 
             <div className="bg-[url('/CO2026/park.jpg')] bg-cover bg-center bg-fixed min-h-screen">
                 <div className=" p-4 md:p-20 font-helvetica text-white">
-                    <Link to="/alumni" className=" absolute block bg-blue-100 font-monkey text-[24px] text-black px-6 py-2 rounded-2xl md:mt-30 ml-[30px] z-[999] cursor-pointer 
+                    <Link to="/alumni" className=" absolute block bg-blue-100 font-joyful text-[24px] text-black px-6 py-2 rounded-2xl md:mt-30 ml-[30px] z-[999] cursor-pointer 
                              hover:bg-blue-200 transition-colors duration-200">
                             Back
                      </Link>

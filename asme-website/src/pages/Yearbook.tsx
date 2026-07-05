@@ -305,7 +305,7 @@ function FolderStrip({
 
       {/* main folder body */}
       <div className={`relative -mt-px h-[84px] md:h-[112px] ${bodyBorderClass} shadow-[0_8px_18px_rgba(7,24,54,0.16)] ${tones[folder.tone].bg} ${folder.bodyClass ?? ""}`}>
-        <h3 className={`font-serif font-light px-4 pt-1 text-[24px] leading-none tracking-[-0.01em] lowercase min-[420px]:text-[27px] md:px-6 md:text-[44px] max-[1400px]:md:text-[40px] max-[1100px]:md:text-[36px] ${tones[folder.tone].title}`}>
+        <h3 className={`font-joyful font-light px-4 pt-1 text-[24px] leading-none tracking-[-0.01em] lowercase min-[420px]:text-[27px] md:px-6 md:text-[44px] max-[1400px]:md:text-[40px] max-[1100px]:md:text-[36px] ${tones[folder.tone].title}`}>
           {folder.title}
         </h3>
       </div>
@@ -348,17 +348,19 @@ function MobileYearbookCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.36, ease: [0.22, 1, 0.36, 1] }}
     >
+
+      {/* mobile*/}
       <Link
         to={`/yearbook/${folder.slug}`}
         className={`block rounded-xl border border-white/80 px-4 py-3 shadow-[0_8px_18px_rgba(7,24,54,0.16)] ${tones[folder.tone].bg}`}
       >
         <span
-          className={`font-helvetica text-[12px] leading-none tracking-[0.16em] ${tones[folder.tone].number}`}
+          className={`font-joyful text-[12px] leading-none tracking-[0.16em] ${tones[folder.tone].number}`}
         >
           {folder.number}
         </span>
         <h3
-          className={`mt-2 font-serif text-[30px] leading-none tracking-[-0.01em] lowercase ${tones[folder.tone].title}`}
+          className={`mt-2 font-joyful text-[30px] leading-none tracking-[-0.01em]  ${tones[folder.tone].title}`}
         >
           {folder.title}
         </h3>

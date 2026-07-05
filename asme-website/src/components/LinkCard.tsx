@@ -15,7 +15,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col justify-between p-6 bg-white  border-zinc-400 hover:border-black transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl"
+      className="group relative flex flex-col justify-between p-6 bg-blue-200 border-zinc-400 hover:border-black transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl"
     >
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-start">
@@ -27,7 +27,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
                 className="h-7 w-7 rounded-sm object-contain"
               />
             )}
-            <h3 className="font-helevtica text-xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
+            <h3 className="font-joyful text-2xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
               {title}
             </h3>
           </div>
@@ -46,7 +46,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
         </div>
 
         {description && (
-          <p className="font-helevtica text-zinc-600 text-sm leading-relaxed whitespace-pre-line">
+          <p className="font-joyful text-zinc-600 text-m leading-relaxed whitespace-pre-line">
             {description}
           </p>
         )}

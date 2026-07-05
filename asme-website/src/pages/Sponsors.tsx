@@ -15,13 +15,15 @@ function Sponsors() {
   return (
     <Layout>
       <div className = "bg-[linear-gradient(rgba(87,212,226,0.00),rgba(87,212,226,0.31)),url('/Title.png')] bg-[length:103%_auto]">
-        <div className=" pt-16 md:pt-24">
+        <div className="">
           <Section className="bg-transparent py-0">
-            <div className="container mx-auto">
-              <h1 className="p-10 text-center font-helvetica text-4xl md:text-6xl lg:text-7xl bg-[#f1f0ea] rounded-lg max-w-md mx-auto">
-                Sponsors
+          <div className="container mx-auto md:w-2/3">
+            <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+              <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+              Sponsors
               </h1>
             </div>
+          </div>
           </Section>
         </div>
 
@@ -31,10 +33,10 @@ function Sponsors() {
           <div className="container grid grid-cols-2 gap-4 mx-auto px-4 py-3">
             <div className = "bg-[#f1f0ea] rounded-lg">
               <div className = "pt-15">
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-joyful text-[20px] p-4">
                     We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
                 </p>
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-joyful text-[20px] p-4">
                     Linked below is the sponsorship packet for additional information and the next steps in how to support us. If you have any questions, do not hesitate to contact us at asme@uci.edu.  
                 </p>
               </div>
@@ -43,8 +45,8 @@ function Sponsors() {
               href="ASME_Sponsorship_Package_26_27.pdf"
               target="_blank"   
               rel="noopener noreferrer"
-              className="flex justify-center font-helvetica text-[30px]">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+              className="flex justify-center text-[30px]">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-joyful rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Sponsorship Package
                 </h1>
               </a>
@@ -53,8 +55,8 @@ function Sponsors() {
               href="mailto:asme@uci.edu"
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex justify-center font-helvetica text-[30px] py-4">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+              className="flex justify-center text-[30px] py-4">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-joyful rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Contact Us!
                 </h1>
               </a>
@@ -75,10 +77,10 @@ function Sponsors() {
             </img>
             <div className = "bg-[#f1f0ea] rounded-lg">
               <div className = "pt-15">
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-joyful text-[20px] p-4">
                     We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
                 </p>
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-joyful text-[20px] p-4">
                     Linked below is the sponsorship packet for additional information and the next steps in how to support us. If you have any questions, do not hesitate to contact us at asme@uci.edu.  
                 </p>
               </div>
@@ -87,8 +89,8 @@ function Sponsors() {
               href="ASME_Sponsorship_Package_26_27.pdf"
               target="_blank"   
               rel="noopener noreferrer"
-              className="flex justify-center font-helvetica text-[30px]">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+              className="flex justify-center text-[30px]">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-joyful rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Sponsorship Package
                 </h1>
               </a>
@@ -97,8 +99,8 @@ function Sponsors() {
               href="mailto:asme@uci.edu"
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex justify-center font-helvetica text-[30px] py-4">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
+              className="flex justify-center text-[30px] py-4">
+                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-joyful rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Contact Us!
                 </h1>
               </a>
@@ -129,10 +131,10 @@ function Sponsors() {
                   className="w-full h-48 object-contain transition-transform group-hover:scale-105"
                 />
                 {/* The Description Under the Image */}
-                <p className="mt-4 mb-4 font-helvetica text-center text-black text-[20px] italic">
+                <p className="mt-4 mb-4 font-joyful text-center text-black text-[20px] italic">
                   {company.desc1}
                 </p>
-                <p className="mt-4 mb-4 font-helvetica text-center text-black text-[20px] italic">
+                <p className="mt-4 mb-4 font-joyful text-center text-black text-[20px] italic">
                   {company.desc2}
                 </p>
               </a>

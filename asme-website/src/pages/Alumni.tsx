@@ -61,7 +61,7 @@ function Alumni(){
                                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap transition-all duration-500 ease-out z-60 ${
                                     hoveredPerson === grads.hover ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                                 }`}>
-                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-bangers">
+                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-joyful">
                                         {grads.name}
                                     </p>
                                 </div>
@@ -113,7 +113,7 @@ function Alumni(){
                                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap transition-all duration-500 ease-out z-60 ${
                                     hoveredPerson === grads.hover ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                                 }`}>
-                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-bangers">
+                                    <p className="text-base text-[60px] font-bold tracking-wide text-white font-joyful">
                                         {grads.name}
                                     </p>
                                 </div>

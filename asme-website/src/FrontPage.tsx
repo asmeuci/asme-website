@@ -92,13 +92,13 @@ function FrontPage() {
         <Section className="">
           <Reveal>
             <div className="flex flex-col space-y-12">
-                <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Who We Are</h2>
-                <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">About ASME</h1>
+                <h2 className="font-joyful text-sm font-joyful uppercase tracking-widest mb-2">Who We Are</h2>
+                <h1 className="font-scrap text-4xl md:text-5xl font-joyful mb-6">About ASME</h1>
             </div>
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
           <Reveal>
-            <p className="font-helevtica font-normal text-lg md:text-2xl leading-relaxed pt-4 pb-14">
+            <p className="font-joyful text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
               ASME is a community of students and engineers dedicated to learning, collaboration, and hands-on innovation. We create opportunities for members to grow through technical projects, professional development, workshops, and networking events.
             </p>
           </Reveal>
@@ -112,15 +112,15 @@ function FrontPage() {
           <Reveal>
             <div className="flex flex-col w-full">
                 <div className="flex flex-col space-y-12">
-                  <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Get Involved </h2>
-                  <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Events</h1>
+                  <h2 className="font-joyful text-sm font-joyful uppercase tracking-widest mb-2">Get Involved </h2>
+                  <h1 className="font-joyful font-joyful text-4xl md:text-5xl font-joyful mb-6">Events</h1>
                 </div>
             </div>              
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
           <Reveal>
-            <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">
-                Explore the hands-on engineering challenges our teams are tackling this year.
+            <p className="font-joyful text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
+                Explore the events we offer on a quarterly basis.
             </p>
           </Reveal>
           <div className="flex flex-col gap-12">
@@ -139,13 +139,13 @@ function FrontPage() {
         <Section className="">
           <Reveal>
             <div className="flex flex-col space-y-12">
-                <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Our Work</h2>
-                <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Featured Projects</h1>
+                <h2 className="font-joyful text-sm font-joyful uppercase tracking-widest mb-2">Our Work</h2>
+                <h1 className="font-joyful font-joyful text-4xl md:text-5xl font-joyful mb-6">Featured Projects</h1>
             </div>
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
           <Reveal>
-            <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">
+            <p className="font-joyful text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
                 Explore the hands-on engineering challenges our teams are tackling this year.
             </p>
           </Reveal>
