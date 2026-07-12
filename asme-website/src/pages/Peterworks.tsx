@@ -23,7 +23,7 @@ function Peterworks() {
     <Layout>
       <div className="min-h-screen bg-[#f1f0ea]">
         <Section className="bg-transparent py-0">
-          <div className="container mx-auto md:w-2/3">
+          <div className="container mx-auto md:w-7/8">
             <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
               PeTerworks
@@ -35,10 +35,10 @@ function Peterworks() {
         <Section className="bg-transparent pt-4 pb-24 md:pb-32">
           <div className="mt-auto border-t-[0.5px] border-zinc-700 pt-4" />
 
-          <p className="pt-2 font-joyful text-sm uppercase tracking-[0.16em] md:text-sm">
+          <p className="pt-2 font-nunito text-sm uppercase tracking-[0.16em] md:text-sm">
             WHAT IS PETERWORKS?
           </p>
-          <h2 className="pt-2 font-joyful text-3xl md:text-5xl">
+          <h2 className="pt-2 font-nunito font-bold text-3xl md:text-5xl">
             BUILD YOUR OWN DRONE!
           </h2>
 
@@ -52,11 +52,11 @@ function Peterworks() {
                       alt="Peterworks icon"
                       className="h-8 w-8 flex-shrink-0 md:h-10 md:w-10"
                     />
-                    <h3 className="font-joyful text-xl md:text-3xl">
+                    <h3 className="font-nunito font-semibold text-xl md:text-3xl">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="pl-11 font-joyful text-base leading-relaxed md:pl-14 md:text-xl">
+                  <p className="pl-11 font-nunito text-base leading-relaxed md:pl-14 md:text-xl">
                     {item.description}
                   </p>
                 </div>

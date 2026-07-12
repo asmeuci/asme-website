@@ -6,14 +6,14 @@ function Navbar() {
   return (
     <div className="hidden md:block">
       <Reveal>
-        <div className="font-joyful flex justify-center p-4">
+        <div className="font-nunito flex justify-center p-4">
           <NavigationMenu className="bg-white/90 backdrop-blur-sm px-6 py-1 rounded-full border border-gray-100 shadow-sm">
             <NavigationMenuList className="gap-1">
               
               {/* Home Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gray-200 focus:bg-gray-100 rounded-full transition-colors`}>
-                  <Link to="/" className="text-lg font-joyful text-gray-800">Home</Link>
+                  <Link to="/" className="text-lg font-nunito text-gray-800">Home</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -24,7 +24,7 @@ function Navbar() {
                     asChild 
                     className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gray-200 focus:bg-gray-100 rounded-full transition-colors`}
                   >
-                    <Link to={`/${label.toLowerCase()}`} className="text-lg font-joyful text-gray-800">
+                    <Link to={`/${label.toLowerCase()}`} className="text-lg font-nunito text-gray-800">
                       {label}
                     </Link>
                   </NavigationMenuLink>
@@ -33,7 +33,7 @@ function Navbar() {
 
               {/* About Link w/ dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-200 data-[state=open]:bg-gray-100 rounded-full font-joyful text-lg text-gray-800 transition-colors">
+                <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-200 data-[state=open]:bg-gray-100 rounded-full font-nunito text-lg text-gray-800 transition-colors">
                   More
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="">

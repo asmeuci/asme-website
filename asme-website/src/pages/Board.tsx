@@ -47,7 +47,7 @@ function Board() {
             />
           </div>
 
-          <p className="font-joyful text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          <p className="font-nunito text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
             {selectedYear.label} Board
           </p>
 

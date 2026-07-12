@@ -27,7 +27,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
                 className="h-7 w-7 rounded-sm object-contain"
               />
             )}
-            <h3 className="font-joyful text-2xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
+            <h3 className="font-nunito text-2xl font-bold text-black group-hover:underline underline-offset-4 decoration-1">
               {title}
             </h3>
           </div>
@@ -46,7 +46,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag, icon
         </div>
 
         {description && (
-          <p className="font-joyful text-zinc-600 text-m leading-relaxed whitespace-pre-line">
+          <p className="font-nunito text-zinc-600 text-m leading-relaxed whitespace-pre-line">
             {description}
           </p>
         )}

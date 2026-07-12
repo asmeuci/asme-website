@@ -54,7 +54,7 @@ function MobileNavbar() {
                     ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"}
                 `}
             >
-                <ul className="font-joyful font-light flex flex-col gap-6 text-2xl ">
+                <ul className="font-nunito font-semibold flex flex-col gap-6 text-2xl ">
                     <li className={`transform transition-all duration-500 delay-100 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Home</Link>
                     </li>

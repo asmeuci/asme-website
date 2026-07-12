@@ -68,6 +68,18 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -82,6 +94,7 @@
   --font-scrap: "Scrapbook", "sans-serif";
   --font-maple: "SugarMaple", "sans-serif";
   --font-joyful: "Joyful", "sans-serif";
+  --font-nunito: "Nunito", "sans-serif";
 }
 
 .animate-fade-in {
