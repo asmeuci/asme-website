@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function MobileNavbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
+    {/*useEffect(() => {
     if (isOpen) {
         document.body.style.overflow = "hidden";
         document.documentElement.style.overflow = "hidden";
@@ -18,6 +18,16 @@ function MobileNavbar() {
         document.body.style.position = "";
         document.body.style.width = "";
     }
+    }, [isOpen]); */}
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+        }
     }, [isOpen]);
 
 
@@ -47,12 +57,12 @@ function MobileNavbar() {
 
             <div 
                 className={`
-                    fixed inset-0 w-full h-screen bg-white z-40
-                    flex flex-col pt-24 px-8
-                    overflow-hidden touch-none
-                    transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]
-                    ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"}
-                `}
+                        fixed inset-0 w-full h-[100dvh] bg-white z-40
+                        flex flex-col pt-24 px-8 pb-12
+                        overflow-y-auto
+                        transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]
+                        ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"}
+                    `}
             >
                 <ul className="font-nunito font-semibold flex flex-col gap-6 text-2xl ">
                     <li className={`transform transition-all duration-500 delay-100 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
@@ -76,8 +86,11 @@ function MobileNavbar() {
                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/sponsors" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Sponsors</Link>
                     </li>
-                        <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                    <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/alumni" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Alumni</Link>
+                    </li>
+                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/minimechs" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Minimechs</Link>
                     </li>
                 </ul>
             </div>

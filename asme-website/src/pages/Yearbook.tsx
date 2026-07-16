@@ -305,7 +305,7 @@ function FolderStrip({
 
       {/* main folder body */}
       <div className={`relative -mt-px h-[84px] md:h-[112px] ${bodyBorderClass} shadow-[0_8px_18px_rgba(7,24,54,0.16)] ${tones[folder.tone].bg} ${folder.bodyClass ?? ""}`}>
-        <h3 className={`font-nunito font-bold px-4 pt-1 text-[24px] leading-none tracking-[-0.01em] lowercase min-[420px]:text-[27px] md:px-6 md:text-[44px] max-[1400px]:md:text-[40px] max-[1100px]:md:text-[36px] ${tones[folder.tone].title}`}>
+        <h3 className={`font-helvetica font-bold px-4 pt-1 text-[24px] leading-none tracking-[-0.01em] lowercase min-[420px]:text-[27px] md:px-6 md:text-[44px] max-[1400px]:md:text-[40px] max-[1100px]:md:text-[36px] ${tones[folder.tone].title}`}>
           {folder.title}
         </h3>
       </div>
@@ -355,12 +355,12 @@ function MobileYearbookCard({
         className={`block rounded-xl border border-white/80 px-4 py-3 shadow-[0_8px_18px_rgba(7,24,54,0.16)] ${tones[folder.tone].bg}`}
       >
         <span
-          className={`font-nunito font-bold text-[12px] leading-none tracking-[0.16em] ${tones[folder.tone].number}`}
+          className={`font-helvetica font-bold text-[12px] leading-none tracking-[0.16em] ${tones[folder.tone].number}`}
         >
           {folder.number}
         </span>
         <h3
-          className={`mt-2 font-nunito font-bold text-[30px] leading-none tracking-[-0.01em]  ${tones[folder.tone].title}`}
+          className={`mt-2 font-helvetica font-bold text-[30px] leading-none tracking-[-0.01em]  ${tones[folder.tone].title}`}
         >
           {folder.title}
         </h3>

@@ -16,7 +16,7 @@ function BoardCommittees({ committees, heading = "Get to know our team" }: Board
 
   return (
     <div className="flex w-full flex-col items-center">
-      <h1 className="mb-4 text-3xl font-nunito tracking-tighter md:text-4xl">{heading}</h1>
+      <h1 className="mb-4 text-3xl font-helvetica tracking-tighter md:text-4xl">{heading}</h1>
 
       {currentBoardPhoto ? (
         <img src={currentBoardPhoto} className="h-auto w-4/5 rounded-lg object-cover" alt={`${currentCommittee?.title} Team`} />
@@ -34,7 +34,7 @@ function BoardCommittees({ committees, heading = "Get to know our team" }: Board
                 key={committee.title}
                 onClick={() => setActiveIndex(index)}
                 className={`
-                  rounded-full border px-5 py-2 text-lg font-nunito transition-all duration-300
+                  rounded-full border px-5 py-2 text-lg font-helvetica transition-all duration-300
                   ${
                     safeActiveIndex === index
                       ? "border-gray-900 bg-gray-800 text-white shadow-md"
@@ -66,8 +66,8 @@ function BoardCommittees({ committees, heading = "Get to know our team" }: Board
                   </a>
                 </div>
                 <div className="w-full px-1">
-                  <h3 className="text-center text-2xl font-nunito leading-tight sm:text-left">{member.name}</h3>
-                  <p className="text-center font-nunito text-m text-gray-500 sm:text-left">{member.role}</p>
+                  <h3 className="text-center text-2xl font-helvetica leading-tight sm:text-left">{member.name}</h3>
+                  <p className="text-center font-helvetica text-m text-gray-500 sm:text-left">{member.role}</p>
                 </div>
               </div>
             ))}

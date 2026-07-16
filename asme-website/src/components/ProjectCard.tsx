@@ -29,15 +29,15 @@ function ProjectCard({event} : ProjectCardProps) {
       </div>
 
       <div className="flex-1 px-8 pb-8 pt-2 flex flex-col">        
-        <h3 className="font-nunito font-bold text-4xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        <h3 className="font-helvetica font-bold text-4xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
             {event.title}
         </h3>
-        <p className="font-nunito font-semibold text-gray-600 text-base leading-relaxed mb-6">
+        <p className="font-helvetica font-semibold text-gray-600 text-base leading-relaxed mb-6">
           {event.description}
         </p>
 
         <div className="mt-auto pt-4 border-t border-gray-100">
-            <span className="text-black text-sm font-nunito hover:text-blue-600 transition-colors flex items-center gap-2">
+            <span className="text-black text-sm font-helvetica hover:text-blue-600 transition-colors flex items-center gap-2">
             View Project
             <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
             </span>

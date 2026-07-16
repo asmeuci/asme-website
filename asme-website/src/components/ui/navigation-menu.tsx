@@ -100,27 +100,27 @@ function NavigationMenuContent({
   )
 }
 {/* where the dropdown appears*/}
-function NavigationMenuViewport({ 
-  className,
-  ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
-  return (
-    <div
-      className={cn(
-        "absolute top-full right-0 isolate z-50 flex justify-center"
-      )}
-    >
-      <NavigationMenuPrimitive.Viewport
-        data-slot="navigation-menu-viewport"
+  function NavigationMenuViewport({ 
+    className,
+    ...props
+  }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+    return (
+      <div
         className={cn(
-          "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
-          className
+          "absolute top-full right-0 isolate z-50 flex justify-center w-full"
         )}
-        {...props}
-      />
-    </div>
-  )
-}
+      >
+        <NavigationMenuPrimitive.Viewport
+          data-slot="navigation-menu-viewport"
+          className={cn(
+            "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
+            className
+          )}
+          {...props}
+        />
+      </div>
+    )
+  }
 
 function NavigationMenuLink({
   className,

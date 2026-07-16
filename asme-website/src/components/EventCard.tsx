@@ -27,11 +27,11 @@ function EventCard({event, isReversed} : EventCardProps){
           </span>
         </div>
 
-        <h3 className="text-2xl font-bold md:text-4xl font-nunito text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-2xl font-bold md:text-4xl font-helvetica text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
           {event.title}
         </h3>
         
-        <p className=" font-nunito text-gray-600 text-lg leading-relaxed mb-8">
+        <p className=" font-helvetica text-gray-600 text-lg leading-relaxed mb-8">
           {event.description}
         </p>
 
