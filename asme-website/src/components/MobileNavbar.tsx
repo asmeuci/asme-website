@@ -68,29 +68,29 @@ function MobileNavbar() {
                     <li className={`transform transition-all duration-500 delay-100 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Home</Link>
                     </li>
-                    <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/peterworks" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Peterworks</Link>
+                    <li className={`transform transition-all duration-500 delay-300 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/events" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Events</Link>
+                    </li>
+                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/sponsors" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Sponsors</Link>
+                    </li>
+                    <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/links" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Links</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-[250ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/board" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Board</Link>
                     </li>
-                    <li className={`transform transition-all duration-500 delay-300 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/events" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Events</Link>
+                    <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/minimechs" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Minimechs</Link>
+                    </li>
+                    <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/peterworks" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Peterworks</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-[350ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/yearbook" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Yearbook</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/links" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Links</Link>
-                    </li>
-                    <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/sponsors" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Sponsors</Link>
-                    </li>
-                    <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/alumni" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Alumni</Link>
-                    </li>
-                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/minimechs" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Minimechs</Link>
                     </li>
                 </ul>
             </div>
