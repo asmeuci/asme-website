@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import MobileNavbar from './MobileNavbar';
 import Footer from './Footer';
 import { inject } from "@vercel/analytics"; 
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 interface LayoutProps {
   children: ReactNode;
