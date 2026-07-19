@@ -81,7 +81,7 @@ function MobileNavbar() {
                         <Link to="/board" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Board</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-[400ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <Link to="/minimechs" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Minimechs</Link>
+                        <Link to="/minimechs" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">MiniMechs</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/peterworks" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Peterworks</Link>
