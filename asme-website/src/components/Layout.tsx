@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import MobileNavbar from './MobileNavbar';
 import Footer from './Footer';
 import { inject } from "@vercel/analytics"; 
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface LayoutProps {
   children: ReactNode;
@@ -55,7 +56,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="container mx-auto px-6 lg:px-24 flex flex-col gap-2">
               <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
               <Footer/>
-             
+             <SpeedInsights/>
           </div>
         </footer>
         
