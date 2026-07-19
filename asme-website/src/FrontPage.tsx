@@ -113,7 +113,7 @@ function FrontPage() {
             <div className="flex flex-col w-full">
                 <div className="flex flex-col space-y-12">
                   <h2 className="font-helvetica  text-sm uppercase tracking-widest mb-2">Get Involved </h2>
-                  <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">Events</h1>
+                  <h1 className="font-scrap font-bold text-4xl md:text-5xl font-helvetica mb-6">Events</h1>
                 </div>
             </div>              
           </Reveal>
@@ -140,7 +140,7 @@ function FrontPage() {
           <Reveal>
             <div className="flex flex-col space-y-12">
                 <h2 className="font-helvetica text-sm font-helvetica uppercase tracking-widest mb-2">Our Work</h2>
-                <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">Featured Projects</h1>
+                <h1 className="font-scrap font-bold text-4xl md:text-5xl font-helvetica mb-6">featured Projects</h1>
             </div>
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>

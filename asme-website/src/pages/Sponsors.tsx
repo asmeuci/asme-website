@@ -77,10 +77,10 @@ function Sponsors() {
             </img>
             <div className = "bg-[#f1f0ea] rounded-lg">
               <div className = "pt-15">
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-helvetica text-[19px] p-4 text-center">
                     We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
                 </p>
-                <p className= " font-helvetica text-[20px] p-4">
+                <p className= " font-helvetica text-[19px] p-4 text-center">
                     Linked below is the sponsorship packet for additional information and the next steps in how to support us. If you have any questions, do not hesitate to contact us at asme@uci.edu.  
                 </p>
               </div>

@@ -42,15 +42,15 @@ function Events() {
     <Layout>
       <Section className="bg-[#f1f0ea]">
         <div className="container mx-auto">
-        <div className="mx-auto w-2/3">
+        <div className="mx-auto w-7/8">
             <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
                   RecenT PosTs 
               </h1>
             </div>
           </div>
-             <h1 className=" p-10 md:p-20 font-scrap text-[45px] md:text-[50px] text-blue-400 text-center">
-                  InsTagram
+             <h1 className=" p-10 md:p-20 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
+                  Instagram
               </h1>
           <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
             {postLinks.map((postLink) => (
@@ -81,7 +81,7 @@ function Events() {
       </Section>
       <Section className="bg-[#f1f0ea]">
         <div className="container mx-auto">
-          <h1 className=" p-10 md:p-0 font-scrap text-[45px] md:text-[50px] text-blue-400 text-center">
+          <h1 className=" p-10 md:p-0 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
                   Linkedin
               </h1>
           <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">

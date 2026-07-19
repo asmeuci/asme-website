@@ -12,10 +12,12 @@ function Alumni(){
         <Layout>
            <Section>
                 <div>
-                    <div className="bg-blue-900 rounded-[80px] mt-15">
-                        <h1 className="flex justify-center md:p-20 font-scrap text-[30px] md:text-[60px] text-blue-400 text-center">
-                            ASME Class of 2026    
-                        </h1>
+                    <div className="container mx-auto md:w-7/8">
+                        <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+                            <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[70px] text-blue-400 text-center">
+                            ASME Class of 2026
+                            </h1>
+                        </div>
                     </div>
                     {/* Image 1 */}
 

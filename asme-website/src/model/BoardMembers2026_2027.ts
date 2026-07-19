@@ -98,6 +98,8 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     title: "Peterworks",
     members: [
       { name: "Sarah McClelland", role: "Peterworks Director", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
+      { name: "Matt Shanahan", role: "Peterworks TA", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/matthew-shanahan-95448137b/" },
+      { name: "Bronton Dieu", role: "Peterworks TA", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/bronton-dieu/" },
     ],
   },
 ];
