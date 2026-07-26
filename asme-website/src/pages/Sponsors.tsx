@@ -14,11 +14,11 @@ const companies =[
 function Sponsors() {
   return (
     <Layout>
-      <div className = "bg-[linear-gradient(rgba(87,212,226,0.00),rgba(87,212,226,0.31)),url('/Title.png')] bg-[length:103%_auto]">
+      <div className = " bg-[url(/sponsorbgMB.png)] md:bg-[url(/sponsorbg.webp)] bg-[length:103%_auto]">
         <div className="">
           <Section className="bg-transparent py-0">
-          <div className="container mx-auto md:w-2/3">
-            <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+          <div className="container mx-auto md:w-5/6">
+            <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
               Sponsors
               </h1>

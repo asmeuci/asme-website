@@ -120,7 +120,7 @@ function FrontPage() {
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
           <Reveal>
             <p className="font-helvetica font-semibold text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
-                Explore the events we offer on a quarterly basis.
+                Every quarter, ASME at UCI hosts a large event inviting industry professionals in the fall, professors and graduate students in the winter, and senior design teams in the spring. Further information about each event can be found below.
             </p>
           </Reveal>
           <div className="flex flex-col gap-12">
@@ -146,7 +146,7 @@ function FrontPage() {
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
           <Reveal>
             <p className="font-helvetica font-semibold text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
-                Explore the hands-on engineering challenges our teams are tackling this year.
+                Explore the hands-on engineering projects that ASME at UCI offers! 
             </p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 md:[&>div]:h-full md:[&>div>div]:h-full md:[&>div>div>*]:h-full">

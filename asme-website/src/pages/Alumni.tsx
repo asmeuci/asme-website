@@ -13,7 +13,7 @@ function Alumni(){
            <Section>
                 <div>
                     <div className="container mx-auto md:w-7/8">
-                        <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+                        <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
                             <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[70px] text-blue-400 text-center">
                             ASME Class of 2026
                             </h1>
@@ -25,7 +25,7 @@ function Alumni(){
                         <img
                             src="/CO2026/group.webp" 
                             alt="Asme's Class of 2026 Group Photo"
-                            className={` p-4 w-full h-auto block rounded-[80px] transition-all duration-500 ease-out 
+                            className={` p-4 w-full h-auto block rounded-[40px] md:rounded-[80px] transition-all duration-500 ease-out 
                                         ${hoveredPerson ? 'brightness-[0.35] saturate-50' : 'brightness-100 saturate-100'
                                         }`}/>
                         {CO2026_3.map((grads, index) => (  
@@ -77,7 +77,7 @@ function Alumni(){
                         <img
                             src="/CO2026/group2.webp" 
                             alt="Asme's Class of 2026 Group Photo"
-                            className={` p-4 w-full h-auto block rounded-[80px] transition-all duration-500 ease-out 
+                            className={` p-4 w-full h-auto block rounded-[40px]  md:rounded-[80px] transition-all duration-500 ease-out 
                                         ${hoveredPerson ? 'brightness-[0.35] saturate-50' : 'brightness-100 saturate-100'
                                         }`}/>
                         {CO2026_2.map((grads, index) => (  

@@ -13,6 +13,11 @@ const postLinks = [
 
 const linksPost = [
   {
+    name: "Spring2026",
+    image: "LI_posts/spring26.jpg",
+    link: "https://www.linkedin.com/posts/as-summer-continues-were-excited-to-look-ugcPost-7486141628248678401-vID7/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
+  },
+  {
     name: "Anteater",
     image: "LI_posts/anteater.jpg",
     link: "https://www.linkedin.com/posts/asme-uci_we-are-thrilled-to-announce-that-asme-at-activity-7468789170426212354-x7Wp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
@@ -21,11 +26,6 @@ const linksPost = [
     name: "SDNN",
     image: "LI_posts/SDNN.jpg",
     link: "https://www.linkedin.com/posts/asme-uci_asme-recently-hosted-our-senior-design-networking-activity-7459390661814013952-OWic?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
-  },
-  {
-    name: "AIAA",
-    image: "LI_posts/AIAA.jpg",
-    link: "https://www.linkedin.com/posts/asme-uci_uci-uciasme-uciaiaa-activity-7457883526752030720-4h2X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
   },
 ];
 
@@ -43,7 +43,7 @@ function Events() {
       <Section className="bg-[#f1f0ea]">
         <div className="container mx-auto">
         <div className="mx-auto w-7/8">
-            <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+            <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
                   RecenT PosTs 
               </h1>

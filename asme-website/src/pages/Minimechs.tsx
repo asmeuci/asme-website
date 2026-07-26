@@ -7,7 +7,7 @@ function Minimechs() {
         <div className="min-h-screen bg-[#f1f0ea]">
             <Section className="bg-transparent py-0">
             <div className="container mx-auto md:w-7/8">
-                <div className="bg-blue-900 rounded-[80px] flex justify-center md:mt-15 ">
+                <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
                 <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
                 MiniMechs
                 </h1>
