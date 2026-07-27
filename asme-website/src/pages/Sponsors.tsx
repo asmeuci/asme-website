@@ -14,7 +14,7 @@ const companies =[
 function Sponsors() {
   return (
     <Layout>
-      <div className = " bg-[url(/sponsorbgMB.png)] md:bg-[url(/sponsorbg.webp)] bg-[length:103%_auto]">
+      <div className = " bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto]">
         <div className="">
           <Section className="bg-transparent py-0">
           <div className="container mx-auto md:w-5/6">
