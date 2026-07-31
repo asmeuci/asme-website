@@ -1,14 +1,17 @@
 import Layout from "../components/Layout";
 import Section from "../components/Section";
+import ContactForm from "./DATA/ContactForm";
 
 const companies =[
   {
-    name: "Ansys",
-    image: "sponsors/ansys.png",
-    desc1: "Ansys is a software company that focuses on simulation, allowing engineers to stress test their designs without having to manufacture, saving a lot of time and money.",
-    desc2: "Thank you for the opportunity to give us the bronze level! We are extremely grateful for your generous funding, and will use the funds to host events broadening engineering access to all students.",
-    website: "https://www.ansys.com",
+    name: "MatterHackers", 
+    image:"sponsors/MatterHackers.png",
+    desc1: "Thank you for supplying us with filament to support our PeterWorks program! We will put the filament to good use for students.",
+    desc2: "",
+    website: "https://www.matterhackers.com",
   },
+  
+ 
 ]
 
 function Sponsors() {
@@ -31,7 +34,7 @@ function Sponsors() {
 
         <div className = "hidden lg:flex">
           <div className="container grid grid-cols-2 gap-4 mx-auto px-4 py-3">
-            <div className = "bg-[#f1f0ea] rounded-lg">
+            <div className = "bg-[#f1f0ea] rounded-lg p-5">
               <div className = "pt-15">
                 <p className= " font-helvetica text-[20px] p-4">
                     We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
@@ -45,21 +48,14 @@ function Sponsors() {
               href="ASME_Sponsorship_Package_26_27.pdf"
               target="_blank"   
               rel="noopener noreferrer"
-              className="flex justify-center text-[30px]">
+              className="flex justify-center text-[30px] py-3">
                 <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Sponsorship Package
                 </h1>
               </a>
               {/* Email Link*/}
-              <a 
-              href="mailto:asme@uci.edu"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex justify-center text-[30px] py-4">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
-                  Contact Us!
-                </h1>
-              </a>
+              <h1 className="font-helvetica text-center text-lg"> Contact us! </h1>
+              <ContactForm/>
             </div>
             <img
                 src= "sponsors/BOARD.jpg"
@@ -89,21 +85,17 @@ function Sponsors() {
               href="ASME_Sponsorship_Package_26_27.pdf"
               target="_blank"   
               rel="noopener noreferrer"
-              className="flex justify-center text-[30px]">
+              className="flex justify-center text-[30px] py-3">
                 <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
                   Sponsorship Package
                 </h1>
               </a>
               {/* Email Link*/}
-              <a 
-              href="mailto:asme@uci.edu"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex justify-center text-[30px] py-4">
-                <h1 className = "inline-block px-10 py-3 bg-blue-300 text-black font-helvetica rounded-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300">
-                  Contact Us!
-                </h1>
-              </a>
+                <h1 className="font-helvetica text-center text-lg"> Contact us! </h1>
+                <div className="px-3 py-2">
+                  <ContactForm/>
+                </div>
+                
             </div>
 
         </div>

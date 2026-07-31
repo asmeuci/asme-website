@@ -3,15 +3,20 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/DbcaQ7QlE5t/",
   "https://www.instagram.com/p/DZN6snwSiWd/",
   "https://www.instagram.com/p/DZBie9VGF0O/",
   "https://www.instagram.com/p/DZAt4_rmPG_/",
   "https://www.instagram.com/p/DYvggePGLd_/",
   "https://www.instagram.com/p/DYvlRrTKH7U/",
-  "https://www.instagram.com/p/DYplfHIqKMG/",
 ];
 
 const linksPost = [
+   {
+    name: "Board",
+    image: "LI_posts/boardreveal.jpg",
+    link: "https://www.linkedin.com/posts/asme-uci_were-so-excited-to-reveal-the-asme-at-uci-activity-7488287475874881536-rRpT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
+  },
   {
     name: "Spring2026",
     image: "LI_posts/spring26.jpg",
@@ -22,11 +27,7 @@ const linksPost = [
     image: "LI_posts/anteater.jpg",
     link: "https://www.linkedin.com/posts/asme-uci_we-are-thrilled-to-announce-that-asme-at-activity-7468789170426212354-x7Wp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
   },
-  {
-    name: "SDNN",
-    image: "LI_posts/SDNN.jpg",
-    link: "https://www.linkedin.com/posts/asme-uci_asme-recently-hosted-our-senior-design-networking-activity-7459390661814013952-OWic?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF98p3MBHSLxP_XneJhowt4IrClHTzYhvZI",
-  },
+
 ];
 
 
@@ -91,14 +92,13 @@ function Events() {
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative mx-auto block  w-full overflow-hidden rounded-xl border border-zinc-200 hover:z-10 bg-white transition-transform group-hover:scale-105"
+                  className="relative mx-auto block  w-full overflow-hidden rounded-xl border border-zinc-200 hover:z-10 bg-white transition-transform"
                 >
                   <img
                     src={link.image}
                     alt={link.name}
                     className="w-full h-full object-contain"
-                  >
-                  </img>
+                  />
                 </a>
               </Reveal>
             ))}
