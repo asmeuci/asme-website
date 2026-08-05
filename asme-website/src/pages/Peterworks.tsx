@@ -22,26 +22,25 @@ function Peterworks() {
   return (
     <Layout>
       <div className="min-h-screen bg-[#f1f0ea]">
-        <Section className="bg-transparent py-0">
+        <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
           <div className="container mx-auto md:w-7/8">
             <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
-              PeTerworks
+                PeTerworks
               </h1>
             </div>
           </div>
         </Section>
 
         <Section className="bg-transparent pt-4 pb-24 md:pb-32">
-          <div className="mt-auto border-t-[0.5px] border-zinc-700 pt-4" />
+          <div className="mt-auto border-t-[0.5px] border-zinc-700" />
 
-          <p className="pt-2 font-helvetica text-sm uppercase tracking-[0.16em] md:text-sm">
+          <p className="pt-2 font-helvetica text-sm uppercase tracking-[0.36em]">
             WHAT IS PETERWORKS?
           </p>
           <h2 className="pt-2 font-helvetica font-bold text-3xl md:text-5xl">
             BUILD YOUR OWN DRONE!
           </h2>
-
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
             <div className="space-y-6">
               {highlights.map((item) => (

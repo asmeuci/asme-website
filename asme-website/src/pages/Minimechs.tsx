@@ -5,14 +5,14 @@ function Minimechs() {
     return(
     <Layout>
         <div className="min-h-screen bg-[#f1f0ea]">
-            <Section className="bg-transparent py-0">
-            <div className="container mx-auto md:w-7/8">
-                <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
-                <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
-                MiniMechs
-                </h1>
+            <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
+                <div className="container mx-auto md:w-7/8">
+                    <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+                        <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+                            MiniMechs
+                        </h1>
+                    </div>
                 </div>
-            </div>
             </Section>
             <Section className="bg-transparent pt-4 pb-24 md:pb-32">
                 <div className="mt-auto border-t-[0.5px] border-zinc-700 pt-4" />
@@ -25,9 +25,8 @@ function Minimechs() {
                         alt= "Mentees get introduced to their mentors for the school year!"
                         className=" w-full h-full object-cover transition-transform rounded-lg">
                     </img>
-                 </div>
-
-                 <div className="grid mt-5 items-center grid-cols-1 md:grid-cols-3">
+                </div>
+                <div className="grid mt-5 items-center grid-cols-1 md:grid-cols-3">
                     <img
                         src= "MiniMechs/Excitement.webp"
                         alt= "Mentees get introduced to their mentors for the school year!"

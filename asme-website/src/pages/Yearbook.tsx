@@ -375,7 +375,7 @@ function Yearbook() {
 
   return (
     <Layout>
-      <section className="relative bg-[#ececec]">
+      <section className="relative  bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto]">
         <div className="min-h-[calc(100dvh-64px)] px-4 pb-6 pt-20 md:hidden">
           <div className="space-y-3">
             {mobileFolders.map((folder, index) => (

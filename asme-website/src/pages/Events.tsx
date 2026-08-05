@@ -31,7 +31,7 @@ const linksPost = [
 ];
 
 
-const EMBED_TOP_CROP = 58;
+const EMBED_TOP_CROP = 53;
 const EMBED_BOTTOM_CROP = 170;
 
 function toEmbedUrl(postUrl: string) {
@@ -41,58 +41,68 @@ function toEmbedUrl(postUrl: string) {
 function Events() {
   return (
     <Layout>
-      <Section className="bg-[#f1f0ea]">
-        <div className="container mx-auto">
-        <div className="mx-auto w-7/8">
-            <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
-              <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
-                  RecenT PosTs 
-              </h1>
-            </div>
-          </div>
-             <h1 className=" p-10 md:p-20 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
-                  Instagram
-              </h1>
-          <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
-            {postLinks.map((postLink) => (
-              <Reveal key={postLink} width="100%">
-                <a
-                  href={postLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative mx-auto block aspect-[4/5] w-full overflow-hidden rounded-xl border border-zinc-200 bg-white"
-                >
-                  <iframe
-                    src={toEmbedUrl(postLink)}
-                    className="pointer-events-none absolute left-0 w-full"
-                    style={{
-                      top: -EMBED_TOP_CROP,
-                      height: `calc(100% + ${EMBED_TOP_CROP + EMBED_BOTTOM_CROP}px)`,
-                    }}
-                    loading="lazy"
-                    scrolling="no"
-                    allow="encrypted-media"
-                    title={`Instagram post ${postLink}`}
-                  />
-                </a>
-              </Reveal>
-            ))}
+      {/* Title */}
+      <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto]">
+        <div className="container mx-auto ">
+          <div className="mx-auto w-7/8">
+              <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+                <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+                    RecenT PosTs 
+                </h1>
+              </div>
           </div>
         </div>
-      </Section>
-      <Section className="bg-[#f1f0ea]">
-        <div className="container mx-auto">
-          <h1 className=" p-10 md:p-0 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
-                  Linkedin
+        </Section>
+        {/*Instagram Posts*/}
+        <Section>
+          <div>
+            <div className= "bg-[#f1f0ea] w-full">
+              <h1 className="p-10 md:p-20 font-helvetica font-bold text-[45px] md:text-[50px] text-center bg-[#f1f0ea]">
+                    Instagram
               </h1>
-          <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
+            </div>
+            <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
+              {postLinks.map((postLink) => (
+                <Reveal key={postLink} width="100%">
+                  <a
+                    href={postLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative mx-auto block aspect-[4/5] w-full overflow-hidden rounded-xl border border-zinc-300 bg-[#f1f0ea]"
+                  >
+                    <iframe
+                      src={toEmbedUrl(postLink)}
+                      className="pointer-events-none absolute left-0 w-full"
+                      style={{
+                        top: -EMBED_TOP_CROP,
+                        height: `calc(100% + ${EMBED_TOP_CROP + EMBED_BOTTOM_CROP}px)`,
+                      }}
+                      loading="lazy"
+                      scrolling="no"
+                      allow="encrypted-media"
+                      title={`Instagram post ${postLink}`}
+                    />
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+        </div>
+      </Section>
+
+
+      <Section className="bg-[#f1f0ea] rounded-xl">
+        <div className="container mx-auto rounded-xl">
+          <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
+            Linkedin
+          </h1>
+          <div className="grid gap-8 bg-[#f1f0ea] lg:grid-cols-3">
             {linksPost.map((link, index) => (
               <Reveal key={index} width="100%">
                 <a
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative mx-auto block  w-full overflow-hidden rounded-xl border border-zinc-200 hover:z-10 bg-white transition-transform"
+                  className="relative mx-auto block w-full overflow-hidden rounded-xl border border-zinc-300"
                 >
                   <img
                     src={link.image}
