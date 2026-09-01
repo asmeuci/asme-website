@@ -12,6 +12,9 @@ import Sponsors from './pages/Sponsors';
 import Alumni from './pages/Alumni'
 import Spotlight from "./pages/Spotlight";
 import Minimechs from "./pages/Minimechs";
+import Network from "./pages/Network";
+import RNN from "./pages/RNN";
+import SDNN from "./pages/SDNN";
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -123,7 +126,10 @@ export default function App() {
             <Route path ="/sponsors" element={<Sponsors/>}/>
             <Route path="/alumni" element = {<Alumni/>}/> 
             <Route path="/alumni/:id" element={<Spotlight/>} />
-            <Route path="/minimechs" element={<Minimechs/>} />
+            <Route path = "/minimechs" element={<Minimechs/>} />
+            <Route path = "/network" element={<Network/>} />
+            <Route path = "/RNN" element={<RNN/>} />
+            <Route path = "/SDNN" element={<SDNN/>} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>

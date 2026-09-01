@@ -31,7 +31,7 @@ function Navbar() {
                 </NavigationMenuItem>
               ))}
 
-                            {/* Programs Link w/ dropdown */}
+            {/* Programs Link w/ dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-200 data-[state=open]:bg-gray-100 rounded-full font-nunito text-sm text-gray-800 transition-colors">
                   Programs
@@ -45,10 +45,31 @@ function Navbar() {
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                     <li>
+                    <li>
                       <NavigationMenuLink asChild className = "">
                         <Link to="/minimechs" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
                           MiniMechs
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/network" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
+                          Network With ASME
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/RNN" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
+                          RNN
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/SDNN" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
+                          SDNN
                         </Link>
                       </NavigationMenuLink>
                     </li>

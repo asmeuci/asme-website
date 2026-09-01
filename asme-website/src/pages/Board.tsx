@@ -51,7 +51,17 @@ function Board() {
             {selectedYear.label} Board
           </p>
 
-          <img src={selectedYear.heroImage} className="h-full w-full rounded-2xl object-contain shadow-2xl" alt="ASME Board" />
+          {selectedYear.heroImage ? (
+            <img
+              src={selectedYear.heroImage}
+              className="h-full w-full rounded-2xl object-contain shadow-2xl"
+              alt={`${selectedYear.label} ASME Board`}
+            />
+          ) : (
+            <div className="flex h-48 w-full items-center justify-center rounded-2xl text-gray-500 italic">
+              No photo available
+            </div>
+          )}
         </div>
       </Section>
 

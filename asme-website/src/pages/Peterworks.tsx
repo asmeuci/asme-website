@@ -41,6 +41,7 @@ function Peterworks() {
           <h2 className="pt-2 font-helvetica font-bold text-3xl md:text-5xl">
             BUILD YOUR OWN DRONE!
           </h2>
+          
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
             <div className="space-y-6">
               {highlights.map((item) => (

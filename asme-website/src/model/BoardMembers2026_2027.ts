@@ -102,7 +102,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
       { name: "Bronton Dieu", role: "Peterworks TA", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/bronton-dieu/" },
     ],
   },
-];
+]; 
 
 const boardCommittees2026_2027WithPortraits: BoardCommittee[] = boardCommittees2026_2027.map((committee) => ({
   ...committee,

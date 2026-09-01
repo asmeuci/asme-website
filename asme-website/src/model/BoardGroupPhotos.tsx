@@ -45,3 +45,4 @@ const boardGroupPhotos: BoardCommittee[] = [
 ];
 
 export default boardGroupPhotos;
+ 

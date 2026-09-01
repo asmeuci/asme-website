@@ -7,7 +7,7 @@ interface BoardCommitteesProps {
   heading?: string;
 }
 
-function BoardCommittees({ committees, heading = "Get to know our team" }: BoardCommitteesProps) {
+function BoardCommittees({ committees, heading = "Get to know our team"}: BoardCommitteesProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const safeActiveIndex = committees.length === 0 ? -1 : Math.min(activeIndex, committees.length - 1);
@@ -58,12 +58,13 @@ function BoardCommittees({ committees, heading = "Get to know our team" }: Board
                     alt={member.name}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover"
                   />
-
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <img src={transparentLinkedin} alt="LinkedIn" className="h-12 w-12 object-contain opacity-80" />
-                    </div>
-                  </a>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <img src={transparentLinkedin} alt="LinkedIn" className="h-12 w-12 object-contain opacity-80" />
+                      </div>
+                    </a>
+                  )}
                 </div>
                 <div className="w-full px-1">
                   <h3 className="text-center text-2xl font-helvetica leading-tight sm:text-left">{member.name}</h3>

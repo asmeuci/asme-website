@@ -35,7 +35,12 @@ function Sponsors() {
         <div className = "hidden lg:flex">
           <div className="container grid grid-cols-2 gap-4 mx-auto px-4 py-3">
             <div className = "bg-[#f1f0ea] rounded-lg p-5">
-              <div className = "pt-15">
+              <div className = "relative pt-15">
+                <img
+                  src= "decorations/doggo.webp"
+                  alt= "decoration"
+                  className="absolute w-25 h-auto -top-15 -right-15 rotate-30 transition-transform hover:scale-105">
+                </img>
                 <p className= " font-helvetica text-[20px] p-4">
                     We appreciate any and all sponsorship considerations, and we hope to gather your support to keep growing and continue fostering a positive community at UCI. 
                 </p>

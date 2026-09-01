@@ -24,31 +24,34 @@ interface EventItem {
 const eventsData: EventItem[] = [
   {
     title: "Research Network Night",
-    date: "",
+    date: "Coming Soon",
     description: "Learn about research labs at UCI and what research is conducted. Connect with professors and graduate students to get the inside scoop of their work (and possibly help get into research)!",
     image: rnn,
-    tag: "Event"
+    tag: "Event",
+    href: "/RNN",
   },
   {
     title: "Senior Design Networking Night",
-    date: "",
+    date: "Coming Soon",
     description: "~14 design projects at UCI are invited to present about their project and network with students. Getting more face time with management and members of project can help when applying!",
     image: sdnn,
-    tag: "Event"
+    tag: "Event",
+    href: "/SDNN",
   },
   {
     title: "Network with ASME",
-    date: "",
+    date: "Coming Soon",
     description: "Banquet-style dinner networking event where company representatives are invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
     image: network,
-    tag: "Event"
+    tag: "Event",
+    href: "/Network",
   },
 ];
 
 const projectsData: EventItem[] = [
   {
     title: "HPVC",
-    date: "Jan 21 • 5 - 8 PM",
+    date: "Coming",
     description: "E-HPVC (Electric Human Powered Vehicle Challenge) is an annual collegiate engineering competition that’s designed to showcase student innovation, teamwork, and technical excellence. The event unites university teams from across the US to design, build, and race electric human-powered vehicles. The competition culminates in a series of dynamic challenges including design, drag, and endurance events. Student-lead teams directly compete against one another in various categories racking up points. The points earned from presentations and track events contribute to each team’s overall score, determining the winners of the competition.",
     image: hpvc,
     tag: "Event",
@@ -93,7 +96,7 @@ function FrontPage() {
           <Reveal>
             <div className="flex flex-col space-y-12">
                 <h2 className="font-helvetica text-sm uppercase tracking-widest mb-2">Who We Are</h2>
-                <h1 className="font-scrap text-4xl md:text-5xl font-helvetica mb-6">About ASME</h1>
+                <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">About ASME</h1>
             </div>
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
@@ -113,7 +116,7 @@ function FrontPage() {
             <div className="flex flex-col w-full">
                 <div className="flex flex-col space-y-12">
                   <h2 className="font-helvetica  text-sm uppercase tracking-widest mb-2">Get Involved </h2>
-                  <h1 className="font-scrap font-bold text-4xl md:text-5xl font-helvetica mb-6">Events</h1>
+                  <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">Events</h1>
                 </div>
             </div>              
           </Reveal>
@@ -140,7 +143,7 @@ function FrontPage() {
           <Reveal>
             <div className="flex flex-col space-y-12">
                 <h2 className="font-helvetica text-sm font-helvetica uppercase tracking-widest mb-2">Our Work</h2>
-                <h1 className="font-scrap font-bold text-4xl md:text-5xl font-helvetica mb-6">featured Projects</h1>
+                <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">Featured Projects</h1>
             </div>
           </Reveal>
           <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>

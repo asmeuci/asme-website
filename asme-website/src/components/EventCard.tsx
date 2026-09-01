@@ -4,6 +4,7 @@ interface EventItem {
   description: string;
   image: string; 
   tag: string;
+  href?: string,
 }
 
 interface EventCardProps {
@@ -16,7 +17,6 @@ function EventCard({event, isReversed} : EventCardProps){
     <article
       className={`font-helvetica group block flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300`}
     >
-      
       <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">        
         <div className="flex items-center gap-3 mb-4">
           <span className="bg-blue-100 text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
@@ -26,11 +26,11 @@ function EventCard({event, isReversed} : EventCardProps){
             {event.date}
           </span>
         </div>
-
-        <h3 className="text-2xl font-bold md:text-4xl font-helvetica text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-          {event.title}
-        </h3>
-        
+        <a href= {event.href}>
+          <h3 className="text-2xl font-bold md:text-4xl font-helvetica text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+            {event.title}
+          </h3>
+        </a>
         <p className=" font-helvetica text-gray-600 text-lg leading-relaxed mb-8">
           {event.description}
         </p>
@@ -46,9 +46,12 @@ function EventCard({event, isReversed} : EventCardProps){
           />
         </div>
       </div>
-
     </article>
+ 
   );
+
+  
+
 }
 
 export default EventCard;
