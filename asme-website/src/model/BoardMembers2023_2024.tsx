@@ -31,7 +31,7 @@ const resolvePortrait = (memberName: string, fallbackImage: string) => {
 };
 
 const zzzzz =
-  "/src/assets/board-photos/23-24_Portraits/Kaitiyn_Nguyen.jpg";
+  "/src/assets/board-photos/22-23_Portraits/Brion_Song.jpg";
 
 
 // 2023-2024
@@ -60,36 +60,36 @@ const boardCommitte: BoardCommittee[] = [
   {
     title: "Finance",
     members: [
-      { name: "Kaitlyn Nguyen", role: "Committee Member", image: zzzzz, linkedin : ""},
-      { name: "Gavin Fujimoto", role: "Committee Member", image: zzzzz, linkedin : ""},
+      { name: "Kaitlyn Nguyen", role: "Committee Member", image: zzzzz, linkedin : "https://www.linkedin.com/in/kaitlyntn/"},
+      { name: "Gavin Fujimoto", role: "Committee Member", image: zzzzz, linkedin : "https://www.linkedin.com/in/gavin-fujimoto/"},
     ],
   },
   {
     title: "Externals",
     members: [
-      { name: "Jacob Pham", role: "Committee Member", image: zzzzz, linkedin : ""},
+      { name: "Jacob Pham", role: "Committee Member", image: zzzzz, linkedin : "https://www.linkedin.com/in/jacob-pham-uci/"},
     ],
   },
   {
     title: "Internals",
     members: [
       { name: "Nolan Haugh", role: "Committee Member", image: zzzzz, linkedin : ""},
-      { name: "Erin Lee", role: "Committee Member", image: zzzzz, linkedin : ""},
-      { name: "Rina Mangalampalli", role: "Committee Member", image: zzzzz , linkedin : "" },
-      { name: "Saheed Oladunjuye", role: "Committee Member", image: zzzzz , linkedin : "" }
+      { name: "Erin Lee", role: "Committee Member", image: zzzzz, linkedin : "https://www.linkedin.com/in/-erinlee/"},
+      { name: "Rina Mangalampalli", role: "Committee Member", image: zzzzz , linkedin : "https://www.linkedin.com/in/rina-mangalampalli/" },
+      { name: "Saheed Oladunjuye", role: "Committee Member", image: zzzzz , linkedin : "https://www.linkedin.com/in/saheed-oladunjoye-6959151a9/" }
     ],
   },
     {
     title: "Communications",
     members: [
-      { name: "Marco Cheng", role: "Committee Member", image: zzzzz, linkedin : ""},
+      { name: "Marco Cheng", role: "Committee Member", image: zzzzz, linkedin : "https://www.linkedin.com/in/marcocheng485/"},
     ],
   },
   {
     title: "Peterworks",
     members: [
-      { name: "Hannah Hjelm", role: "Peterworks TA", image: zzzzz, linkedin : ""},
-      { name: "Gabriel Sackinger", role: "Peterworks TA", image: zzzzz, linkedin : ""},
+      { name: "Hannah Hjelm", role: "Peterworks TA", image: zzzzz, linkedin : "https://www.linkedin.com/in/hannah-hjelm-986570218/"},
+      { name: "Gabriel Sackinger", role: "Peterworks TA", image: zzzzz, linkedin : "https://www.linkedin.com/in/gabrielsackinger/"},
     ],
   },
 ];

@@ -35,8 +35,37 @@ const placeholderHeadshot =
 // 2022-2023
 
 const boardCommitte: BoardCommittee[] = [
+    {
+    title: "2020-2021 ",
+    members: [
+      { name: "Quan Nguyen", role: "President", image: placeholderHeadshot },
+      { name: "Anthony Chin", role: "Vice President", image: placeholderHeadshot },
+      { name: "Noelle Camanyag", role: "External Affairs Director", image: placeholderHeadshot },
+      { name: "Sophia Shannon", role: "Internal Affairs Director", image: placeholderHeadshot },
+      { name: "Timothy Young", role: "Treasurer", image: placeholderHeadshot },
+      { name: "Brion Song", role: "Secretary", image: placeholderHeadshot },
+      { name: "Benjamen Bielecki", role: "Nedia Director", image: placeholderHeadshot },
+
+    ],
+  }, 
   {
-    title: "Officers",
+    title: "2021-2022",
+    members: [
+      { name: "Quan Nguyen", role: "President", image: placeholderHeadshot},
+      { name: "Noelle Camanyag", role: "Communications Director", image: placeholderHeadshot},
+      { name: "Sophia Shannon", role: "Internal Affairs Director", image: placeholderHeadshot},
+      { name: "Anthony Chin", role: "External Affairs Director", image: placeholderHeadshot},
+      { name: "Anisha Jayasekara", role: "Projects Manager", image: placeholderHeadshot},
+      { name: "Shakeel Riyaj", role: "P.R Coordinator", image: placeholderHeadshot},
+      { name: "Adrian Ornelas", role: "Projects Director", image: placeholderHeadshot},
+      { name: "Crew Parker", role: "Projects Director", image: placeholderHeadshot},
+      { name: "Timothy Young", role: "Finance Director", image: placeholderHeadshot},
+      { name: "Brion Song", role: "Historian", image: placeholderHeadshot},
+      { name: "Benjamen Bielecki", role: "Webmaster", image: placeholderHeadshot},
+    ],
+  },
+  {
+    title: "2022-2023",
     members: [
       { name: "Anthony Chin", role: "President", image: placeholderHeadshot},
       { name: "Alex Avila", role: "Internal Affairs Director", image: placeholderHeadshot},
@@ -48,7 +77,7 @@ const boardCommitte: BoardCommittee[] = [
       { name: "Andrew Kim", role: "Secretary", image: placeholderHeadshot},
       { name: "Quan Nguyen", role: "Advisor", image: placeholderHeadshot},
     ],
-  },
+  }, 
 ];
 
 const boardCommitteeWithPortraits: BoardCommittee[] = boardCommitte.map((committee) => ({

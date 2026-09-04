@@ -43,6 +43,12 @@ const boardCommitte: BoardCommittee[] = [
       { name: "Sophia Shannon", role: "Internal Affairs Director", image: placeholderHeadshot},
       { name: "Anthony Chin", role: "External Affairs Director", image: placeholderHeadshot},
       { name: "Anisha Jayasekara", role: "Projects Manager", image: placeholderHeadshot},
+      { name: "Shakeel Riyaj", role: "P.R Coordinator", image: placeholderHeadshot},
+      { name: "Adrian Ornelas", role: "Projects Director", image: placeholderHeadshot},
+      { name: "Crew Parker", role: "Projects Director", image: placeholderHeadshot},
+      { name: "Timothy Young", role: "Finance Director", image: placeholderHeadshot},
+      { name: "Brion Song", role: "Historian", image: placeholderHeadshot},
+      { name: "Benjamen Bielecki", role: "Webmaster", image: placeholderHeadshot},
     ],
   },
   {

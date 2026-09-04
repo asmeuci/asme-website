@@ -63,10 +63,17 @@ function Board() {
             </div>
           )}
         </div>
-      </Section>
+      </Section> 
 
       <Section>
-        <BoardCommittees committees={selectedYear.committees} heading={`Get to know our ${selectedYear.label} team`} />
+        <BoardCommittees
+          committees={selectedYear.committees}
+          heading={
+            selectedYear.id === "2022-2023"
+              ? "Get to know our Founding Fathers"
+              : `Get to know our ${selectedYear.label} team`
+          }
+        />
       </Section>
     </Layout>
   );
