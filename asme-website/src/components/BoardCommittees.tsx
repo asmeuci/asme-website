@@ -52,19 +52,36 @@ function BoardCommittees({ committees, heading = "Get to know our team"}: BoardC
           <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {currentCommittee?.members.map((member, idx) => (
               <div key={`${member.name}-${idx}`} className="flex w-60 flex-col items-center sm:items-start">
-                <div className="group relative mb-4 h-60 w-60 overflow-hidden rounded-md">
+
+    {/* Member profile */}
+                <div className="relative mb-4 h-60 w-60">
                   <img
-                    src={member.image}
-                    alt={member.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover"
+                    src="/gears.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -right-6 -top-6 z-20 w-12"
                   />
-                  {member.linkedin && (
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <img src={transparentLinkedin} alt="LinkedIn" className="h-12 w-12 object-contain opacity-80" />
-                      </div>
-                    </a>
-                  )}
+
+                  {/* Portrait */}
+                  <div className="group relative h-full w-full overflow-hidden rounded-md">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="h-full w-full object-cover transition-transform duration-500"
+                    />
+
+                    {member.linkedin && (
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <img
+                            src={transparentLinkedin}
+                            alt="LinkedIn"
+                            className="h-12 w-12 object-contain opacity-80"
+                          />
+                        </div>
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <div className="w-full px-1">
                   <h3 className="text-center text-2xl font-helvetica leading-tight sm:text-left">{member.name}</h3>

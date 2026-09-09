@@ -50,18 +50,19 @@ function Board() {
           <p className="font-helvetica text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
             {selectedYear.label} Board
           </p>
-
-          {selectedYear.heroImage ? (
-            <img
-              src={selectedYear.heroImage}
-              className="h-full w-full rounded-2xl object-contain shadow-2xl"
-              alt={`${selectedYear.label} ASME Board`}
-            />
-          ) : (
-            <div className="flex h-48 w-full items-center justify-center rounded-2xl text-gray-500 italic">
-              No photo available
-            </div>
-          )}
+          
+            {selectedYear.heroImage ? (
+              <img
+                src={selectedYear.heroImage}
+                className="h-full w-full rounded-2xl object-contain shadow-2xl"
+                alt={`${selectedYear.label} ASME Board`}
+              />
+            ) : (
+              <div className="flex h-48 w-full items-center justify-center rounded-2xl text-gray-500 italic">
+                No photo available
+              </div>
+            )}
+          
         </div>
       </Section> 
 
