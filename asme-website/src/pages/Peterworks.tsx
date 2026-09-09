@@ -24,7 +24,17 @@ function Peterworks() {
       <div className="min-h-screen bg-[#f1f0ea]">
         <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
           <div className="container mx-auto md:w-7/8">
-            <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+            <div className="relative  bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+              <img
+                src= "decorations/peterworks.png"
+                alt= "decoration"
+                className="absolute w-75 h-auto -bottom-30 -right-30 -rotate-30 transition-transform hover:scale-105">
+              </img>
+              <img
+                src= "decorations/peterborg.png"
+                alt= "decoration"
+                className="absolute w-75 h-auto -top-30 -left-30 rotate-30 transition-transform hover:scale-105">
+              </img>
               <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
                 PeTerworks
               </h1>
