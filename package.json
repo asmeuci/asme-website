@@ -6,6 +6,8 @@
     "preview": "npm --prefix asme-website run preview"
   },
   "devDependencies": {
+    "@emnapi/core": "^1.11.3",
+    "@emnapi/runtime": "^1.11.3",
     "@vercel/node": "^12.0.1",
     "tailwindcss": "^4.1.18"
   },
