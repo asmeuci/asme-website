@@ -115,10 +115,11 @@ function NetworkRegister() {
 
       <input type="text" name="name" required maxLength={100} placeholder="Full name" className={inputStyles} />
       <input type="email" name="email" required maxLength={200} placeholder="Email" className={inputStyles} />
+      {/*}
       <input type="tel" name="phone" required maxLength={30} placeholder="Phone number" className={inputStyles} />
       <input type="text" name="major" required maxLength={100} placeholder="Major" className={inputStyles} />
       <input type="text" name="gradYear" required maxLength={10} placeholder="Graduation year" className={inputStyles} />
-      <textarea name="dietary" rows={3} maxLength={300} placeholder="Dietary restrictions (optional)" className={inputStyles} />
+      <textarea name="dietary" rows={3} maxLength={300} placeholder="Dietary restrictions (optional)" className={inputStyles} />*/}
 
       <button type="submit" disabled={isSubmitting} className="p-2 rounded font-semibold border disabled:opacity-60">
         {isSubmitting ? "Redirecting..." : `Continue to payment${selectedPrice ? ` — ${selectedPrice}` : ""}`}

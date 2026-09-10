@@ -44,7 +44,7 @@ export default function ContactForm() {
       <input type="email" name="email" required placeholder="Email" className="font-helvetica p-2 border rounded" />
       <textarea name="message" required placeholder="Message" className="font-helvetica p-2 border rounded" rows={4}></textarea>
       
-      <button type="submit" className="font-helvetica bg-blue-300 text-black p-2 rounded font-semibold">
+      <button type="submit" className="font-helvetica bg-blue-300 text-black p-2 rounded font-semibold hover:bg-blue-400 transition-colors duration-200">
         Submit
       </button>
 
