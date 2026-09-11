@@ -13,6 +13,8 @@ import Alumni from './pages/Alumni'
 import Spotlight from "./pages/Spotlight";
 import Minimechs from "./pages/Minimechs";
 import Network from "./pages/Network";
+import NetworkRegister from "./pages/NetworkRegister";
+import NetworkSuccess from "./pages/NetworkSuccess";
 import RNN from "./pages/RNN";
 import SDNN from "./pages/SDNN";
 
@@ -128,6 +130,8 @@ export default function App() {
             <Route path="/alumni/:id" element={<Spotlight/>} />
             <Route path = "/minimechs" element={<Minimechs/>} />
             <Route path = "/network" element={<Network/>} />
+            <Route path="/network/register" element={<NetworkRegister />} />
+            <Route path="/network/success" element={<NetworkSuccess />} />
             <Route path = "/RNN" element={<RNN/>} />
             <Route path = "/SDNN" element={<SDNN/>} />
             <Route path="/coming-soon" element={<DefaultPage />} />

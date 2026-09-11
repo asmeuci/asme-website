@@ -22,6 +22,14 @@ interface EventItem {
 }
 
 const eventsData: EventItem[] = [
+    {
+    title: "Network with ASME",
+    date: "October 21st, 2026",
+    description: "Banquet-style dinner networking event where company representatives are invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
+    image: network,
+    tag: "Event",
+    href: "/Network",
+  },
   {
     title: "Research Network Night",
     date: "Coming Soon",
@@ -37,14 +45,6 @@ const eventsData: EventItem[] = [
     image: sdnn,
     tag: "Event",
     href: "/SDNN",
-  },
-  {
-    title: "Network with ASME",
-    date: "Coming Soon",
-    description: "Banquet-style dinner networking event where company representatives are invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
-    image: network,
-    tag: "Event",
-    href: "/Network",
   },
 ];
 

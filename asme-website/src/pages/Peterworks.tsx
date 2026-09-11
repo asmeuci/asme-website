@@ -24,18 +24,18 @@ function Peterworks() {
       <div className="min-h-screen bg-[#f1f0ea]">
         <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
           <div className="container mx-auto md:w-7/8">
-            <div className="relative  bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+            <div className="relative bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
               <img
                 src= "decorations/peterworks.png"
                 alt= "decoration"
-                className="absolute w-75 h-auto -bottom-30 -right-30 -rotate-30 transition-transform hover:scale-105">
+                className="absolute w-30 md:w-75 h-auto -bottom-15 md:-bottom-30 -right-0 md:-right-30 -rotate-30 transition-transform hover:scale-105">
               </img>
               <img
                 src= "decorations/peterborg.png"
                 alt= "decoration"
-                className="absolute w-75 h-auto -top-30 -left-30 rotate-30 transition-transform hover:scale-105">
+                className="absolute w-20 md:w-55 h-auto -top-10 md:-top-20 -left-5 md:-left-20 rotate-30 transition-transform hover:scale-105">
               </img>
-              <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+              <h1 className="px-5 py-8 md:px-12 md:py-12 font-scrap text-[40px] md:text-[64px] text-blue-400 text-center">
                 PeTerworks
               </h1>
             </div>
@@ -60,7 +60,7 @@ function Peterworks() {
                     <img
                       src="/gears.png"
                       alt="Peterworks icon"
-                      className="h-8 w-8 flex-shrink-0 md:h-10 md:w-10"
+                      className="h-8 flex-shrink-0 md:h-10 md:w-10"
                     />
                     <h3 className="font-helvetica font-semibold text-xl md:text-3xl">
                       {item.title}

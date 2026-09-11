@@ -15,9 +15,13 @@ function Links(){
                 {/* RSVP Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
-                         <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
-                            RSVP fORMS 
-                        </h1>
+                        <div className="container mx-auto md:w-1/1 pb-2">
+                            <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                                <h1 className="px-2 py-4 md:px-6 md:py-6 font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
+                                    RSVP fORMS 
+                                </h1>
+                            </div>
+                        </div>
                     </Reveal>
                     
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
@@ -31,9 +35,13 @@ function Links(){
                 {/* Resources Section*/}
                 <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
-                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
-                            Resources 
-                        </h1>
+                        <div className="container mx-auto md:w-1/1 pb-2">
+                            <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                                <h1 className="px-2 py-4 md:px-6 md:py-6 font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
+                                    Resources
+                                </h1>
+                            </div>
+                        </div>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
@@ -53,9 +61,13 @@ function Links(){
                 {/* General Forms Section*/}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
-                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
-                            Forms 
-                        </h1>
+                        <div className="container mx-auto md:w-1/1 pb-2">
+                            <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                                <h1 className="px-2 py-4 md:px-6 md:py-6 font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
+                                    fORMS
+                                </h1>
+                            </div>
+                        </div>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
@@ -94,9 +106,13 @@ function Links(){
                 {/* Community Section */}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
-                        <h1 className=" font-scrap text-[30px] md:text-[50px] text-blue-400">
-                            join Our CommuniTy! 
-                        </h1>
+                        <div className="container mx-auto md:w-1/1 pb-2">
+                            <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                                <h1 className="px-2 py-4 md:px-6 md:py-6 font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
+                                    join Our CommuniTy! 
+                                </h1>
+                            </div>
+                        </div>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     

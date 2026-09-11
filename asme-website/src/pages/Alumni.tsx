@@ -13,7 +13,17 @@ function Alumni(){
            <Section>
                 <div>
                     <div className="container mx-auto md:w-7/8">
-                        <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+                        <div className="relative bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+                             <img
+                                src= "decorations/graduate.png"
+                                alt= ""
+                                className="absolute w-25 md:w-35 h-auto -bottom-5 md:-bottom-15 right-0 md:-right-15 -rotate-30 transition-transform hover:scale-105">
+                            </img>
+                            <img
+                                src= "decorations/bear.png"
+                                alt= "decoration"
+                                className="absolute w-20 md:w-30 h-auto -top-5 md:-top-10 -left-5 md:-left-10 rotate-30 transition-transform hover:scale-105">
+                            </img>
                             <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[70px] text-blue-400 text-center">
                             ASME Class of 2026
                             </h1>
@@ -21,7 +31,7 @@ function Alumni(){
                     </div>
                     {/* Image 1 */}
 
-                    <div className="relative w-fit mx-auto overflow-visible">
+                    <div className="relative w-fit mx-auto overflow-visible mt-20">
                         <img
                             src="/CO2026/group.webp" 
                             alt="Asme's Class of 2026 Group Photo"
