@@ -55,9 +55,13 @@ function Events() {
         <div>
           <div>
             <div className= "py-0 bg-[#f1f0ea] w-full">
-              <h1 className="p-5 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center bg-[#f1f0ea]">
+              <div className="bg-[#f1f0ea] container mx-auto md:w-1/4 pb-5 pt-5">
+                <div className="bg-blue-200 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                  <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
                     Instagram
-              </h1>
+                  </h1>
+                </div>
+              </div>
             </div>
             <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3 px-10 md:px-25">
               {postLinks.map((postLink) => (
@@ -100,9 +104,13 @@ function Events() {
       {/*Linkedin*/}
       <div className="bg-[#f1f0ea] rounded-xl">
         <div className="container mx-auto rounded-xl">
-          <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
-            Linkedin
-          </h1>
+          <div className="bg-[#f1f0ea] container mx-auto md:w-1/4 pb-2 pt-5">
+            <div className="bg-blue-200 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+              <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
+                Linkedin
+              </h1>
+            </div>
+          </div>
           <div className="grid items-center gap-8 bg-[#f1f0ea] lg:grid-cols-3 px-10 md:px-25">
             {linksPost.map((link, index) => (
               <Reveal key={index} width="100%">

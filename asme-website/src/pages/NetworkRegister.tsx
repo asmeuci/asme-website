@@ -16,8 +16,8 @@ type Company = {
 };
 
 const FALLBACK_TIERS: Tier[] = [
-  { id: "no_meal", label: "No meal", amount: null, currency: "usd" },
   { id: "meal", label: "Meal", amount: null, currency: "usd" },
+  { id: "no_meal", label: "No meal", amount: null, currency: "usd" },
 ];
 
 const MAX_RESUME_BYTES = 2 * 1024 * 1024;

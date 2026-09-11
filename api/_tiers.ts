@@ -15,8 +15,8 @@ export type Tier = {
 };
 
 export const TIERS: Tier[] = [
-  { id: 'no_meal', envVar: 'STRIPE_PRICE_ID_MEMBER', fallbackLabel: 'No meal' },
   { id: 'meal', envVar: 'STRIPE_PRICE_ID_NONMEMBER', fallbackLabel: 'Meal' },
+  { id: 'no_meal', envVar: 'STRIPE_PRICE_ID_MEMBER', fallbackLabel: 'No meal' },
 ];
 
 export const tierById = (id: unknown): Tier | undefined =>
