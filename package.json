@@ -12,6 +12,7 @@
     "tailwindcss": "^4.1.18"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "react-social-media-embed": "^2.5.18",

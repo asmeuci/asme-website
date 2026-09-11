@@ -34,15 +34,20 @@ function vercelApiDevServer(): Plugin {
         if (req.method === "POST" || req.method === "PUT" || req.method === "PATCH") {
           const chunks: Buffer[] = []
           for await (const chunk of req) chunks.push(chunk as Buffer)
-          const raw = Buffer.concat(chunks).toString("utf8")
+          const rawBuffer = Buffer.concat(chunks)
+          const raw = rawBuffer.toString("utf8")
           if (raw) {
-            try {
-              body = JSON.parse(raw)
-            } catch {
-              res.statusCode = 400
-              res.setHeader("Content-Type", "application/json")
-              res.end(JSON.stringify({ error: "Invalid JSON body." }))
-              return
+            if (name === "stripe-webhook") {
+              body = rawBuffer
+            } else {
+              try {
+                body = JSON.parse(raw)
+              } catch {
+                res.statusCode = 400
+                res.setHeader("Content-Type", "application/json")
+                res.end(JSON.stringify({ error: "Invalid JSON body." }))
+                return
+              }
             }
           }
         }

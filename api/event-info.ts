@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
 import { TIERS, priceIdFor } from './_tiers';
+import { getSupabaseAdmin } from './_supabase';
 
 /*
 Reads each ticket level straight out of Stripe so the registration page never
@@ -33,8 +34,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const stripe = new Stripe(secretKey);
 
   try {
-    const tiers = await Promise.all(
-      configured.map(async ({ tier, priceId }) => {
+    const supabase = getSupabaseAdmin();
+    const [tiers, companiesResult] = await Promise.all([
+      Promise.all(configured.map(async ({ tier, priceId }) => {
         const price = await stripe.prices.retrieve(priceId, { expand: ['product'] });
         const product = price.product;
         const productName =
@@ -46,10 +48,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           amount: price.unit_amount,
           currency: price.currency,
         };
-      }),
-    );
+      })),
+      supabase
+        .from('network_companies')
+        .select('id, name')
+        .eq('active', true)
+        .order('display_order', { ascending: true })
+        .order('name', { ascending: true }),
+    ]);
 
-    return res.status(200).json({ tiers });
+    if (companiesResult.error) {
+      throw companiesResult.error;
+    }
+
+    return res.status(200).json({ tiers, companies: companiesResult.data });
   } catch (error) {
     console.error('Stripe price lookup failed', error);
     return res.status(500).json({ error: 'Could not load ticket prices.' });

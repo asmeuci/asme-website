@@ -7,7 +7,7 @@ a code change. Adding a third level means one more entry here plus its env var.
 Every file in api/ is routed as a serverless function on Vercel — the leading
 underscore is what keeps this shared module from becoming an endpoint.
 */
-
+ 
 export type Tier = {
   id: string;
   envVar: string;
@@ -15,8 +15,8 @@ export type Tier = {
 };
 
 export const TIERS: Tier[] = [
-  { id: 'member', envVar: 'STRIPE_PRICE_ID_MEMBER', fallbackLabel: 'ASME member' },
-  { id: 'nonmember', envVar: 'STRIPE_PRICE_ID_NONMEMBER', fallbackLabel: 'Non-member' },
+  { id: 'no_meal', envVar: 'STRIPE_PRICE_ID_MEMBER', fallbackLabel: 'No meal' },
+  { id: 'meal', envVar: 'STRIPE_PRICE_ID_NONMEMBER', fallbackLabel: 'Meal' },
 ];
 
 export const tierById = (id: unknown): Tier | undefined =>
