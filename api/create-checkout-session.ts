@@ -144,7 +144,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const registrationId = randomUUID();
     const resumePath = resumeBytes
-      ? `${registrationId}/${safeFilenamePart(firstName)}_${safeFilenamePart(lastName)}.pdf`
+      ? `${registrationId}/${safeFilenamePart(firstName)}_${safeFilenamePart(lastName)}_${registrationId}.pdf`
       : null;
     let resumeUploaded = false;
     let registrationCreated = false;

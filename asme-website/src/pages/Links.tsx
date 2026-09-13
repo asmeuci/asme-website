@@ -18,14 +18,20 @@ function Links(){
                         <div className="container mx-auto md:w-1/1 pb-2">
                             <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
                                 <h1 className="px-2 py-4 md:px-6 md:py-6 font-scrap text-[30px] md:text-[50px] text-blue-400 text-left">
-                                    RSVP fORMS 
+                                    SIGNUP fORMS 
                                 </h1>
                             </div>
                         </div>
                     </Reveal>
-                    
+
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
-                    
+                    <Reveal width="100%">
+                        <LinkCard 
+                            title="MiniMechs Mentor Interest Form" 
+                            href="https://forms.gle/zjH4gyij31iN3uxJA" 
+                            description="Interested in being a mentor to a first year student and help younger students get adjusted to UCI? Fill out the interest form here!"
+                        />
+                     </Reveal>
                     <div className="flex flex-col space-y-5">
 
 
@@ -59,7 +65,7 @@ function Links(){
                 </Section>
 
                 {/* General Forms Section*/}
-                <Section className="bg-[#f1f0ea]">
+                <Section className="bg-[#f1f0ea] pt-0">
                     <Reveal>
                         <div className="container mx-auto md:w-1/1 pb-2">
                             <div className="bg-blue-900 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
