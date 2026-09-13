@@ -12,9 +12,17 @@ type Confirmation = {
   ticket: string | null;
 };
 
+/*
+"error" means Stripe is sure this registration does not exist. "unavailable"
+means we could not reach Stripe to ask. They have to stay apart: only the first
+one can safely offer to start the registration over, because the second one may
+be hiding a payment that already went through.
+*/
+type Status = "loading" | "paid" | "unpaid" | "unavailable" | "error";
+
 function NetworkSuccess() {
   const [searchParams] = useSearchParams();
-  const [status, setStatus] = useState<"loading" | "paid" | "unpaid" | "error">("loading");
+  const [status, setStatus] = useState<Status>("loading");
   const [confirmation, setConfirmation] = useState<Confirmation | null>(null);
 
   const sessionId = searchParams.get("session_id");
@@ -29,16 +37,25 @@ function NetworkSuccess() {
 
     fetch(`/api/checkout-session?session_id=${encodeURIComponent(sessionId)}`)
       .then(async (response) => {
-        if (!response.ok) throw new Error("lookup failed");
-        return response.json();
-      })
-      .then((data: Confirmation) => {
         if (!active) return;
+
+        if (response.status === 400 || response.status === 404) {
+          setStatus("error");
+          return;
+        }
+
+        if (!response.ok) {
+          setStatus("unavailable");
+          return;
+        }
+
+        const data: Confirmation = await response.json();
         setConfirmation(data);
         setStatus(data.paid ? "paid" : "unpaid");
       })
       .catch(() => {
-        if (active) setStatus("error");
+        // A network failure tells us nothing about whether the payment landed.
+        if (active) setStatus("unavailable");
       });
 
     return () => {
@@ -74,16 +91,38 @@ function NetworkSuccess() {
         </>
       )}
 
-      {status === "error" && (
+      {status === "unavailable" && (
         <>
-          <p className="font-semibold">We couldn't find that registration.</p>
+          <p className="font-semibold">We couldn't confirm your payment just now.</p>
           <p className="text-sm">
-            If you were charged, email us and we'll sort it out — you won't lose your spot.
+            This is a problem on our end, not with your card.{" "}
+            <strong>Please don't pay again</strong> — if your payment went through it is already
+            recorded, and Stripe has emailed you a receipt. Refresh in a moment to check.
           </p>
         </>
       )}
 
-      {status !== "paid" && status !== "loading" && (
+      {status === "error" && (
+        <>
+          <p className="font-semibold">We couldn't find that registration.</p>
+          <p className="text-sm">
+            If you were charged, email us and we'll sort it out — you won't lose your spot, and
+            you don't need to pay again.
+          </p>
+        </>
+      )}
+
+      {status === "unavailable" && (
+        <button
+          type="button"
+          onClick={() => window.location.reload()}
+          className="text-sm underline self-start"
+        >
+          Refresh
+        </button>
+      )}
+
+      {(status === "unpaid" || status === "error") && (
         <Link to="/network/register" className="text-sm underline">
           Try again
         </Link>
@@ -93,4 +132,3 @@ function NetworkSuccess() {
 }
 
 export default NetworkSuccess;
- 

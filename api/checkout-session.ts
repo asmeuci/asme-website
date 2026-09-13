@@ -8,6 +8,16 @@ the redirect, so the confirmation is read back from Stripe rather than trusted
 from the URL — a visitor can't fake a paid registration by typing the route.
 */
 
+/*
+Only Stripe telling us the session does not exist is a real "not found". A rate
+limit, a timeout, or a cold-start blip means we simply could not check, and
+reporting that as "not found" would tell someone who just paid that they are not
+registered — next to a link inviting them to pay again.
+*/
+const isMissingSession = (error: unknown): boolean =>
+  error instanceof Stripe.errors.StripeInvalidRequestError
+  && (error.code === 'resource_missing' || error.statusCode === 404);
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
@@ -71,7 +81,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       currency: session.currency,
     });
   } catch (error) {
+    if (isMissingSession(error)) {
+      console.error('Stripe session not found', sessionId);
+      return res.status(404).json({ error: 'Registration not found.' });
+    }
+
     console.error('Stripe session lookup failed', error);
-    return res.status(404).json({ error: 'Registration not found.' });
+    return res.status(503).json({ error: 'Could not reach Stripe to confirm this payment.' });
   }
 }
