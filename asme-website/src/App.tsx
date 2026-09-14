@@ -5,7 +5,7 @@ import Links from './pages/Links';
 import asmegif from '@/assets/site/loading.gif';
 import Board from './pages/Board';
 import Peterworks from './pages/Peterworks';
-import Events from './pages/Events';
+import Posts from './pages/Posts';
 import Yearbook from './pages/Yearbook';
 import YearbookSection from './pages/YearbookSection';
 import Sponsors from './pages/Sponsors';
@@ -121,7 +121,7 @@ export default function App() {
             <Route path="/" element={<FrontPage />} />
             <Route path="/links" element={<Links />} />
             <Route path="/board" element={<Board/> } />
-            <Route path="/events" element={<Events />} />
+            <Route path="/posts" element={<Posts />} />
             <Route path="/yearbook" element={<Yearbook />} />
             <Route path="/yearbook/:section" element={<YearbookSection />} />
             <Route path="/peterworks" element={<Peterworks />} />

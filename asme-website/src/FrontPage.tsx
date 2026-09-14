@@ -24,7 +24,7 @@ interface EventItem {
 const eventsData: EventItem[] = [
     {
     title: "Network with ASME",
-    date: "October 21st, 2026",
+    date: "October 21st 5-8:30PM ",
     description: "Banquet-style dinner networking event where company representatives are invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
     image: network,
     tag: "Event",

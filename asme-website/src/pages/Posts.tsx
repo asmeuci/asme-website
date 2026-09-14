@@ -3,9 +3,11 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/DdPS-9RK0sf/",
   "https://www.instagram.com/p/DcZx5jBBSDY/",
   "https://www.instagram.com/p/DbcaQ7QlE5t/",
   "https://www.instagram.com/p/DZN6snwSiWd/",
+  
 
 ];
 
@@ -36,7 +38,7 @@ function toEmbedUrl(postUrl: string) {
   return `${postUrl.replace(/\/$/, "")}/embed`;
 }
 
-function Events() {
+function Posts() {
   return (
     <Layout>
       {/* Title */}
@@ -146,4 +148,4 @@ function Events() {
   );
 }
 
-export default Events;
+export default Posts;

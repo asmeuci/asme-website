@@ -90,6 +90,14 @@ function Peterworks() {
               />
             </a>
           </div>
+
+          <div className="mt-10 flex justify-center">
+            <img
+              src="/drone.webp"
+              alt="Student drone"
+              className="aspect-square w-full max-w-xl rounded-lg object-cover object-center"
+            />
+          </div>
         </Section>
       </div>
     </Layout>

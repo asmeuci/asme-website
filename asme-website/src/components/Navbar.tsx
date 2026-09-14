@@ -17,8 +17,8 @@ function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* Dynamic Links (Events, Yearbook, Links) */}
-              {["Events", "Sponsors", "Links", "Board"].map((label) => (
+              {/* Dynamic Links (Posts, Yearbook, Links) */}
+              {["Posts", "Sponsors", "Links", "Board"].map((label) => (
                 <NavigationMenuItem key={label}>
                   <NavigationMenuLink 
                     asChild 
@@ -31,27 +31,14 @@ function Navbar() {
                 </NavigationMenuItem>
               ))}
 
-            {/* Programs Link w/ dropdown */}
+
+            {/* Flagship Link w/ dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-200 data-[state=open]:bg-gray-100 rounded-full font-nunito text-sm text-gray-800 transition-colors">
-                  Programs
+                  Flagship
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="">
                   <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
-                    <li>
-                      <NavigationMenuLink asChild className = "">
-                        <Link to="/peterworks" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
-                          Peterworks
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild className = "">
-                        <Link to="/minimechs" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
-                          MiniMechs
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
                     <li>
                       <NavigationMenuLink asChild className = "">
                         <Link to="/network" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
@@ -70,6 +57,30 @@ function Navbar() {
                       <NavigationMenuLink asChild className = "">
                         <Link to="/SDNN" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
                           SDNN
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            {/* Programs Link w/ dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="justify-end ml-auto bg-transparent hover:bg-gray-200 data-[state=open]:bg-gray-100 rounded-full font-nunito text-sm text-gray-800 transition-colors">
+                  Programs
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="">
+                  <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/peterworks" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
+                          Peterworks
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild className = "">
+                        <Link to="/minimechs" className="block p-2 text-lg hover:bg-gray-200 rounded-md transition-colors text-gray-700 ">
+                          MiniMechs
                         </Link>
                       </NavigationMenuLink>
                     </li>
