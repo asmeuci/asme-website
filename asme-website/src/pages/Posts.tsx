@@ -3,9 +3,11 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/DdPS-9RK0sf/",
   "https://www.instagram.com/p/DcZx5jBBSDY/",
   "https://www.instagram.com/p/DbcaQ7QlE5t/",
   "https://www.instagram.com/p/DZN6snwSiWd/",
+  
 
 ];
 
@@ -36,7 +38,7 @@ function toEmbedUrl(postUrl: string) {
   return `${postUrl.replace(/\/$/, "")}/embed`;
 }
 
-function Events() {
+function Posts() {
   return (
     <Layout>
       {/* Title */}
@@ -44,7 +46,7 @@ function Events() {
         <div className="container mx-auto ">
           <div className="mx-auto w-7/8">
               <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
-                <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+                <h1 className="px-5 py-8 md:px-12 md:py-12 font-scrap text-[40px] md:text-[64px] text-blue-400 text-center">
                     RecenT PosTs 
                 </h1>
               </div>
@@ -52,16 +54,30 @@ function Events() {
         </div>
         </Section>
         {/*Instagram Posts*/}
-        <Section>
+        <div>
           <div>
-            <div className= "bg-[#f1f0ea] w-full">
-              <h1 className="p-10 md:p-20 font-helvetica font-bold text-[45px] md:text-[50px] text-center bg-[#f1f0ea]">
+            <div className= "py-0 bg-[#f1f0ea] w-full">
+              <div className="bg-[#f1f0ea] container mx-auto md:w-1/4 pb-5 pt-5">
+                <div className="bg-blue-200 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+                  <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
                     Instagram
-              </h1>
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3 px-10 md:px-25">
               {postLinks.map((postLink) => (
                 <Reveal key={postLink} width="100%">
+                  <img
+                    src= "decorations/shark.png"
+                    alt= ""
+                    className="absolute w-30 h-auto -top-10 -left-10 rotate-10 z-20 transition-transform hover:scale-105">
+                  </img>
+                  <img
+                    src= "decorations/camera.png"
+                    alt= ""
+                    className="absolute w-20 h-auto -bottom-10 -right-0 -rotate-100 z-20 transition-transform hover:scale-105">
+                  </img>
                   <a
                     href={postLink}
                     target="_blank"
@@ -85,17 +101,31 @@ function Events() {
               ))}
             </div>
         </div>
-      </Section>
+      </div>
 
-
-      <Section className="bg-[#f1f0ea] rounded-xl">
+      {/*Linkedin*/}
+      <div className="bg-[#f1f0ea] rounded-xl">
         <div className="container mx-auto rounded-xl">
-          <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
-            Linkedin
-          </h1>
-          <div className="grid gap-8 bg-[#f1f0ea] lg:grid-cols-3">
+          <div className="bg-[#f1f0ea] container mx-auto md:w-1/4 pb-2 pt-5">
+            <div className="bg-blue-200 rounded-[10px] flex justify-center md:mt-15 md:rounded-[30px]">
+              <h1 className=" p-10 md:p-10 font-helvetica font-bold text-[45px] md:text-[50px] text-center">
+                Linkedin
+              </h1>
+            </div>
+          </div>
+          <div className="grid items-center gap-8 bg-[#f1f0ea] lg:grid-cols-3 px-10 md:px-25">
             {linksPost.map((link, index) => (
               <Reveal key={index} width="100%">
+                <img
+                  src= "decorations/shark.png"
+                  alt= ""
+                  className="absolute w-30 h-auto -top-10 -left-10 rotate-10 z-20 transition-transform hover:scale-105">
+                </img>
+                <img
+                  src= "decorations/camera.png"
+                  alt= ""
+                  className="absolute w-20 h-auto -bottom-10 -right-0 -rotate-100 z-20 transition-transform hover:scale-105">
+                </img>
                 <a
                   href={link.link}
                   target="_blank"
@@ -112,9 +142,10 @@ function Events() {
             ))}
           </div>
         </div>
-      </Section>
+      </div>
+      <div className = "pb-12 bg-[#f1f0ea]"/>
     </Layout>
   );
 }
 
-export default Events;
+export default Posts;

@@ -5,7 +5,7 @@ import Links from './pages/Links';
 import asmegif from '@/assets/site/loading.gif';
 import Board from './pages/Board';
 import Peterworks from './pages/Peterworks';
-import Events from './pages/Events';
+import Posts from './pages/Posts';
 import Yearbook from './pages/Yearbook';
 import YearbookSection from './pages/YearbookSection';
 import Sponsors from './pages/Sponsors';
@@ -13,6 +13,8 @@ import Alumni from './pages/Alumni'
 import Spotlight from "./pages/Spotlight";
 import Minimechs from "./pages/Minimechs";
 import Network from "./pages/Network";
+import NetworkRegister from "./pages/NetworkRegister";
+import NetworkSuccess from "./pages/NetworkSuccess";
 import RNN from "./pages/RNN";
 import SDNN from "./pages/SDNN";
 
@@ -119,7 +121,7 @@ export default function App() {
             <Route path="/" element={<FrontPage />} />
             <Route path="/links" element={<Links />} />
             <Route path="/board" element={<Board/> } />
-            <Route path="/events" element={<Events />} />
+            <Route path="/posts" element={<Posts />} />
             <Route path="/yearbook" element={<Yearbook />} />
             <Route path="/yearbook/:section" element={<YearbookSection />} />
             <Route path="/peterworks" element={<Peterworks />} />
@@ -128,6 +130,8 @@ export default function App() {
             <Route path="/alumni/:id" element={<Spotlight/>} />
             <Route path = "/minimechs" element={<Minimechs/>} />
             <Route path = "/network" element={<Network/>} />
+            <Route path="/network/register" element={<NetworkRegister />} />
+            <Route path="/network/success" element={<NetworkSuccess />} />
             <Route path = "/RNN" element={<RNN/>} />
             <Route path = "/SDNN" element={<SDNN/>} />
             <Route path="/coming-soon" element={<DefaultPage />} />

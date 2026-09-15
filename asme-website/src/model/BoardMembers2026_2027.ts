@@ -91,7 +91,7 @@ const boardCommittees2026_2027: BoardCommittee[] = [
     members: [
       { name: "Katie Schmitz", role: "Student Outreach Director ", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/katie-schmitz-893308331/" },
       { name: "Colin Tang Khoang", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/colin-khoang-10b933366/" },
-      { name: "Sarah McClelland", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
+      { name: "Sarah McClelIand", role: "Committee Member", image: placeholderHeadshot, linkedin: "https://www.linkedin.com/in/sarahrmcclelland/" },
     ],
   },
   {

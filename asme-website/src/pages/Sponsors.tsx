@@ -21,8 +21,13 @@ function Sponsors() {
         <div className="">
           <Section className="bg-transparent py-0">
           <div className="container mx-auto md:w-5/6">
-            <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
-              <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+            <div className="relative bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+              <img
+                src= "decorations/wave.png"
+                alt= "decoration"
+                className="absolute w-20 md:w-40 h-auto -bottom-5 md:-bottom-15 -left-5 md:-left-15 -rotate-30 transition-transform hover:scale-105">
+              </img>
+              <h1 className="px-5 py-8 md:px-12 md:py-12 font-scrap text-[40px] md:text-[64px] text-blue-400 text-center">
               Sponsors
               </h1>
             </div>

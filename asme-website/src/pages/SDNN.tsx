@@ -7,8 +7,18 @@ function SDNN() {
         <div className="min-h-screen bg-[#f1f0ea]">
             <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
                 <div className="container mx-auto md:w-7/8">
-                    <div className="bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
-                        <h1 className="p-5 md:p-20 font-scrap text-[40px] md:text-[80px] text-blue-400 text-center">
+                    <div className="relative bg-blue-900 rounded-[20px] flex justify-center md:mt-15 md:rounded-[80px]">
+                            <img
+                                src= "decorations/rover.png"
+                                alt= ""
+                                className="absolute w-30 md:w-60 h-auto -bottom-15 md:-bottom-25 right-5 md:-right-25 -rotate-30 transition-transform hover:scale-105">
+                            </img>
+                            <img
+                                src= "decorations/car.png"
+                                alt= "decoration"
+                                className="absolute w-30 md:w-60 h-auto -top-20 md:-top-40 -left-7 md:-left-20 -rotate-30 transition-transform hover:scale-105">
+                            </img>
+                        <h1 className="px-5 py-8 md:px-12 md:py-12 font-scrap text-[40px] md:text-[64px] text-blue-400 text-center">
                             Senior Design Networking Night
                         </h1>
                     </div>
@@ -28,8 +38,13 @@ function SDNN() {
                     
                 </div>
 
-                <div className="grid mt-5 items-center grid-cols-1 md:grid-cols-3 bg-gray-300 rounded-xl">
-                    <h1 className = "font-helvetica ml-4 font-bold text-lg md:text-2xl">
+                <div className="relative grid mt-5 items-center grid-cols-1 md:grid-cols-3 bg-gray-300 rounded-xl">
+                    <img
+                        src= "decorations/wave.png"
+                        alt= "decoration"
+                        className="absolute w-20 md:w-40 h-auto -top-6 md:-top-20 -left-6 md:-left-20  -rotate-0 transition-transform hover:scale-105">
+                    </img>
+                    <h1 className = "mt-15 md:mt-0 font-helvetica ml-4 font-bold text-lg md:text-2xl">
                         2026 Attendees:
                     </h1>
                     <div>
