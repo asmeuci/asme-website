@@ -20,7 +20,7 @@ function Network() {
                 {/*<div className= "p-4">
                     <Link to="/network/register"  target="_blank" rel="noopener noreferrer" className="block font-helvetica font-bold text-[24px] text-black text-center px-6 py-2 rounded-2xl ml-[30px] bg-blue-200
                             hover:bg-blue-400 transition-colors duration-200">
-                        Register Now!
+                        Register Now! 
                     </Link>
                 </div>*/}
                 <div className= "relative grid grid-cols-1 items-center md:grid-cols-2">
