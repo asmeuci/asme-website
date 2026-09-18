@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import Section from "../components/Section";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 function Network() {
     return(
