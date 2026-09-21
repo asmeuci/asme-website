@@ -90,7 +90,30 @@ function FrontPage() {
           </svg>
         </div>
       </div>
-      
+
+
+      <div className="bg-[#f1f0ea] w-full">
+        <div className="px-5 py-5 container mx-auto md:w-1/1 bg-[#f1f0ea] w-full">
+          <div className="bg-blue-900 rounded-[10px] flex justify-center  md:rounded-[30px]">
+              <h1 className="px-2 py-4 md:px-6 md:py-6 font-helvetica font-bold text-[30px] md:text-[50px] text-blue-400 text-center">
+                  Come find us at AIF! Tuesday, September 22 from 11-4PM
+              </h1>
+            </div>
+        </div>
+        <div className="px-5 py-2 grid grid-cols-1 md:grid-cols-2">
+          <img src="AIF 2026 (1).png" className="px-5 py-2 rounded-[30px] md:rounded-[80px]"/>
+          <img src="AIF 2026.png" className="px-5 py-2 rounded-[30px] md:rounded-[80px]"/>
+        </div>
+        <div className="px-5 py-5 container mx-auto md:w-1/1 bg-[#f1f0ea] w-full">
+          <div className=" bg-blue-900 rounded-[10px] flex justify-center  md:rounded-[30px]">
+              <h1 className="px-2 py-4 md:px-6 md:py-6 font-helvetica font-bold text-[30px] md:text-[50px] text-blue-400 text-center">
+                  Booth E249 (close to Engineering tower)
+              </h1>
+          </div>
+        </div>
+      </div>
+
+
         <div className="w-full bg-[#f1f0ea]">
         <Section className="">
           <Reveal>
