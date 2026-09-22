@@ -3,6 +3,9 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/Ddh5V6oqfUX/",
+  "https://www.instagram.com/p/Ddi1DK4KIoy/",
+  "https://www.instagram.com/p/Ddh91KtkgpF/",
   "https://www.instagram.com/p/Ddfwjt8DYTz/",
   "https://www.instagram.com/p/DdfseTnNFm8/",
   "https://www.instagram.com/p/DdfuLj0DcOp/",
