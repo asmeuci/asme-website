@@ -26,6 +26,14 @@ function Links(){
 
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     <div className="flex flex-col space-y-5">
+                        
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="ESO Bonfire RSVP Form" 
+                                href="https://forms.gle/nv9Nxso3Z8suGZMp7" 
+                                description="Join the ESOS at Corona Del Mar Week 1 Friday at 6-9PM to make some engineering friends while enjoying food and fun!"
+                            />
+                        </Reveal>
                         <Reveal width="100%">
                             <LinkCard 
                                 title="MiniMechs Mentee Interest Form" 

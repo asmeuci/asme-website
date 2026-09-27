@@ -1,7 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import Stripe from 'stripe';
-import { priceIdFor, tierById } from './_tiers';
+import { paymentLinkUrlFor, tierById } from './_tiers';
 import { getSupabaseAdmin } from './_supabase';
 
 const MAX_RESUME_BYTES = 2 * 1024 * 1024;
@@ -41,12 +40,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-  if (!stripeSecretKey) {
-    console.error('Missing STRIPE_SECRET_KEY');
-    return res.status(500).json({ error: 'Payments are not configured yet.' });
-  }
-
   const body = (req.body ?? {}) as Record<string, unknown>;
 
   try {
@@ -68,9 +61,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Dietary restrictions must be 500 characters or fewer.' });
     }
 
-    const priceId = priceIdFor(tier);
-    if (!priceId) {
-      console.error(`Missing ${tier.envVar} for ticket level "${tier.id}"`);
+    const paymentLinkUrl = paymentLinkUrlFor(tier);
+    if (!paymentLinkUrl) {
+      console.error(`Missing ${tier.paymentLinkEnvVar} for ticket level "${tier.id}"`);
+      return res.status(500).json({ error: 'That ticket type is not available right now.' });
+    }
+
+    let paymentUrl: URL;
+    try {
+      paymentUrl = new URL(paymentLinkUrl);
+      if (paymentUrl.protocol !== 'https:') throw new Error('Payment Link must use HTTPS');
+    } catch (error) {
+      console.error(`Invalid ${tier.paymentLinkEnvVar}`, error);
       return res.status(500).json({ error: 'That ticket type is not available right now.' });
     }
 
@@ -183,41 +185,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       if (registrationError) throw registrationError;
       registrationCreated = true;
 
-      const host = req.headers.host ?? '';
-      const isLocal = host.startsWith('localhost') || host.startsWith('127.0.0.1');
-      const origin = process.env.PUBLIC_SITE_URL || `${isLocal ? 'http' : 'https'}://${host}`;
-      const stripe = new Stripe(stripeSecretKey);
-      const metadata = {
-        registration_id: registrationId,
-        name: `${firstName} ${lastName}`,
-        tier: tier.id,
-      };
+      // Stripe copies this value onto the Checkout Session created from the
+      // Payment Link. The webhook uses it to match the payment to this form.
+      paymentUrl.searchParams.set('client_reference_id', registrationId);
 
-      const session = await stripe.checkout.sessions.create({
-        mode: 'payment',
-        line_items: [{ price: priceId, quantity: 1 }],
-        customer_email: email,
-        metadata,
-        payment_intent_data: { metadata },
-        success_url: `${origin}/network/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${origin}/network/register?canceled=1`,
-      });
-
-      if (!session.url) throw new Error('Stripe did not return a Checkout URL');
-
-      const { error: sessionUpdateError } = await supabase
-        .from('network_registrations')
-        .update({ stripe_checkout_session_id: session.id })
-        .eq('id', registrationId);
-
-      if (sessionUpdateError) {
-        if (session.status === 'open') {
-          await stripe.checkout.sessions.expire(session.id).catch(() => undefined);
-        }
-        throw sessionUpdateError;
-      }
-
-      return res.status(200).json({ url: session.url });
+      return res.status(200).json({ url: paymentUrl.toString() });
     } catch (error) {
       if (registrationCreated) {
         await supabase.from('network_registrations').delete().eq('id', registrationId);

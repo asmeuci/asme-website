@@ -21,7 +21,7 @@ function InfoBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-16 md:top-36 left-0 z-[90] w-full px-4">
+    <div className="fixed top-16 md:top-32 left-0 z-[90] w-full px-4">
       <div
         className="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-xl bg-blue-300 px-5 py-3 text-black shadow-lg"
         role="status"

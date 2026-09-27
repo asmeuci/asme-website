@@ -47,7 +47,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const ticket =
       product && typeof product === 'object' && 'name' in product ? product.name : null;
 
-    const registrationId = session.metadata?.registration_id;
+    // Payment Links carry this in client_reference_id. The metadata fallback
+    // keeps confirmations for older API-created sessions working.
+    const registrationId = session.client_reference_id ?? session.metadata?.registration_id;
+    let registrationName = session.metadata?.name ?? null;
+
+    if (registrationId) {
+      try {
+        const { data: registration, error: registrationError } = await getSupabaseAdmin()
+          .from('network_registrations')
+          .select('first_name, last_name')
+          .eq('id', registrationId)
+          .maybeSingle();
+
+        if (registrationError) throw registrationError;
+        if (registration) {
+          registrationName = `${registration.first_name} ${registration.last_name}`.trim();
+        }
+      } catch (error) {
+        console.error('Supabase registration lookup unavailable', error);
+      }
+    }
+
     if (session.payment_status === 'paid' && registrationId) {
       try {
         const paymentIntent =
@@ -74,7 +95,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({
       paid: session.payment_status === 'paid',
-      name: session.metadata?.name ?? null,
+      name: registrationName,
       email: session.customer_details?.email ?? session.customer_email ?? null,
       ticket,
       amountTotal: session.amount_total,

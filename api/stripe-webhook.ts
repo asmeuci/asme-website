@@ -23,6 +23,11 @@ const paymentIntentId = (session: Stripe.Checkout.Session): string | null =>
     ? session.payment_intent
     : session.payment_intent?.id ?? null;
 
+// Payment Links use client_reference_id. Keep the metadata fallback so older
+// API-created Checkout Sessions can still complete safely during the switch.
+const registrationIdFor = (session: Stripe.Checkout.Session): string | undefined =>
+  session.client_reference_id ?? session.metadata?.registration_id;
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -70,7 +75,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       || event.type === 'checkout.session.async_payment_succeeded'
     ) {
       const session = event.data.object;
-      const registrationId = session.metadata?.registration_id;
+      const registrationId = registrationIdFor(session);
 
       if (registrationId && session.payment_status === 'paid') {
         const { error } = await supabase
@@ -86,7 +91,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
     } else if (event.type === 'checkout.session.async_payment_failed') {
       const session = event.data.object;
-      const registrationId = session.metadata?.registration_id;
+      const registrationId = registrationIdFor(session);
       if (registrationId) {
         const { error } = await supabase
           .from('network_registrations')
@@ -97,7 +102,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
     } else if (event.type === 'checkout.session.expired') {
       const session = event.data.object;
-      const registrationId = session.metadata?.registration_id;
+      const registrationId = registrationIdFor(session);
       if (registrationId) {
         const { error } = await supabase
           .from('network_registrations')

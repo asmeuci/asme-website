@@ -18,7 +18,7 @@ function Navbar() {
               </NavigationMenuItem>
 
               {/* Dynamic Links (Posts, Yearbook, Links) */}
-              {["Posts", "Sponsors", "Links", "FAQ", "Board"].map((label) => (
+              {["Posts","Links", "FAQ", "Sponsors", "Board"].map((label) => (
                 <NavigationMenuItem key={label}>
                   <NavigationMenuLink 
                     asChild 
