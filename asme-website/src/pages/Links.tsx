@@ -25,17 +25,23 @@ function Links(){
                     </Reveal>
 
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
-                    <Reveal width="100%">
-                        <LinkCard 
-                            title="MiniMechs Mentor Interest Form" 
-                            href="https://forms.gle/zjH4gyij31iN3uxJA" 
-                            description="Interested in being a mentor to a first year student and help younger students get adjusted to UCI? Fill out the interest form here!"
-                        />
-                     </Reveal>
                     <div className="flex flex-col space-y-5">
-
-
+                        <Reveal width="100%">
+                            <LinkCard 
+                              title="Corona Del Mar Beach Social" 
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSf0Ff5RTey-heulBwbRaFOVzMLs_fGqdnbANq1wCBOqDGVTeQ/formResponse " 
+                            description="Join ASME and AICHE at Corona Del Mar to clean up the beach and help with the environment while meeting new friends and awesome people!. Event: Saturday Week 0 at 3-6PM"
+                        />
+                        </Reveal>
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="MiniMechs Mentee Interest Form" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeBlBq2xpBnquN0dYAJqIFecpiJATlOp-U2CXeWvQXVmPJt3w/viewform?usp=publish-editor" 
+                                description="Interested in being a mentee of an older UCI student? Fill out the form to register as a member of MiniMechs! Learn more about life at UCI, and gain valuable insight in your future success as an engineer. Plus, you get to know some pretty cool people :)"
+                            />
+                        </Reveal>
                     </div>
+
                 </Section>
 
                 {/* Resources Section*/}
@@ -52,7 +58,6 @@ function Links(){
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
                     <div className="flex flex-col space-y-5">
-
                         <Reveal width="100%">
                             <LinkCard 
                                 title="Welcome to UCI!" 
@@ -60,8 +65,15 @@ function Links(){
                                 description="A complete guide for incoming UCI students with housing tips, class planning resources, and everything you need to transition smoothly into college!"
                             />
                         </Reveal>
-
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="ASME National Membership registration" 
+                                href="https://www.asme.org/join" 
+                                description="Want to be a part of the larger national ASME organization? Sign up here to gain access to workshops, resources and much more! 1st year students get membership for FREE! Use code SECTION for 10% off."
+                            />
+                        </Reveal>
                     </div>
+
                 </Section>
 
                 {/* General Forms Section*/}

@@ -91,7 +91,7 @@ function FrontPage() {
         </div>
       </div>
 
-
+{/*
       <div className="bg-[#f1f0ea] w-full">
         <div className="px-5 py-5 container mx-auto md:w-1/1 bg-[#f1f0ea] w-full">
           <div className="bg-blue-900 rounded-[10px] flex justify-center  md:rounded-[30px]">
@@ -113,21 +113,39 @@ function FrontPage() {
         </div>
       </div>
 
-
+*/}
         <div className="w-full bg-[#f1f0ea]">
-        <Section className="">
-          <Reveal>
-            <div className="flex flex-col space-y-12">
-                <h2 className="font-helvetica text-sm uppercase tracking-widest mb-2">Who We Are</h2>
-                <h1 className="font-helvetica font-bold text-4xl md:text-5xl font-helvetica mb-6">About ASME</h1>
-            </div>
-          </Reveal>
-          <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
-          <Reveal>
-            <p className="font-helvetica font-semibold text-zinc-600 text-lg md:text-2xl leading-relaxed pt-4 pb-14">
-              ASME is a community of students and engineers dedicated to learning, collaboration, and hands-on innovation. We create opportunities for members to grow through technical projects, professional development, workshops, and networking events.
-            </p>
-          </Reveal>
+        <Section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#f1f0ea]">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover opacity-40"
+          >
+            <source src="/0926.mp4" type="video/mp4" />
+          </video>
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-48 bg-gradient-to-b from-transparent to-[#f1f0ea]" />
+
+          <div className="relative z-10 mx-auto max-w-5xl text-center">
+            <Reveal width="100%">
+              <div className="flex flex-col space-y-6">
+                  <h2 className="font-helvetica text-sm uppercase tracking-widest">Who We Are</h2>
+                  <h1 className="font-helvetica font-bold text-4xl md:text-5xl">About ASME</h1>
+              </div>
+            </Reveal>
+            <div className="mt-8 border-t-[0.5px] border-zinc-700"></div>
+            <Reveal width="100%">
+              <p className="pt-8 font-helvetica font-semibold text-zinc-600 text-lg md:text-2xl leading-relaxed">
+                ASME is a community of students and engineers dedicated to learning, collaboration, and hands-on innovation. We create opportunities for members to grow through technical projects, professional development, workshops, and networking events.
+              </p>
+            </Reveal>
+          </div>
+        </Section>
+
+        <Section className="pt-36 pb-0">
           <Reveal width="100%">
               <BentoGallery/>
           </Reveal>

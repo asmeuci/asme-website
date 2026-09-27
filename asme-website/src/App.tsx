@@ -17,6 +17,8 @@ import NetworkRegister from "./pages/NetworkRegister";
 import NetworkSuccess from "./pages/NetworkSuccess";
 import RNN from "./pages/RNN";
 import SDNN from "./pages/SDNN";
+import FAQ from "./pages/FAQ";
+import InfoBanner from "./components/InfoBanner";
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -117,6 +119,7 @@ export default function App() {
     <>
       <div className={`transition-opacity duration-700 ease-out ${isLaunchLoading && !isLoaderFading ? 'opacity-0' : 'opacity-100'}`}>
         <BrowserRouter>
+          <InfoBanner />
           <Routes>
             <Route path="/" element={<FrontPage />} />
             <Route path="/links" element={<Links />} />
@@ -134,6 +137,7 @@ export default function App() {
             <Route path="/network/success" element={<NetworkSuccess />} />
             <Route path = "/RNN" element={<RNN/>} />
             <Route path = "/SDNN" element={<SDNN/>} />
+            <Route path = "/FAQ" element={<FAQ/>} />
             <Route path="/coming-soon" element={<DefaultPage />} />
             <Route path="*" element={<DefaultPage />} />
           </Routes>

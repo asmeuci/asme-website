@@ -95,6 +95,9 @@ function MobileNavbar() {
                     <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/peterworks" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Peterworks</Link>
                     </li>
+                    <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <Link to="/FAQ" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">FAQ</Link>
+                    </li>
                     <li className={`transform transition-all duration-500 delay-[350ms] ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
                         <Link to="/yearbook" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Yearbook</Link>
                     </li>
