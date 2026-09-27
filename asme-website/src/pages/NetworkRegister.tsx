@@ -33,6 +33,14 @@ const formatPrice = (amount: number, currency: string) =>
 const priceOf = (tier: Tier | undefined) =>
   tier && tier.amount != null ? formatPrice(tier.amount, tier.currency) : null;
 
+const readApiResponse = async (response: Response, fallbackError: string) => {
+  const contentType = response.headers.get("content-type") ?? "";
+  if (!contentType.includes("application/json")) {
+    throw new Error(fallbackError);
+  }
+  return response.json();
+};
+
 const fileToBase64 = (file: File) =>
   new Promise<string>((resolve, reject) => {
     const reader = new FileReader();
@@ -61,7 +69,7 @@ function NetworkRegister() {
 
     fetch("/api/event-info")
       .then(async (response) => {
-        const data = await response.json();
+        const data = await readApiResponse(response, "Registration is temporarily unavailable. Please try again.");
         if (!response.ok) throw new Error(data.error || "Could not load registration options.");
         return data;
       })
@@ -138,7 +146,7 @@ function NetworkRegister() {
         }),
       });
 
-      const data = await response.json();
+      const data = await readApiResponse(response, "Registration is temporarily unavailable. Please try again.");
       if (!response.ok || !data.url) {
         setError(data.error || "Something went wrong. Please try again.");
         setIsSubmitting(false);
