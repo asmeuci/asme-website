@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 // Change this text whenever you want to update the banner.
 const BANNER_MESSAGE = "ASME Week 1 GM will be at DCE270! Wednesday 9/30 at 6:30PM. Board members will be at Brandywine @ 6:10 to lead the way! Meetings will be in MDEA moving forward. ";

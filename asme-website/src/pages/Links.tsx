@@ -28,13 +28,6 @@ function Links(){
                     <div className="flex flex-col space-y-5">
                         <Reveal width="100%">
                             <LinkCard 
-                              title="Corona Del Mar Beach Social" 
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSf0Ff5RTey-heulBwbRaFOVzMLs_fGqdnbANq1wCBOqDGVTeQ/formResponse " 
-                            description="Join ASME and AICHE at Corona Del Mar to clean up the beach and help with the environment while meeting new friends and awesome people!. Event: Saturday Week 0 at 3-6PM"
-                        />
-                        </Reveal>
-                        <Reveal width="100%">
-                            <LinkCard 
                                 title="MiniMechs Mentee Interest Form" 
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSeBlBq2xpBnquN0dYAJqIFecpiJATlOp-U2CXeWvQXVmPJt3w/viewform?usp=publish-editor" 
                                 description="Interested in being a mentee of an older UCI student? Fill out the form to register as a member of MiniMechs! Learn more about life at UCI, and gain valuable insight in your future success as an engineer. Plus, you get to know some pretty cool people :)"
