@@ -22,12 +22,12 @@ const highlights = [
     description: "In our sponsors page, you are able to see our sponsorship package! Additionally, you can email asme@uci.edu or send a quick message using the text boxes on that page. We look forward to working with you!"
   },
   {
-    title: "How do I get more information about anything that ASME offers!",
+    title: "How do I get more information about anything that ASME offers?",
     description: "The website is a good place to find out any information about our major events, as well as RSVP forms! The website is updated regularly to ensure that viewers like you get the most up-to-date information."
   },
   {
     title:"What does ASME do outside of general meetings?",
-    description: "We do a lot outside of general meetings! We occasionally do workshops and/or guest speakers to find out more about the industry. We also have our flagship events, where you can find out more, by hovering on Flagship (computer), or clicking on one of our 3 events! (mobile). Additionally, we like to have fun as well in the terms of socials."
+    description: "We do a lot outside of general meetings! We occasionally do workshops and/or guest speakers to find out more about the industry. We also have our flagship events, where you can find out more, by hovering on Flagship (computer), or clicking on one of our 3 events! (mobile). Additionally, we like to have fun as well, with socials throughout the year!"
   },
   {
     title: "How do I get more involved with ASME?",
