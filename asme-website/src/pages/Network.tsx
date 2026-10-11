@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 import Section from "../components/Section";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Network() {
-    return(
+    return( 
     <Layout>
         <div className="min-h-screen bg-[#f1f0ea]">
             <Section className=" bg-[url(/sponsors/sponsorbgMB.png)] md:bg-[url(/sponsors/sponsorbg.webp)] bg-[length:103%_auto] py-0">
@@ -17,15 +17,15 @@ function Network() {
             </Section>
             <Section className="bg-transparent pt-4 pb-24 md:pb-32">
                 <div className="mt-auto border-t-[0.5px] border-zinc-700 pt-4" />
-                {/*<div className= "p-4">
+                <div className= "p-4">
                     <Link to="/network/register"  target="_blank" rel="noopener noreferrer" className="block font-helvetica font-bold text-[24px] text-black text-center px-6 py-2 rounded-2xl ml-[30px] bg-blue-200
                             hover:bg-blue-400 transition-colors duration-200">
                         Register Now! 
                     </Link>
-                </div>*/}
+                </div>
                 <div className= "relative grid grid-cols-1 items-center md:grid-cols-2">
                     <h1 className = "font-helvetica font-bold p-5 text-lg md:text-2xl">
-                        Network With ASME is a banquet style networking event where many company representatives are invited to talk and connect with students to give them insights about college, internship and job searching, as well as their experiences in the workforce! Keep an eye out as we finalize the list of attendees for 2026!
+                        Network With ASME is a banquet style networking event where many company representatives are invited to talk and connect with students to give them insights about college, internship and job searching, as well as their experiences in the workforce! Be on the lookout for RSVPS, as they will open soon. Here is a list of companies for 2026.
                     </h1>
                     <img
                         src= "Quarterly/Network2.webp"
@@ -41,16 +41,24 @@ function Network() {
                     </img>
                     <div>
                         <h1 className = "font-helvetica mt-10 ml-4 font-bold text-lg md:text-2xl">
-                        2025 Attendees:
+                        2026 Attendees:
                         </h1>
                         <ul className = "font-helvetica font-bold text-md md:text-xl list-[circle] pl-15 py-10">
-                            <li>ANSYS</li>
-                            <li>Hyundai</li>
-                            <li>Johnson &amp; Johnson</li>
-                            <li>MKS Inc</li>
+                            <li>Ansys, part of Synopsys</li>
+                            <li>Divergent Technologies</li>
+                            <li> Edwards Lifesciences</li>
+                            <li>Fluor Corp.</li>
+                            <li>Hyundai America Technical Center</li>
+                            <li>Hyundai Motor America</li>
+                            <li>Johnson & Johnson</li>
+                            <li>Leonardo DRS</li>
+                            <li>MKS Instruments</li>
+                            <li>NASA</li>
                             <li>Northrop Grumman</li>
                             <li>Parker Aerospace</li>
-                            <li>Rivian</li>
+                            <li>RTX</li>
+                            <li>Safran</li>
+                            <li>Vast Aerospace</li>
                         </ul>
                     </div>
                     <img

@@ -2,10 +2,10 @@ import { useState } from "react";
 //import { Link } from "react-router-dom";
 
 // Change this text whenever you want to update the banner.
-const BANNER_MESSAGE = "ASME Week 1 GM will be at DCE270! Wednesday 9/30 at 6:30PM. Board members will be at Brandywine @ 6:10 to lead the way! Meetings will be in MDEA moving forward. ";
+const BANNER_MESSAGE = "NETWORK WITH ASME REGISTRATIONS ARE NOW OPEN!!!! Go to Flagship Tab and Network with ASME. Spots are going fast! ";
 
 // Change the version when you want everyone to see a new announcement.
-const BANNER_VERSION = "fall-w1";
+const BANNER_VERSION = "fall-w2_1";
 const DISMISSED_KEY = `asme-info-banner-dismissed-${BANNER_VERSION}`;
 
 function InfoBanner() {
@@ -21,7 +21,7 @@ function InfoBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-16 md:top-32 left-0 z-[90] w-full px-4">
+    <div className="fixed top-16 md:top-1 left-0 z-[90] w-full px-4">
       <div
         className="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-xl bg-blue-300 px-5 py-3 text-black shadow-lg"
         role="status"

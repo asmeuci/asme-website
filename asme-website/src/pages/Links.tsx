@@ -25,22 +25,15 @@ function Links(){
                     </Reveal>
 
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
-                    <div className="flex flex-col space-y-5">
-                        
+                    <div className="flex flex-col space-y-5"> 
                         <Reveal width="100%">
                             <LinkCard 
-                                title="ESO Bonfire RSVP Form" 
-                                href="https://forms.gle/nv9Nxso3Z8suGZMp7" 
-                                description="Join the ESOS at Corona Del Mar Week 1 Friday at 6-9PM to make some engineering friends while enjoying food and fun!"
+                                title="Network With ASME 2026 RSVP" 
+                                href="https://www.asmeatuci.com/network/register" 
+                                description="Join us at the banquet style networking event where many company representatives are invited to talk and connect with students! Companies include Northrop Grumman, Edwards Lifesciences, and Hyundai Motor America! "
                             />
                         </Reveal>
-                        <Reveal width="100%">
-                            <LinkCard 
-                                title="MiniMechs Mentee Interest Form" 
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSeBlBq2xpBnquN0dYAJqIFecpiJATlOp-U2CXeWvQXVmPJt3w/viewform?usp=publish-editor" 
-                                description="Interested in being a mentee of an older UCI student? Fill out the form to register as a member of MiniMechs! Learn more about life at UCI, and gain valuable insight in your future success as an engineer. Plus, you get to know some pretty cool people :)"
-                            />
-                        </Reveal>
+
                     </div>
 
                 </Section>
@@ -70,7 +63,7 @@ function Links(){
                             <LinkCard 
                                 title="ASME National Membership registration" 
                                 href="https://www.asme.org/join" 
-                                description="Want to be a part of the larger national ASME organization? Sign up here to gain access to workshops, resources and much more! 1st year students get membership for FREE! Use code SECTION for 10% off."
+                                description="Want to be a part of the larger national ASME organization? Sign up here to gain access to workshops, resources and much more! 1st year students get membership for FREE! Use code SECTION for 25% off."
                             />
                         </Reveal>
                     </div>

@@ -3,24 +3,12 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
-  "https://www.instagram.com/p/DdxDanQyDyT/",
-  "https://www.instagram.com/p/Ddwv8S0zymp/",
-  "https://www.instagram.com/p/DdvGyblDUgm/",
-  "https://www.instagram.com/p/Ddus_simDfC/",
-  "https://www.instagram.com/p/DduMDhDKDpJ/",
-  "https://www.instagram.com/p/DdseSfgK6Hn/",
-  "https://www.instagram.com/p/Ddfwjt8DYTz/",
-  "https://www.instagram.com/p/DdfseTnNFm8/",
-  "https://www.instagram.com/p/DdfuLj0DcOp/",
-  "https://www.instagram.com/p/DdfqjTjjebZ/",
-  "https://www.instagram.com/p/DdfpUz8DT4r/",
-  "https://www.instagram.com/p/DdflJ1yDVVB/",
-  "https://www.instagram.com/p/Ddar2WRjohQ/",
-  "https://www.instagram.com/p/Ddarqtrju1u/",
-  "https://www.instagram.com/p/Ddarap5DkkQ/",
-  "https://www.instagram.com/p/DdX-pwBDV_w/",
-  "https://www.instagram.com/p/DdX9JMBNnpD/",
-  "https://www.instagram.com/p/DdX86KIjffk/",
+  "https://www.instagram.com/p/DeTX3usKVT9/",
+  "https://www.instagram.com/p/DeS0P1RKqk1/",
+  "https://www.instagram.com/p/DeQRs_tGEYf/",
+  "https://www.instagram.com/p/DeIrcT-KfCk/",
+  "https://www.instagram.com/p/DeGSnepjcCL/",
+  "https://www.instagram.com/p/Dd0YLSmjuov/",
 ];
 
 const linksPost = [

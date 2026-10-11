@@ -9,7 +9,7 @@ type Tier = {
   amount: number | null;
   currency: string;
 };
-
+ 
 type Company = {
   id: string;
   name: string;
@@ -32,14 +32,6 @@ const formatPrice = (amount: number, currency: string) =>
 
 const priceOf = (tier: Tier | undefined) =>
   tier && tier.amount != null ? formatPrice(tier.amount, tier.currency) : null;
-
-const readApiResponse = async (response: Response, fallbackError: string) => {
-  const contentType = response.headers.get("content-type") ?? "";
-  if (!contentType.includes("application/json")) {
-    throw new Error(fallbackError);
-  }
-  return response.json();
-};
 
 const fileToBase64 = (file: File) =>
   new Promise<string>((resolve, reject) => {
@@ -69,7 +61,7 @@ function NetworkRegister() {
 
     fetch("/api/event-info")
       .then(async (response) => {
-        const data = await readApiResponse(response, "Registration is temporarily unavailable. Please try again.");
+        const data = await response.json();
         if (!response.ok) throw new Error(data.error || "Could not load registration options.");
         return data;
       })
@@ -146,7 +138,7 @@ function NetworkRegister() {
         }),
       });
 
-      const data = await readApiResponse(response, "Registration is temporarily unavailable. Please try again.");
+      const data = await response.json();
       if (!response.ok || !data.url) {
         setError(data.error || "Something went wrong. Please try again.");
         setIsSubmitting(false);
@@ -209,7 +201,7 @@ function NetworkRegister() {
 
               <div>
                 <h2 className="text-xl font-bold text-blue-950">Company preferences</h2>
-                <p className="mt-1 text-sm text-zinc-600 text-center">Rank up to three different companies. Your rankings will be used to designate seating assignments.</p>
+                <p className="mt-1 text-sm text-zinc-600 text-center">Rank up to three different companies. Your rankings will be used to pair you up with companies!</p>
                 <div className="mt-4 grid gap-4">
                   {["First choice", "Second choice (optional)", "Third choice (optional)"].map((label, index) => (
                     <label key={label} className="flex flex-col gap-2 text-sm font-semibold text-zinc-800">
@@ -253,6 +245,7 @@ function NetworkRegister() {
 
               <div>
                 <h2 className="text-xl font-bold text-blue-950">Payment</h2>
+                <h2 className="mt-1 text-sm text-zinc-600 text-center"> 2 Tiers: Full Event ($20) is from 5-8:30pm and includes dinner, Open Networking ($10) is only from 7:30-8:30pm</h2>
                 <label className="mt-4 flex flex-col gap-2 text-sm font-semibold text-zinc-800">
                   Ticket type
                   <select className={inputStyles} required value={tierId} onChange={(event) => setTierId(event.target.value)}>

@@ -5,7 +5,7 @@ import { getSupabaseAdmin } from './_supabase';
 
 const MAX_RESUME_BYTES = 2 * 1024 * 1024;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_PATTERN = /^[^\s@]+@uci\.edu$/;
 
 const safeFilenamePart = (value: string): string =>
   value
@@ -47,7 +47,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const lastName = requiredText(body, 'lastName', 'Last name', 100);
     const email = requiredText(body, 'email', 'Email', 254).toLowerCase();
     if (!EMAIL_PATTERN.test(email)) {
-      return res.status(400).json({ error: 'Please enter a valid email address.' });
+      return res.status(400).json({ error: 'Please enter a valid UCI email address.' });
     }
 
     const tier = tierById(body.tier);

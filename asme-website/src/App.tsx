@@ -20,6 +20,8 @@ import SDNN from "./pages/SDNN";
 import FAQ from "./pages/FAQ";
 import InfoBanner from "./components/InfoBanner";
 
+const NETWORK_REGISTRATION_ENABLED = true;
+
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
     <img src= {asmegif} className = "w-64 h-64"></img>
@@ -133,7 +135,7 @@ export default function App() {
             <Route path="/alumni/:id" element={<Spotlight/>} />
             <Route path = "/minimechs" element={<Minimechs/>} />
             <Route path = "/network" element={<Network/>} />
-            <Route path="/network/register" element={<NetworkRegister />} />
+            <Route path="/network/register" element={NETWORK_REGISTRATION_ENABLED? <NetworkRegister /> : <DefaultPage/>} />
             <Route path="/network/success" element={<NetworkSuccess />} />
             <Route path = "/RNN" element={<RNN/>} />
             <Route path = "/SDNN" element={<SDNN/>} />
