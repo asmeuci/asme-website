@@ -6,10 +6,17 @@ const companies =[
   {
     name: "MatterHackers", 
     image:"sponsors/MatterHackers.png",
-    desc1: "Thank you for supplying us with filament to support our PeterWorks program! We will put the filament to good use for students.",
+    desc1: "",
     desc2: "",
     website: "https://www.matterhackers.com",
   },
+  {
+    name: "MKS",
+    image: "sponsors/MKS.png",
+    desc1: "",
+    desc2:"",
+    website: "https://www.mks.com",
+  }
   
  
 ]
@@ -117,6 +124,11 @@ function Sponsors() {
           </div>
         </div>
         <div className="bg-[#f1f0ea]">
+          <div>
+          <div className="flex flex-col space-y-6">
+                  <h1 className="font-helvetica font-bold text-4xl text-center md:text-5xl mt-5">List of Sponsors</h1>
+          </div>
+          </div>
           <div className="container mx-auto flex flex-wrap justify-center gap-12 px-4 py-10">
             {companies.map((company, index) => (
               <a 
