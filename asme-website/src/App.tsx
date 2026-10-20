@@ -20,7 +20,7 @@ import SDNN from "./pages/SDNN";
 import FAQ from "./pages/FAQ";
 import InfoBanner from "./components/InfoBanner";
 
-const NETWORK_REGISTRATION_ENABLED = true;
+const NETWORK_REGISTRATION_ENABLED = false;
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">

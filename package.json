@@ -3,7 +3,8 @@
     "dev": "npm --prefix asme-website run dev",
     "build": "npm --prefix asme-website run build",
     "lint": "npm --prefix asme-website run lint",
-    "preview": "npm --prefix asme-website run preview"
+    "preview": "npm --prefix asme-website run preview",
+    "export:paid-resumes": "node --env-file=.env scripts/export-paid-resumes.mjs"
   },
   "devDependencies": {
     "@emnapi/core": "^1.11.3",

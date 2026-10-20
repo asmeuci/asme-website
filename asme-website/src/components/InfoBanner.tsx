@@ -2,10 +2,10 @@ import { useState } from "react";
 //import { Link } from "react-router-dom";
 
 // Change this text whenever you want to update the banner.
-const BANNER_MESSAGE = "NETWORK WITH ASME REGISTRATIONS ARE NOW OPEN!!!! Go to Flagship Tab and Network with ASME. Spots are going fast! ";
+const BANNER_MESSAGE = "NETWORK WITH ASME TICKETS SOLD OUT! WE HOPE YOU ENJOY THE EVENT!";
 
 // Change the version when you want everyone to see a new announcement.
-const BANNER_VERSION = "fall-w2_1";
+const BANNER_VERSION = "fall-w4_1";
 const DISMISSED_KEY = `asme-info-banner-dismissed-${BANNER_VERSION}`;
 
 function InfoBanner() {
@@ -23,10 +23,12 @@ function InfoBanner() {
   return (
     <div className="fixed top-16 md:top-1 left-0 z-[90] w-full px-4">
       <div
-        className="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-xl bg-blue-300 px-5 py-3 text-black shadow-lg"
+        className="mx-auto grid max-w-5xl grid-cols-[2.5rem_minmax(0,1fr)_2.5rem] items-center rounded-xl bg-blue-300 px-3 py-3 text-black shadow-lg sm:px-5"
         role="status"
       >
-        <p className="font-helvetica text-sm font-semibold text-center sm:text-base">
+        <span aria-hidden="true" />
+
+        <p className="font-helvetica text-center text-sm font-semibold sm:text-base">
           {BANNER_MESSAGE}
             {/*<Link to="/network/register" className="underline">
               Register Now
@@ -36,12 +38,10 @@ function InfoBanner() {
         <button
           type="button"
           onClick={dismissBanner}
-          className="shrink-0 rounded-md px-2 py-1 text-xl leading-none transition-colors hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="justify-self-end rounded-md px-2 py-1 font-helvetica text-xl leading-none transition-colors hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           aria-label="Dismiss announcement"
         >
-          <p className ="font-helvetica">
-            X
-          </p>
+          X
         </button>
       </div>
     </div>

@@ -9,6 +9,21 @@ then
 npm run dev  
 ```
 
+## Export paid resumes
+
+The resume exporter downloads PDFs only for registrations whose payment status
+is `paid`. It reads `SUPABASE_URL` and `SUPABASE_SECRET_KEY` from `.env`, then
+creates a ZIP containing the PDFs and a `paid-attendees.csv` manifest.
+
+From this directory, run:
+
+```text
+npm run export:paid-resumes
+```
+
+The finished ZIP is saved in the ignored `exports` directory. Keep the ZIP
+private because it contains attendee contact information and resumes.
+
 ## Network With ASME payment links
 
 The registration form uses separate Stripe Payment Links for its two ticket
