@@ -3,18 +3,21 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/De0W9Q-GDqA/",
   "https://www.instagram.com/p/DeqIQEQlA5y/",
   "https://www.instagram.com/p/DeqI1-aqkV5/",
   "https://www.instagram.com/p/Depb__6BXxB/",
   "https://www.instagram.com/p/DekgSZmS4Nc/",
   "https://www.instagram.com/p/Dec6tYOqQF7/",
-  "https://www.instagram.com/p/DeS0P1RKqk1/",
-  "https://www.instagram.com/p/DeQRs_tGEYf/",
-  "https://www.instagram.com/p/Deaj6HiqYtN/",
-  "https://www.instagram.com/p/DeXuJQGBian/",
 ];
 
 const linksPost = [
+  
+    {
+    name: "FallIntro",
+    image: "LI_posts/aif.jpg",
+    link: "https://lnkd.in/p/gMGaj9Mm",
+  },
    {
     name: "Board",
     image: "LI_posts/boardreveal.jpg",

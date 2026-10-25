@@ -2,7 +2,7 @@ import { useState } from "react";
 //import { Link } from "react-router-dom";
 
 // Change this text whenever you want to update the banner.
-const BANNER_MESSAGE = "NETWORK WITH ASME TICKETS SOLD OUT! WE HOPE YOU ENJOY THE EVENT!";
+const BANNER_MESSAGE = "RSVP for the RTX info session by Monday October 26 at 11:59PM! ";
 
 // Change the version when you want everyone to see a new announcement.
 const BANNER_VERSION = "fall-w4_1";

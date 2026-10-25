@@ -26,13 +26,13 @@ function Links(){
 
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     <div className="flex flex-col space-y-5"> 
-                        {/*<Reveal width="100%">
+                        <Reveal width="100%">
                             <LinkCard 
-                                title="Network With ASME 2026 RSVP" 
-                                href="https://www.asmeatuci.com/network/register" 
-                                description="Join us at the banquet style networking event where many company representatives are invited to talk and connect with students! Companies include Northrop Grumman, Edwards Lifesciences, and Hyundai Motor America! "
+                                title="RTX x ASME Lunch and Learn RSVP" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdtXn4bsJF9R8o5vRJoDSzqutsOdQ6vuBDUSAIFapvpVF4d0w/viewform?usp=sharing&ouid=107358755532678905777" 
+                                description="Come and learn about RTX and what roles they are actively looking for students for! Managers are actively looking for Summer 2027 internship roles as well as full time positions! Refreshments will be provided."
                             />
-                        </Reveal>*/}
+                        </Reveal>
 
                     </div>
 
