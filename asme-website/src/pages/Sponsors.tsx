@@ -16,7 +16,7 @@ const companies =[
     desc1: "",
     desc2:"",
     website: "https://www.mks.com",
-  }
+  },
   {
     name: "RTX",
     image: "sponsors/rtx.png",
