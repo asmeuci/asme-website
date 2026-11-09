@@ -3,12 +3,12 @@ import Section from "../components/Section";
 import { Reveal } from "../components/Reveal";
 
 const postLinks = [
+  "https://www.instagram.com/p/DfdKt0mBC6s/",
+  "https://www.instagram.com/p/DfV_eyZKHmA/",
+  "https://www.instagram.com/p/DfgAsgMK4r8/",
+  "https://www.instagram.com/p/DfgNXqZGHDZ/",
   "https://www.instagram.com/p/DfObTsTlPoy/",
   "https://www.instagram.com/p/DfOiL6RqDsJ/",
-  "https://www.instagram.com/p/DfOlQSmKC8S/",
-  "https://www.instagram.com/p/De8l0kJKe5J/",
-  "https://www.instagram.com/p/DeqIQEQlA5y/",
-  "https://www.instagram.com/p/DekgSZmS4Nc/",
 ];
 
 const linksPost = [

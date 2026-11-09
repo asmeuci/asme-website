@@ -28,9 +28,9 @@ function Links(){
                     <div className="flex flex-col space-y-5"> 
                         <Reveal width="100%">
                             <LinkCard 
-                                title="RTX x ASME Lunch and Learn RSVP" 
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSdtXn4bsJF9R8o5vRJoDSzqutsOdQ6vuBDUSAIFapvpVF4d0w/viewform?usp=sharing&ouid=107358755532678905777" 
-                                description="Come and learn about RTX and what roles they are actively looking for students for! Managers are actively looking for Summer 2027 internship roles as well as full time positions! Refreshments will be provided."
+                                title="Mech-In-Training Application" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLScV4I_DBBFUW_Yg2DtLi_bKLoB_3MZDHqh4SmeAGNFQ-fNYdQ/viewform" 
+                                description="Want to become more involved with ASME? Join the board as an intern to assist committees with different tasks! You are able to learn applicable professional skills while also having fun with the board. Application closes Nov 15 at 11:59PM!!"
                             />
                         </Reveal>
 
@@ -50,8 +50,16 @@ function Links(){
                         </div>
                     </Reveal>
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
+                                        <div className="flex flex-col space-y-5">
+                    <Reveal width="100%">
+                            <LinkCard 
+                                title="ASME Board Dare Form" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdg-8zmCnvVF4wsp-g9n3hQ58ixgVQYyBnF9wr0YtqWjNPrMQ/viewform?usp=header" 
+                                description="Make our board do silly challenges! 3 members are up for challenges each week."
+                            />
+                    </Reveal>
                     
-                    <div className="flex flex-col space-y-5">
+
                         <Reveal width="100%">
                             <LinkCard 
                                 title="Welcome to UCI!" 

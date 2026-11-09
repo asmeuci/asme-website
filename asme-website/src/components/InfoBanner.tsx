@@ -2,7 +2,7 @@ import { useState } from "react";
 //import { Link } from "react-router-dom";
 
 // Change this text whenever you want to update the banner.
-const BANNER_MESSAGE = "Halfway through fall quarter!! You all have got this!";
+const BANNER_MESSAGE = " Up this week for dares is Jocelyn, Aashika, and Ahbinaav! Go check out the dare form in links to make them do funny challenges.";
 
 // Change the version when you want everyone to see a new announcement.
 const BANNER_VERSION = "fall-w4_1";
@@ -11,7 +11,7 @@ const DISMISSED_KEY = `asme-info-banner-dismissed-${BANNER_VERSION}`;
 function InfoBanner() {
   const [isVisible, setIsVisible] = useState(
     () => sessionStorage.getItem(DISMISSED_KEY) !== "true",
-  );
+  );  
 
   const dismissBanner = () => {
     sessionStorage.setItem(DISMISSED_KEY, "true");
